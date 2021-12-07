@@ -1,35 +1,38 @@
 {
   "name": "cesium-pelo-mundo",
-  "version": "0.1.0",
+  "version": "1.0.0-dev",
   "private": true,
-  "dependencies": {
-    "google-map-react": "^1.1.4",
-    "normalize.css": "^8.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "styled-components": "^4.3.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "develop": "npm-run-all dev",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "next lint",
+    "lint:css": "stylelint --fix './**/*.{css,js,ts,tsx}' --ignore-path .gitignore",
+    "fmt": "npm-run-all format",
+    "format": "prettier --write . --ignore-path .gitignore",
+    "test": "npm-run-all test:*",
+    "test:lint": "npm-run-all test:lint:*",
+    "test:lint:js": "eslint . --ignore-path .gitignore",
+    "test:lint:css": "stylelint './**/*.{css,js,jsx,ts,tsx}' --ignore-path .gitignore",
+    "test:format": "prettier --check . --ignore-path .gitignore"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "leaflet": "^1.7.1",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-leaflet": "^3.2.2"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "stylelint": "^13.13.1",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-css-modules": "^2.3.0",
+    "stylelint-config-prettier": "^9.0.3"
   }
 }
