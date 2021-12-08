@@ -6,11 +6,7 @@ import { Icon } from 'leaflet';
 import styles from './style.module.css';
 
 const Marker = ({ coordinates, city, country, author, photo, date }) => {
-  const icon = new Icon({
-    iconUrl: '/logo.png',
-    iconSize: [25, 25],
-    iconAnchor: [12, 41]
-  });
+  const icon = new Icon({ iconUrl: '/logo.png', iconSize: [25, 25] });
 
   return (
     <MarkerContainer icon={icon} position={coordinates}>
