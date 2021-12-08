@@ -1,0 +1,4 @@
+extends:
+  - stylelint-a11y
+  - stylelint-config-prettier
+  - stylelint-config-css-modules
