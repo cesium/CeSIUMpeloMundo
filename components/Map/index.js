@@ -1,14 +1,4 @@
-import { useState } from 'react';
-import {
-  MapContainer,
-  TileLayer,
-  LayerGroup,
-  Circle,
-  Rectangle,
-  FeatureGroup,
-  LayersControl,
-  Popup
-} from 'react-leaflet';
+import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
 import Marker from '~/components/Marker';
 import luisMadrid from '~/public/photos/luis-madrid.jpg';
 
@@ -21,14 +11,30 @@ const pins = [
   }
 ];
 
-const tiles = {
-  earth: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-  light: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
-  dark: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
-};
+const tiles = [
+  {
+    name: 'Earth',
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+  },
+  {
+    name: 'Light',
+    url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
+  },
+  {
+    name: 'Dark',
+    url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
+    checked: true
+  }
+];
 
-const attribution =
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const Tile = ({ url, name, checked }) => (
+  <LayersControl.BaseLayer checked={checked} name={name}>
+    <TileLayer
+      url={url}
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    />
+  </LayersControl.BaseLayer>
+);
 
 export default function Map() {
   return (
@@ -36,18 +42,11 @@ export default function Map() {
       center={[40, 0]}
       zoom={5}
       scrollWheelZoom={true}
-      style={{ height: '100vh' }}
-    >
+      style={{ height: '100vh' }}>
       <LayersControl position="topright">
-        <LayersControl.BaseLayer name="Earth">
-          <TileLayer url={tiles.earth} attribution={attribution} />
-        </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name="Light">
-          <TileLayer url={tiles.light} attribution={attribution} />
-        </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name="Dark">
-          <TileLayer url={tiles.dark} checked attribution={attribution} />
-        </LayersControl.BaseLayer>
+        {tiles.map((tile) => (
+          <Tile {...tile} />
+        ))}
       </LayersControl>
       {pins.map((pin) => (
         <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
