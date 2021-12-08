@@ -1,13 +1,23 @@
 import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
 import Marker from '~/components/Marker';
 import luisMadrid from '~/public/photos/luis-madrid.jpg';
+import nelsonHelsinki from '~/public/photos/nelson-helsinki.jpg';
 
 const pins = [
   {
     author: 'Luis Araújo',
     city: 'Madrid',
+    country: 'Spain',
     coordinates: [40.4213, -3.7011],
     photo: luisMadrid
+  },
+  {
+    author: 'Nelson Estevão',
+    city: 'Helsinki',
+    country: 'Finland',
+    coordinates: [60.1673826, 24.9551949],
+    date: '2019-01-17',
+    photo: nelsonHelsinki
   }
 ];
 
@@ -42,8 +52,7 @@ export default function Map() {
       center={[40, 0]}
       zoom={5}
       scrollWheelZoom={true}
-      style={{ height: '100vh' }}
-    >
+      style={{ height: '100vh' }}>
       <LayersControl position="topright">
         {tiles.map((tile) => (
           <Tile key={tile.name} {...tile} />
