@@ -3,12 +3,15 @@
 [license]: LICENSE.txt
 [netlify-badge]: https://api.netlify.com/api/v1/badges/88366cb6-c159-4b8b-8efe-502f11059215/deploy-status
 [netlify-status]: https://app.netlify.com/sites/cesium-pelo-mundo/deploys
+[ci-style-status]: https://github.com/cesium/CeSIUMpeloMundo/actions/workflows/style.yml/badge.svg
+[ci-style-workflow]: https://github.com/cesium/CeSIUMpeloMundo/actions/workflows/style.yml
 
 # CeSIUM pelo Mundo
 
 > :world_map: A world map with the places we've been
 
 [![Netlify Status][netlify-badge]][netlify-status]
+[![CI Style][ci-style-status]][ci-style-workflow]
 
 ## 🤝 Contributing
 
