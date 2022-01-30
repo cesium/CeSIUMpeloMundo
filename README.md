@@ -1,10 +1,14 @@
 [contributing]: CONTRIBUTING.md
 [code_of_conduct]: CODE_OF_CONDUCT.md
 [license]: LICENSE.txt
+[netlify-badge]: https://api.netlify.com/api/v1/badges/88366cb6-c159-4b8b-8efe-502f11059215/deploy-status
+[netlify-status]: https://app.netlify.com/sites/cesium-pelo-mundo/deploys
 
 # CeSIUM pelo Mundo
 
 > :world_map: A world map with the places we've been
+
+[![Netlify Status][netlify-badge]][netlify-status]
 
 ## 🤝 Contributing
 
