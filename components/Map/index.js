@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
 import Marker from '~/components/Marker';
 import luisMadrid from '~/public/photos/luis-madrid.jpg';
 import nelsonHelsinki from '~/public/photos/nelson-helsinki.jpg';
-import liraBern from '~/public/photos/lira-Bern.jpg';
+import liraBern from '~/public/photos/lira-bern.jpg';
 import liraKoniz from '~/public/photos/lira-koniz.jpg';
 
 const pins = [
