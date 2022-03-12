@@ -37,7 +37,6 @@ const pins = [
     date: '2019-08-01',
     photo: liraKoniz
   }
-  
 ];
 
 const tiles = [
