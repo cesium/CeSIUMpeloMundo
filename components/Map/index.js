@@ -2,6 +2,8 @@ import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
 import Marker from '~/components/Marker';
 import luisMadrid from '~/public/photos/luis-madrid.jpg';
 import nelsonHelsinki from '~/public/photos/nelson-helsinki.jpg';
+import liraBern from '~/public/photos/lira-Bern.jpg';
+import liraKoniz from '~/public/photos/lira-koniz.jpg';
 
 const pins = [
   {
@@ -18,6 +20,22 @@ const pins = [
     coordinates: [60.1673826, 24.9551949],
     date: '2019-01-17',
     photo: nelsonHelsinki
+  },
+  {
+    author: 'Francisco Lira',
+    city: 'Bern',
+    country: 'Switzerland',
+    coordinates: [46.933938, 7.445919],
+    date: '2019-08-12',
+    photo: liraBern
+  },
+  {
+    author: 'Francisco Lira',
+    city: 'Köniz',
+    country: 'Switzerland',
+    coordinates: [46.919683, 7.436997],
+    date: '2019-08-01',
+    photo: liraKoniz
   }
 ];
 
