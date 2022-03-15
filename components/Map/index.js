@@ -36,6 +36,14 @@ const pins = [
     coordinates: [46.919683, 7.436997],
     date: '2019-08-01',
     photo: liraKoniz
+  },
+  {
+    author: 'Filipe Felício',
+    city: 'Amesterdam',
+    country: 'The Netherlands',
+    coordinates: [52.37548607644857, 4.896832185020905],
+    date: '2022-23-02',
+    photo: felicioAmesterdam
   }
 ];
 
