@@ -1,7 +1,10 @@
 const pkg = require('./package.json');
 
 // starts a command line process to get the git hash
-const commitHash = require('child_process').execSync('git rev-parse HEAD').toString().trim();
+const commitHash = require('child_process')
+  .execSync('git rev-parse HEAD')
+  .toString()
+  .trim();
 
 module.exports = {
   env: {
