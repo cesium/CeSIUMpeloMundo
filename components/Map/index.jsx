@@ -5,6 +5,7 @@ import nelsonHelsinki from '~/public/photos/nelson-helsinki.jpg';
 import liraBern from '~/public/photos/lira-bern.jpg';
 import liraKoniz from '~/public/photos/lira-koniz.jpg';
 import felicioAmesterdam from '~/public/photos/felicio-amesterdam.jpg';
+import luisBarcelona from '~/public/photos/luis-barcelona.jpg';
 
 const pins = [
   {
@@ -14,6 +15,14 @@ const pins = [
     coordinates: [40.4213, -3.7011],
     date: '2021-07-06',
     photo: luisMadrid
+  },
+  {
+    author: 'Luis Araújo',
+    city: 'Barcelona',
+    country: 'Spain',
+    coordinates: [41.5888, 1.8422],
+    date: '2021-07-11',
+    photo: luisBarcelona
   },
   {
     author: 'Nelson Estevão',
