@@ -82,7 +82,6 @@ export default function Map() {
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
     >
-      <h1>Hello</h1>
       <LayersControl position="topright">
         {tiles.map((tile) => (
           <Tile key={tile.name} {...tile} />
