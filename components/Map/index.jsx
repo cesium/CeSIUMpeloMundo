@@ -4,6 +4,7 @@ import luisMadrid from '~/public/photos/luis-madrid.jpg';
 import nelsonHelsinki from '~/public/photos/nelson-helsinki.jpg';
 import liraBern from '~/public/photos/lira-bern.jpg';
 import liraKoniz from '~/public/photos/lira-koniz.jpg';
+import felicioAmesterdam from '~/public/photos/felicio-amesterdam.jpg';
 
 const pins = [
   {
@@ -11,6 +12,7 @@ const pins = [
     city: 'Madrid',
     country: 'Spain',
     coordinates: [40.4213, -3.7011],
+    date: '2021-07-06',
     photo: luisMadrid
   },
   {
@@ -42,7 +44,7 @@ const pins = [
     city: 'Amesterdam',
     country: 'The Netherlands',
     coordinates: [52.37548607644857, 4.896832185020905],
-    date: '2022-23-02',
+    date: '2022-02-23',
     photo: felicioAmesterdam
   }
 ];
@@ -80,6 +82,7 @@ export default function Map() {
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
     >
+      <h1>Hello</h1>
       <LayersControl position="topright">
         {tiles.map((tile) => (
           <Tile key={tile.name} {...tile} />
