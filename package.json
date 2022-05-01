@@ -1,6 +1,14 @@
 {
   "name": "cesium-pelo-mundo",
+  "description": "A world map with the places we've been",
   "version": "1.0.0-dev",
+  "license": "MIT",
+  "homepage": "https://pelomundo.cesium.di.uminho.pt",
+  "bugs": "https://github.com/cesium/CeSIUMpeloMundo/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cesium/CeSIUMpeloMundo"
+  },
   "private": true,
   "scripts": {
     "develop": "npm-run-all dev",
