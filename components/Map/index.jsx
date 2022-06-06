@@ -6,6 +6,7 @@ import liraBern from '~/public/photos/lira-bern.jpg';
 import liraKoniz from '~/public/photos/lira-koniz.jpg';
 import felicioAmesterdam from '~/public/photos/felicio-amesterdam.jpg';
 import luisBarcelona from '~/public/photos/luis-barcelona.jpg';
+import correiaLausanne from '~/public/photos/correia-lausanne.jpg';
 
 const pins = [
   {
@@ -55,6 +56,14 @@ const pins = [
     coordinates: [52.37548607644857, 4.896832185020905],
     date: '2022-02-23',
     photo: felicioAmesterdam
+  },
+  {
+    author: 'João Correia',
+    city: 'EPFL, Lausanne',
+    country: 'Switzerland',
+    coordinates: [46.519164417441345, 6.563699123819026],
+    date: '2022-06-06',
+    photo: correiaLausanne
   }
 ];
 
