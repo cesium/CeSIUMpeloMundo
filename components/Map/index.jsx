@@ -5,6 +5,7 @@ import nelsonHelsinki from '~/public/photos/nelson-helsinki.jpg';
 import liraBern from '~/public/photos/lira-bern.jpg';
 import liraKoniz from '~/public/photos/lira-koniz.jpg';
 import felicioAmesterdam from '~/public/photos/felicio-amesterdam.jpg';
+import felicioLondonValim from '~/public/photos/felicio-london-valim.jpg';
 import luisBarcelona from '~/public/photos/luis-barcelona.jpg';
 import correiaLausanne from '~/public/photos/correia-lausanne.jpg';
 
@@ -56,6 +57,14 @@ const pins = [
     coordinates: [52.37548607644857, 4.896832185020905],
     date: '2022-02-23',
     photo: felicioAmesterdam
+  },
+  {
+    author: 'Filipe Felício',
+    city: 'London',
+    country: 'United Kingdom',
+    coordinates: [51.486082974689104, -0.19962908422844805],
+    date: '2022-06-09',
+    photo: felicioLondonValim
   },
   {
     author: 'João Correia',
