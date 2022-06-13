@@ -32,7 +32,8 @@ export default function Map({ pins }) {
       center={[40, 0]}
       zoom={5}
       scrollWheelZoom={true}
-      style={{ height: '100vh' }}>
+      style={{ height: '100vh' }}
+    >
       <LayersControl position="topright">
         {tiles.map((tile) => (
           <Tile key={tile.name} {...tile} />
