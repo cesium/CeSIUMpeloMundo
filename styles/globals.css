@@ -5,3 +5,8 @@ body {
   margin: 0;
   background-color: #333;
 }
+
+.leaflet-popup-content {
+  min-width: 300px;
+  min-height: 470px;
+}

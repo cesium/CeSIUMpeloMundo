@@ -12,22 +12,24 @@ const Marker = ({ coordinates, city, country, author, photo, date }) => {
     <MarkerContainer icon={icon} position={coordinates}>
       <Popup>
         <div>
-          <h1>{country}</h1>
-          <h2>{city}</h2>
+          <div className={styles.text}>
+            <h1>{country}</h1>
+            <h2>{city}</h2>
 
-          <i>
-            {date &&
-              DateTime.fromISO(date)
-                .toRelative(Date.now())
-                .toLocaleString(DateTime.DATETIME_MED)}
-          </i>
-          <br />
-          <span>{author}</span>
-          <br />
+            <i>
+              {date &&
+                DateTime.fromISO(date)
+                  .toRelative(Date.now())
+                  .toLocaleString(DateTime.DATETIME_MED)}
+            </i>
+            <br />
+            <span>{author}</span>
+          </div>
           <Image
-            className={styles.photo}
             alt={`${author} at ${city}`}
             src={photo}
+            layout="fill"
+            objectFit="cover"
           />
         </div>
       </Popup>

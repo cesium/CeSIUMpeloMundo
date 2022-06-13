@@ -1,14 +1,5 @@
 import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
 import Marker from '~/components/Marker';
-import luisMadrid from '~/public/photos/luis-madrid.jpg';
-import nelsonHelsinki from '~/public/photos/nelson-helsinki.jpg';
-import liraBern from '~/public/photos/lira-bern.jpg';
-import liraKoniz from '~/public/photos/lira-koniz.jpg';
-import felicioAmesterdam from '~/public/photos/felicio-amesterdam.jpg';
-import felicioLondonValim from '~/public/photos/felicio-london-valim.jpg';
-import luisBarcelona from '~/public/photos/luis-barcelona.jpg';
-import correiaLausanne from '~/public/photos/correia-lausanne.jpg';
-
 const pins = [
   {
     author: 'Luis Araújo',
@@ -16,7 +7,7 @@ const pins = [
     country: 'Spain',
     coordinates: [40.4213, -3.7011],
     date: '2021-07-06',
-    photo: luisMadrid
+    photo: '/photos/luis-madrid.jpg'
   },
   {
     author: 'Luis Araújo',
@@ -24,7 +15,7 @@ const pins = [
     country: 'Spain',
     coordinates: [41.5888, 1.8422],
     date: '2021-07-11',
-    photo: luisBarcelona
+    photo: '/photos/luis-barcelona.jpg'
   },
   {
     author: 'Nelson Estevão',
@@ -32,7 +23,7 @@ const pins = [
     country: 'Finland',
     coordinates: [60.1673826, 24.9551949],
     date: '2019-01-17',
-    photo: nelsonHelsinki
+    photo: '/photos/nelson-helsinki.jpg'
   },
   {
     author: 'Francisco Lira',
@@ -40,7 +31,7 @@ const pins = [
     country: 'Switzerland',
     coordinates: [46.933938, 7.445919],
     date: '2019-08-12',
-    photo: liraBern
+    photo: '/photos/lira-bern.jpg'
   },
   {
     author: 'Francisco Lira',
@@ -48,7 +39,7 @@ const pins = [
     country: 'Switzerland',
     coordinates: [46.919683, 7.436997],
     date: '2019-08-01',
-    photo: liraKoniz
+    photo: '/photos/lira-koniz.jpg'
   },
   {
     author: 'Filipe Felício',
@@ -56,7 +47,7 @@ const pins = [
     country: 'The Netherlands',
     coordinates: [52.37548607644857, 4.896832185020905],
     date: '2022-02-23',
-    photo: felicioAmesterdam
+    photo: '/photos/felicio-amesterdam.jpg'
   },
   {
     author: 'Filipe Felício',
@@ -64,7 +55,7 @@ const pins = [
     country: 'United Kingdom',
     coordinates: [51.486082974689104, -0.19962908422844805],
     date: '2022-06-09',
-    photo: felicioLondonValim
+    photo: '/photos/felicio-london-valim.jpg'
   },
   {
     author: 'João Correia',
@@ -72,7 +63,7 @@ const pins = [
     country: 'Switzerland',
     coordinates: [46.519164417441345, 6.563699123819026],
     date: '2022-06-06',
-    photo: correiaLausanne
+    photo: '/photos/correia-lausanne.jpg'
   }
 ];
 

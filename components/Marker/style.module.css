@@ -1,3 +1,8 @@
-.photo {
-  margin: auto;
+.text {
+  position: absolute;
+  z-index: 50;
+  color: white;
+  bottom: 20px;
+  text-shadow: 0px 0px 5px black;
+  font-weight: 500;
 }
