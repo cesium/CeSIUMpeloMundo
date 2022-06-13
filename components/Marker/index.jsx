@@ -5,6 +5,18 @@ import { Icon } from 'leaflet';
 
 import styles from './style.module.css';
 
+const getNameString = (authors) => {
+  if (!Array.isArray(authors)) {
+    return authors;
+  }
+
+  if (authors.length <= 2) {
+    return authors.join(' and ');
+  }
+
+  return authors.join(', ');
+};
+
 const Marker = ({ coordinates, city, country, author, photo, date }) => {
   const icon = new Icon({ iconUrl: '/logo.png', iconSize: [25, 25] });
 
@@ -17,16 +29,24 @@ const Marker = ({ coordinates, city, country, author, photo, date }) => {
             <h2>{city}</h2>
 
             <i>
+              {new Date(date).toLocaleDateString(undefined, {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}{' '}
+              (
               {date &&
                 DateTime.fromISO(date)
                   .toRelative(Date.now())
                   .toLocaleString(DateTime.DATETIME_MED)}
+              )
             </i>
             <br />
-            <span>{author}</span>
+            <span>{getNameString(author)}</span>
           </div>
           <Image
-            alt={`${author} at ${city}`}
+            alt={`${getNameString(author)} at ${city}`}
             src={photo}
             layout="fill"
             objectFit="cover"

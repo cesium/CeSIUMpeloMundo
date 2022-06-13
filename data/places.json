@@ -5,7 +5,7 @@
     "country": "Spain",
     "coordinates": [40.4213, -3.7011],
     "date": "2021-07-06",
-    "photo": "/photos/luis-madrid.jpg"
+    "photo": "/photos/laraujo7/madrid.jpg"
   },
   {
     "author": "Luis Araújo",
@@ -13,7 +13,7 @@
     "country": "Spain",
     "coordinates": [41.5888, 1.8422],
     "date": "2021-07-11",
-    "photo": "/photos/luis-barcelona.jpg"
+    "photo": "/photos/laraujo7/barcelona.jpg"
   },
   {
     "author": "Nelson Estevão",
@@ -21,7 +21,7 @@
     "country": "Finland",
     "coordinates": [60.1673826, 24.9551949],
     "date": "2019-01-17",
-    "photo": "/photos/nelson-helsinki.jpg"
+    "photo": "/photos/nelsonmestevao/helsinki.jpg"
   },
   {
     "author": "Francisco Lira",
@@ -29,7 +29,7 @@
     "country": "Switzerland",
     "coordinates": [46.933938, 7.445919],
     "date": "2019-08-12",
-    "photo": "/photos/lira-bern.jpg"
+    "photo": "/photos/FranciscoLira/bern.jpg"
   },
   {
     "author": "Francisco Lira",
@@ -37,23 +37,23 @@
     "country": "Switzerland",
     "coordinates": [46.919683, 7.436997],
     "date": "2019-08-01",
-    "photo": "/photos/lira-koniz.jpg"
+    "photo": "/photos/FranciscoLira/koniz.jpg"
   },
   {
     "author": "Filipe Felício",
     "city": "Amesterdam",
-    "country": "The Netherlands",
+    "country": "Netherlands",
     "coordinates": [52.37548607644857, 4.896832185020905],
     "date": "2022-02-23",
-    "photo": "/photos/felicio-amesterdam.jpg"
+    "photo": "/photos/feliciofilipe/amesterdam.jpg"
   },
   {
-    "author": "Filipe Felício",
+    "author": ["Filipe Felício", "Nelson Estevão"],
     "city": "London",
     "country": "United Kingdom",
     "coordinates": [51.486082974689104, -0.19962908422844805],
     "date": "2022-06-09",
-    "photo": "/photos/felicio-london-valim.jpg"
+    "photo": "/photos/feliciofilipe+nelsonmestevao/london.jpg"
   },
   {
     "author": "João Correia",
@@ -61,6 +61,6 @@
     "country": "Switzerland",
     "coordinates": [46.519164417441345, 6.563699123819026],
     "date": "2022-06-06",
-    "photo": "/photos/correia-lausanne.jpg"
+    "photo": "/photos/jpcorreia99/lausanne.jpg"
   }
 ]
