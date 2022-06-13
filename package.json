@@ -1,7 +1,7 @@
 {
   "name": "cesium-pelo-mundo",
   "description": "A world map with the places we've been",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-beta",
   "license": "MIT",
   "homepage": "https://pelomundo.cesium.di.uminho.pt",
   "bugs": "https://github.com/cesium/CeSIUMpeloMundo/issues",
@@ -28,10 +28,10 @@
   },
   "dependencies": {
     "leaflet": "^1.8.0",
-    "luxon": "^2.3.2",
-    "next": "^12.1.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "luxon": "^2.4.0",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-leaflet": "^3.2.5"
   },
   "devDependencies": {
