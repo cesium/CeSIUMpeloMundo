@@ -62,5 +62,13 @@
     "coordinates": [46.519164417441345, 6.563699123819026],
     "date": "2022-06-06",
     "photo": "/photos/jpcorreia99/lausanne.jpg"
+  },
+  {
+    "author": "João Correia",
+    "city": "Mt. Pilatus, Lucerne",
+    "country": "Switzerland",
+    "coordinates": [46.97946423603654, 8.25622198625752],
+    "date": "2022-06-12",
+    "photo": "/photos/jpcorreia99/lucerne.jpg"
   }
 ]
