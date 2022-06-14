@@ -1,8 +1,8 @@
-name: CI Style
+name: Code Quality
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, master]
     types: [opened, synchronize]
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: 📦 Cache dependencies
-      - uses: actions/cache@v3
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -40,4 +40,3 @@ jobs:
       - name: 🔍 Lint the code
         run: npm run test:lint
         if: always()
-
