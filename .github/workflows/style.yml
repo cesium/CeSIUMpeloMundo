@@ -6,33 +6,38 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  build:
+  style:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node: [16.x]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: ☁️ Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup node
-        uses: actions/setup-node@v2
+      - name: 🟩 Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
 
-      - uses: actions/cache@v2
+      - name: 📦 Cache dependencies
+      - uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install dependencies
+      - name: 📥 Install dependencies
         run: npm ci
 
-      - name: Check code formating
+      - name: 📏 Check code formating
         run: npm run test:format
+        if: always()
 
-      - name: Lint the code
+      - name: 🔍 Lint the code
         run: npm run test:lint
+        if: always()
+
