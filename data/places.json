@@ -48,6 +48,14 @@
     "photo": "/photos/feliciofilipe/amesterdam.jpg"
   },
   {
+    "author": "Filipe Felício",
+    "city": "London",
+    "country": "United Kingdom",
+    "coordinates": [51.5019163, -0.1596214],
+    "date": "2022-06-10",
+    "photo": "/photos/feliciofilipe/london.jpg"
+  },
+  {
     "author": ["Filipe Felício", "Nelson Estevão"],
     "city": "London",
     "country": "United Kingdom",
