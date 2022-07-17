@@ -78,5 +78,13 @@
     "coordinates": [46.97946423603654, 8.25622198625752],
     "date": "2022-06-12",
     "photo": "/photos/jpcorreia99/lucerne.jpg"
+  },
+  {
+    "author": "João Correia",
+    "city": "Dublin",
+    "country": "Ireland",
+    "coordinates": [53.345589992774805, -6.27459360543026],
+    "date": "2022-07-17",
+    "photo": "/photos/jpcorreia99/dublin.jpg"
   }
 ]
