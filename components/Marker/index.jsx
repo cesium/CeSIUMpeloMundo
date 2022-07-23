@@ -7,10 +7,14 @@ import styles from './style.module.css';
 
 const getIcon = (type) => {
   switch (type) {
-    case 'sticker': return new Icon({ iconUrl: '/marker_sticker.png', iconSize: [40, 80] });
-    case 'picture': return new Icon({ iconUrl: '/marker_picture.png', iconSize: [40, 80] });
-    case 'special': return new Icon({ iconUrl: '/marker_special.png', iconSize: [40, 80] });
-    default: return new Icon({ iconUrl: '/marker_sticker.png', iconSize: [40, 80] });
+    case 'sticker':
+      return new Icon({ iconUrl: '/marker_sticker.png', iconSize: [40, 80] });
+    case 'picture':
+      return new Icon({ iconUrl: '/marker_picture.png', iconSize: [40, 80] });
+    case 'special':
+      return new Icon({ iconUrl: '/marker_special.png', iconSize: [40, 80] });
+    default:
+      return new Icon({ iconUrl: '/marker_sticker.png', iconSize: [40, 80] });
   }
 };
 
