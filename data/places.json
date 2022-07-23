@@ -24,6 +24,15 @@
     "photo": "/photos/nelsonmestevao/helsinki.jpg"
   },
   {
+    "author": "Nelson Estevão",
+    "type": "golden",
+    "city": "Gualtar",
+    "country": "Portugal",
+    "coordinates": [41.56157392223945, -8.397397824887639],
+    "date": "1995-03-29",
+    "photo": "/photos/nelsonmestevao/gualtar.jpg"
+  },
+  {
     "author": "Francisco Lira",
     "city": "Bern",
     "country": "Switzerland",
