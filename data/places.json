@@ -1,6 +1,7 @@
 [
   {
     "author": "Luis Araújo",
+    "type": "sticker",
     "city": "Madrid",
     "country": "Spain",
     "coordinates": [40.4213, -3.7011],
@@ -9,6 +10,7 @@
   },
   {
     "author": "Luis Araújo",
+    "type": "sticker",
     "city": "Barcelona",
     "country": "Spain",
     "coordinates": [41.5888, 1.8422],
@@ -17,6 +19,7 @@
   },
   {
     "author": "Nelson Estevão",
+    "type": "sticker",
     "city": "Helsinki",
     "country": "Finland",
     "coordinates": [60.1673826, 24.9551949],
@@ -25,7 +28,7 @@
   },
   {
     "author": "Nelson Estevão",
-    "type": "golden",
+    "type": "special",
     "city": "Gualtar",
     "country": "Portugal",
     "coordinates": [41.56157392223945, -8.397397824887639],
@@ -34,6 +37,7 @@
   },
   {
     "author": "Francisco Lira",
+    "type": "sticker",
     "city": "Bern",
     "country": "Switzerland",
     "coordinates": [46.933938, 7.445919],
@@ -42,6 +46,7 @@
   },
   {
     "author": "Francisco Lira",
+    "type": "sticker",
     "city": "Köniz",
     "country": "Switzerland",
     "coordinates": [46.919683, 7.436997],
@@ -50,6 +55,7 @@
   },
   {
     "author": "Filipe Felício",
+    "type": "sticker",
     "city": "Amesterdam",
     "country": "Netherlands",
     "coordinates": [52.37548607644857, 4.896832185020905],
@@ -58,6 +64,7 @@
   },
   {
     "author": "Filipe Felício",
+    "type": "sticker",
     "city": "London",
     "country": "United Kingdom",
     "coordinates": [51.5019163, -0.1596214],
@@ -66,6 +73,7 @@
   },
   {
     "author": ["Filipe Felício", "Nelson Estevão"],
+    "type": "picture",
     "city": "London",
     "country": "United Kingdom",
     "coordinates": [51.486082974689104, -0.19962908422844805],
@@ -74,6 +82,7 @@
   },
   {
     "author": "João Correia",
+    "type": "sticker",
     "city": "EPFL, Lausanne",
     "country": "Switzerland",
     "coordinates": [46.519164417441345, 6.563699123819026],
@@ -82,6 +91,7 @@
   },
   {
     "author": "João Correia",
+    "type": "sticker",
     "city": "Mt. Pilatus, Lucerne",
     "country": "Switzerland",
     "coordinates": [46.97946423603654, 8.25622198625752],
@@ -90,6 +100,7 @@
   },
   {
     "author": "João Correia",
+    "type": "sticker",
     "city": "Dublin",
     "country": "Ireland",
     "coordinates": [53.345589992774805, -6.27459360543026],

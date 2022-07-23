@@ -6,11 +6,28 @@ import { Icon } from 'leaflet';
 import styles from './style.module.css';
 
 const getIcon = (type) => {
-  if (type === 'golden') {
-    return new Icon({ iconUrl: '/logo-golden.png', iconSize: [30, 30] });
+  switch (type) {
+    case 'sticker':
+      return new Icon({
+        iconUrl: '/images/markers/sticker.png',
+        iconSize: [40, 80]
+      });
+    case 'picture':
+      return new Icon({
+        iconUrl: '/images/markers/picture.png',
+        iconSize: [40, 80]
+      });
+    case 'special':
+      return new Icon({
+        iconUrl: '/images/markers/special.png',
+        iconSize: [40, 80]
+      });
+    default:
+      return new Icon({
+        iconUrl: '/images/markers/sticker.png',
+        iconSize: [40, 80]
+      });
   }
-
-  return new Icon({ iconUrl: '/logo.png', iconSize: [25, 25] });
 };
 
 const getFullDateString = (date) => {
