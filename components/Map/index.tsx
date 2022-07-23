@@ -5,8 +5,15 @@ import {
   LayerGroup
 } from 'react-leaflet';
 import Marker from '~/components/Marker';
+import type { Pin } from '~/components/Marker';
 
-const tiles = [
+type Tyle = {
+  name: string;
+  url: string;
+  checked?: boolean;
+};
+
+const tiles: Tyle[] = [
   {
     name: 'Light',
     url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
@@ -22,7 +29,7 @@ const tiles = [
   }
 ];
 
-const Tile = ({ url, name, checked }) => (
+const TileController = ({ url, name, checked }: Tyle) => (
   <LayersControl.BaseLayer checked={checked} name={name}>
     <TileLayer
       url={url}
@@ -31,7 +38,13 @@ const Tile = ({ url, name, checked }) => (
   </LayersControl.BaseLayer>
 );
 
-const filters = [
+interface Filter {
+    name: string;
+    type: string;
+    checked: boolean;
+}
+
+const filters: Filter[] = [
   {
     name: 'Sticker',
     type: 'sticker',
@@ -49,15 +62,11 @@ const filters = [
   }
 ];
 
-function filterPins(name, type, checked, pins) {
-  var list = pins.filter((pin) => {
-    return pin.type === type;
-  });
-
+function filterPins(pins: Pin[], {name, type, checked}: Filter) {
   return (
     <LayersControl.Overlay checked={checked} name={name}>
       <LayerGroup>
-        {list.map((pin) => (
+          {pins.filter((pin: Pin) => pin.type === type).map((pin: Pin) => (
           <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
         ))}
       </LayerGroup>
@@ -65,7 +74,7 @@ function filterPins(name, type, checked, pins) {
   );
 }
 
-export default function Map({ pins }) {
+export default function Map({ pins }: { pins: Pin[] }) {
   return (
     <MapContainer
       center={[41.56157392223945, -8.397397824887639]}
@@ -75,10 +84,10 @@ export default function Map({ pins }) {
     >
       <LayersControl position="topright">
         {tiles.map((tile) => (
-          <Tile key={tile.name} {...tile} />
+          <TileController key={tile.name} {...tile} />
         ))}
         {filters.map((filter) =>
-          filterPins(filter.name, filter.type, filter.checked, pins)
+          filterPins(pins. filter)
         )}
       </LayersControl>
     </MapContainer>
