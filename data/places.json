@@ -36,6 +36,16 @@
     "photo": "/photos/nelsonmestevao/gualtar.jpg"
   },
   {
+    "author": "Nelson Estevão",
+    "type": "sticker",
+    "city": "London",
+    "country": "United Kingdom",
+    "coordinates": [51.5052606, -0.1126733],
+    "date": "2022-06-11",
+    "streetview": "https://www.google.com/maps/@51.5052606,-0.1126733,3a,60y,348.18h,84.44t/data=!3m6!1e1!3m4!1sG6kgwad45Rn0mxC1nzHK9g!2e0!7i16384!8i8192",
+    "photo": "/photos/nelsonmestevao/london.jpg"
+  },
+  {
     "author": "Francisco Lira",
     "type": "sticker",
     "city": "Bern",
