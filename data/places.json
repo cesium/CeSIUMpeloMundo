@@ -106,5 +106,14 @@
     "coordinates": [53.345589992774805, -6.27459360543026],
     "date": "2022-07-17",
     "photo": "/photos/jpcorreia99/dublin.jpg"
+  },
+  {
+    "author": "Daniel Pereira",
+    "type": "sticker",
+    "city": "Santa Cruz",
+    "country": "United States of America",
+    "coordinates": [36.955797, -121.972159],
+    "date": "2022-07-04",
+    "photo": "/photos/danielpereira/daniel-california.jpeg"
   }
 ]
