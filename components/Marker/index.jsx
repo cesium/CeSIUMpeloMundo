@@ -10,22 +10,22 @@ const getIcon = (type) => {
     case 'sticker':
       return new Icon({
         iconUrl: '/images/markers/sticker.png',
-        iconSize: [40, 80]
+        iconSize: [45, 90]
       });
     case 'picture':
       return new Icon({
         iconUrl: '/images/markers/picture.png',
-        iconSize: [40, 80]
+        iconSize: [45, 90]
       });
     case 'special':
       return new Icon({
         iconUrl: '/images/markers/special.png',
-        iconSize: [40, 80]
+        iconSize: [45, 90]
       });
     default:
       return new Icon({
         iconUrl: '/images/markers/sticker.png',
-        iconSize: [40, 80]
+        iconSize: [45, 90]
       });
   }
 };

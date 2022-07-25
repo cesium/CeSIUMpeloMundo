@@ -1,4 +1,9 @@
-import { MapContainer, TileLayer, LayersControl } from 'react-leaflet';
+import {
+  MapContainer,
+  TileLayer,
+  LayersControl,
+  LayerGroup
+} from 'react-leaflet';
 import Marker from '~/components/Marker';
 
 const tiles = [
@@ -26,6 +31,40 @@ const Tile = ({ url, name, checked }) => (
   </LayersControl.BaseLayer>
 );
 
+const filters = [
+  {
+    name: 'Sticker',
+    type: 'sticker',
+    checked: true
+  },
+  {
+    name: 'Picture',
+    type: 'picture',
+    checked: true
+  },
+  {
+    name: 'Special',
+    type: 'special',
+    checked: true
+  }
+];
+
+function filterPins(name, type, checked, pins) {
+  var list = pins.filter((pin) => {
+    return pin.type === type;
+  });
+
+  return (
+    <LayersControl.Overlay checked={checked} name={name}>
+      <LayerGroup>
+        {list.map((pin) => (
+          <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
+        ))}
+      </LayerGroup>
+    </LayersControl.Overlay>
+  );
+}
+
 export default function Map({ pins }) {
   return (
     <MapContainer
@@ -38,10 +77,10 @@ export default function Map({ pins }) {
         {tiles.map((tile) => (
           <Tile key={tile.name} {...tile} />
         ))}
+        {filters.map((filter) =>
+          filterPins(filter.name, filter.type, filter.checked, pins)
+        )}
       </LayersControl>
-      {pins.map((pin) => (
-        <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
-      ))}
     </MapContainer>
   );
 }
