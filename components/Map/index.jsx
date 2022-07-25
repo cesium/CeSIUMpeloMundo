@@ -4,8 +4,7 @@ import Marker from '~/components/Marker';
 const tiles = [
   {
     name: 'Light',
-    url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
-    checked: true
+    url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
   },
   {
     name: 'Dark',
@@ -13,7 +12,8 @@ const tiles = [
   },
   {
     name: 'Earth',
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    checked: true
   }
 ];
 
