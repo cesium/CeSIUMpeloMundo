@@ -6,42 +6,54 @@ import {
 } from 'react-leaflet';
 import Marker from '~/components/Marker';
 import type { Pin } from '~/components/Marker';
+import useTheme from '~/hooks/useTheme';
 
 type Tyle = {
+  id: string;
   name: string;
   url: string;
-  checked?: boolean;
 };
 
 const tiles: Tyle[] = [
   {
+    id: 'earth',
+    name: 'Earth',
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+  },
+  {
+    id: 'light',
     name: 'Light',
     url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
   },
   {
+    id: 'dark',
     name: 'Dark',
     url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
-  },
-  {
-    name: 'Earth',
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    checked: true
   }
 ];
 
-const TileController = ({ url, name, checked }: Tyle) => (
-  <LayersControl.BaseLayer checked={checked} name={name}>
-    <TileLayer
-      url={url}
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    />
-  </LayersControl.BaseLayer>
-);
+const TileController = ({ id, url, name }: Tyle) => {
+  const { theme, changeTheme } = useTheme();
+
+  return (
+    <LayersControl.BaseLayer checked={id === theme} name={name}>
+      <TileLayer
+        url={url}
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        eventHandlers={{
+          add: () => {
+            changeTheme(id);
+          }
+        }}
+      />
+    </LayersControl.BaseLayer>
+  );
+};
 
 interface Filter {
-    name: string;
-    type: string;
-    checked: boolean;
+  name: string;
+  type: string;
+  checked: boolean;
 }
 
 const filters: Filter[] = [
@@ -62,13 +74,15 @@ const filters: Filter[] = [
   }
 ];
 
-function filterPins(pins: Pin[], {name, type, checked}: Filter) {
+function filterPins(pins: Pin[], { name, type, checked }: Filter) {
   return (
     <LayersControl.Overlay checked={checked} name={name}>
       <LayerGroup>
-          {pins.filter((pin: Pin) => pin.type === type).map((pin: Pin) => (
-          <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
-        ))}
+        {pins
+          .filter((pin: Pin) => pin.type === type)
+          .map((pin: Pin) => (
+            <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
+          ))}
       </LayerGroup>
     </LayersControl.Overlay>
   );
@@ -86,9 +100,7 @@ export default function Map({ pins }: { pins: Pin[] }) {
         {tiles.map((tile) => (
           <TileController key={tile.name} {...tile} />
         ))}
-        {filters.map((filter) =>
-          filterPins(pins. filter)
-        )}
+        {filters.map((filter: Filter) => filterPins(pins, filter))}
       </LayersControl>
     </MapContainer>
   );
