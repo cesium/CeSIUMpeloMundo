@@ -65,8 +65,10 @@ const Marker = ({ type, coordinates, city, country, author, photo, date }) => {
       <Popup>
         <div>
           <div className={styles.text}>
-            <h1>{country}</h1>
-            <h2>{city}</h2>
+            <h1>
+              {city},<br />
+              {country}
+            </h1>
             {date && (
               <i>
                 {getFullDateString(date)} ({getRelativeTimeString(date)})
@@ -80,6 +82,7 @@ const Marker = ({ type, coordinates, city, country, author, photo, date }) => {
             src={photo}
             layout="fill"
             objectFit="cover"
+            style={{ borderRadius: '10px', overflow: 'hidden' }}
           />
         </div>
       </Popup>
