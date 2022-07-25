@@ -125,5 +125,32 @@
     "coordinates": [36.955797, -121.972159],
     "date": "2022-07-04",
     "photo": "/photos/danielpereira/california.jpeg"
+  },
+  {
+    "author": "Gerson Júnior",
+    "type": "sticker",
+    "city": "Roma",
+    "country": "Italy",
+    "coordinates": [41.889048, 12.492502],
+    "date": "2022-07-11",
+    "photo": "/photos/GresosJ/Coliseu.jpg"
+  },
+  {
+    "author": "Gerson Júnior",
+    "type": "sticker",
+    "city": "Napoli",
+    "country": "Italy",
+    "coordinates": [40.840007, 14.251875],
+    "date": "2022-07-08",
+    "photo": "/photos/GresosJ/Napoles.jpg"
+  },
+  {
+    "author": "Gerson Júnior",
+    "type": "sticker",
+    "city": "San Giorgio, Albanese",
+    "country": "Italy",
+    "coordinates": [39.58367, 16.45292],
+    "date": "2022-07-04",
+    "photo": "/photos/GersosJ/SanGiorgio.jpg"
   }
 ]
