@@ -50,7 +50,7 @@ const filters = [
 ];
 
 function filterPins(name, type, checked, pins) {
-  var list = pins.filter((pin) => {
+  const list = pins.filter((pin) => {
     return pin.type === type;
   });
 
