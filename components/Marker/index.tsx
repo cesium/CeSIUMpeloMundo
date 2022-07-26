@@ -1,63 +1,49 @@
 import Image from 'next/image';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
-import { DateTime } from 'luxon';
 import { Icon } from 'leaflet';
+import {
+  getFullDateString,
+  getRelativeTimeString,
+  getNameString
+} from '~/lib/utils';
 
 import styles from './style.module.css';
 
-const getIcon = (type) => {
+type PinType = 'sticker' | 'picture' | 'special';
+
+export interface Pin {
+  author: string;
+  city: string;
+  country: string;
+  coordinates: number[];
+  date: string;
+  photo: string;
+  type?: PinType;
+}
+
+const getIcon = (type: PinType): Icon => {
   switch (type) {
     case 'sticker':
-      return new Icon({
-        iconUrl: '/images/markers/sticker.png',
-        iconSize: [45, 90]
-      });
     case 'picture':
-      return new Icon({
-        iconUrl: '/images/markers/picture.png',
-        iconSize: [45, 90]
-      });
     case 'special':
       return new Icon({
-        iconUrl: '/images/markers/special.png',
+        iconUrl: `/images/markers/${type}.png`,
         iconSize: [45, 90]
       });
     default:
-      return new Icon({
-        iconUrl: '/images/markers/sticker.png',
-        iconSize: [45, 90]
-      });
+      throw new Error(`Unknown action: ${type}`);
   }
 };
 
-const getFullDateString = (date) => {
-  return new Date(date).toLocaleDateString(undefined, {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-};
-
-const getRelativeTimeString = (date) => {
-  return DateTime.fromISO(date)
-    .toRelative(Date.now())
-    .toLocaleString(DateTime.DATETIME_MED);
-};
-
-const getNameString = (authors) => {
-  if (!Array.isArray(authors)) {
-    return authors;
-  }
-
-  if (authors.length <= 2) {
-    return authors.join(' and ');
-  }
-
-  return authors.join(', ');
-};
-
-const Marker = ({ type, coordinates, city, country, author, photo, date }) => {
+const Marker = ({
+  type,
+  coordinates,
+  city,
+  country,
+  author,
+  photo,
+  date
+}: Pin) => {
   const icon = getIcon(type);
 
   return (
