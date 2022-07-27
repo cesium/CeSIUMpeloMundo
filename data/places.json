@@ -152,5 +152,77 @@
     "coordinates": [39.58367, 16.45292],
     "date": "2022-07-04",
     "photo": "/photos/GresosJ/SanGiorgio.jpg"
+  },
+  {
+    "author": "Filipe Felício",
+    "type": "sticker",
+    "city": "Rijeka",
+    "country": "Croatia",
+    "coordinates": [45.33902, 14.416862],
+    "date": "2022-07-07",
+    "photo": "/photos/feliciofilipe/rijeka.jpg"
+  },
+  {
+    "author": "Filipe Felício",
+    "type": "sticker",
+    "city": "Zagreb",
+    "country": "Croatia",
+    "coordinates": [45.813258549667765, 15.977218879620182],
+    "date": "2022-07-03",
+    "photo": "/photos/feliciofilipe/zagreb.jpg"
+  },
+  {
+    "author": ["Filipe Felício", "Matilde Bravo"],
+    "type": "sticker",
+    "city": "Zagreb",
+    "country": "Croatia",
+    "coordinates": [45.81383, 15.97732],
+    "date": "2022-07-03",
+    "photo": "/photos/feliciofilipe,matildeopbravo/zagreb2.jpg"
+  },
+  {
+    "author": ["Filipe Felício", "Matilde Bravo"],
+    "type": "sticker",
+    "city": "Zagreb",
+    "country": "Croatia",
+    "coordinates": [45.8149711819682, 15.97573733926956],
+    "date": "2022-07-02",
+    "photo": "/photos/feliciofilipe,matildeopbravo/zagreb1.jpg"
+  },
+  {
+    "author": ["Filipe Felício", "Matilde Bravo", "Mariana Rodrigues"],
+    "type": "picture",
+    "city": "Rijeka",
+    "country": "Croatia",
+    "coordinates": [45.33264760505596, 14.455986441966521],
+    "date": "2022-07-04",
+    "photo": "/photos/feliciofilipe,matildeopbravo/rijeka.jpg"
+  },
+  {
+    "author": ["Filipe Felício", "Matilde Bravo"],
+    "type": "sticker",
+    "city": "Trieste",
+    "country": "Italy",
+    "coordinates": [45.65240883374153, 13.77165131984631],
+    "date": "2022-07-09",
+    "photo": "/photos/feliciofilipe,matildeopbravo/trieste.jpg"
+  },
+  {
+    "author": ["Filipe Felício", "Matilde Bravo"],
+    "type": "sticker",
+    "city": "Pula",
+    "country": "Croatia",
+    "coordinates": [44.867328742659424, 13.850810010552738],
+    "date": "2022-07-08",
+    "photo": "/photos/feliciofilipe,matildeopbravo/pula.jpg"
+  },
+  {
+    "author": ["Filipe Felício", "Matilde Bravo", "José Nuno Macedo"],
+    "type": "picture",
+    "city": "Luibliana",
+    "country": "Slovenia",
+    "coordinates": [46.05218163654292, 14.511751028966621],
+    "date": "2022-07-10",
+    "photo": "/photos/feliciofilipe,matildeopbravo/liubliana.jpg"
   }
 ]
