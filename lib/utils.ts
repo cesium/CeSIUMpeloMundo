@@ -20,8 +20,8 @@ export const getNameString = (authors: string[] | string) => {
     return authors;
   }
 
-  if (authors.length <= 2) {
-    return authors.join(' and ');
+  if (authors.length <= 1) {
+    return authors.join()
   }
 
   const last = authors.pop();
