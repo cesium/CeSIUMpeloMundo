@@ -20,9 +20,11 @@ export const getNameString = (authors: string[] | string) => {
     return authors;
   }
 
-  if (authors.length <= 2) {
-    return authors.join(' and ');
+  const size = authors.length;
+
+  if (size <= 1) {
+    return authors.join();
   }
 
-  return authors.join(', ');
+  return authors.slice(0, size - 1).join(', ') + ' and ' + authors[size - 1];
 };
