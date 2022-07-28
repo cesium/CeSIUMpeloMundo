@@ -22,8 +22,8 @@ export const getNameString = (authors: string[] | string) => {
 
   if (authors.length <= 2) {
     return authors.join(' and ');
-  } else {
-    var last = authors.pop();
-    return authors.join(', ') + ' and ' + last;
   }
+  
+  var last = authors.pop();
+  return authors.join(', ') + ' and ' + last;
 };
