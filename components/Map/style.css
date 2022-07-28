@@ -1,0 +1,13 @@
+.custom-marker-cluster {
+  background: rgba(156, 86, 255, 1);
+  border: 4px solid rgba(197, 155, 255, 0.8);
+  border-style: outset;
+  border-radius: 50%;
+  color: white;
+  height: 40px;
+  line-height: 30px;
+  text-align: center;
+  width: 40px;
+  font-weight: bold;
+  font-size: 14px;
+}

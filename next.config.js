@@ -10,7 +10,12 @@ const commitHash = require('child_process')
 /**
  * @type {import('next').NextConfig}
  **/
-module.exports = {
+
+const { withGlobalCss } = require('next-global-css');
+
+const withConfig = withGlobalCss();
+
+module.exports = withConfig({
   env: {
     APP_NAME: pkg.name,
     APP_DESCRIPTION: pkg.description,
@@ -28,4 +33,4 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true
   }
-};
+});

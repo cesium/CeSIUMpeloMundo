@@ -8,6 +8,10 @@ import Marker from '~/components/Marker';
 import type { Pin } from '~/components/Marker';
 import useTheme from '~/hooks/useTheme';
 
+import MarkerClusterGroup from 'react-leaflet-cluster';
+import L from 'leaflet';
+import './style.css';
+
 type Tyle = {
   id: string;
   name: string;
@@ -74,15 +78,28 @@ const filters: Filter[] = [
   }
 ];
 
+const createClusterCustomIcon = function (cluster) {
+  return L.divIcon({
+    html: `<span>${'+' + cluster.getChildCount()}</span>`,
+    className: 'custom-marker-cluster',
+    iconSize: L.point(30, 30, true)
+  });
+};
+
 function filterPins(pins: Pin[], { name, type, checked }: Filter) {
   return (
     <LayersControl.Overlay checked={checked} name={name}>
       <LayerGroup>
-        {pins
-          .filter((pin: Pin) => pin.type === type)
-          .map((pin: Pin) => (
-            <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
-          ))}
+        <MarkerClusterGroup
+          iconCreateFunction={createClusterCustomIcon}
+          showCoverageOnHover={false}
+        >
+          {pins
+            .filter((pin: Pin) => pin.type === type)
+            .map((pin: Pin) => (
+              <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
+            ))}
+        </MarkerClusterGroup>
       </LayerGroup>
     </LayersControl.Overlay>
   );
