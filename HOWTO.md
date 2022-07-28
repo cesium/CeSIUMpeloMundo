@@ -12,21 +12,19 @@
 
 1. Go to your fork and click <b>Code</b>;
 
-
 2. You can either choose to clone the repo through <b>HTTPS</b> or <b>SSH</b>.
 
-    - If you choose to do it through HTTPS, copy the link ```https://github.com/cesium/CeSIUMpeloMundo.git```, open the terminal and in the directory of your choice, run the following command:
-    
-    ```
-    git clone https://github.com/<your-github-username>/CeSIUMpeloMundo.git
-    ```
+   - If you choose to do it through HTTPS, copy the link `https://github.com/cesium/CeSIUMpeloMundo.git`, open the terminal and in the directory of your choice, run the following command:
 
-    - If you'd rather clone with SSH, copy ```git@github.com:cesium/CeSIUMpeloMundo.git```, open the terminal and in the chosen directory, run:
-    
-    ```
-    git clone git@github.com:cesium/CeSIUMpeloMundo.git
-    ```
+   ```
+   git clone https://github.com/<your-github-username>/CeSIUMpeloMundo.git
+   ```
 
+   - If you'd rather clone with SSH, copy `git@github.com:cesium/CeSIUMpeloMundo.git`, open the terminal and in the chosen directory, run:
+
+   ```
+   git clone git@github.com:cesium/CeSIUMpeloMundo.git
+   ```
 
 Now you have a local copy of the repo.
 
@@ -37,9 +35,10 @@ Now you have a local copy of the repo.
 ```
 git checkout -b <branch>
 ```
+
 Where <branch> is the name of the branch.
 
-2. The name of the branch should follow the CeSIUM convention: ```'first letter of first name' + 'first letter of last name'/'name of branch'```. Something like this:
+2. The name of the branch should follow the CeSIUM convention: `'first letter of first name' + 'first letter of last name'/'name of branch'`. Something like this:
 
 ```
 af/howto
@@ -53,23 +52,22 @@ git checkout -b af/howto
 
 <h2>Submitting your pins</h2>
 
-1. Go to the folder ```public```;
+1. Go to the folder `public`;
 
-2. Open the folder ```photos```;
+2. Open the folder `photos`;
 
 3. Create another folder with your name or GitHub username. You'll save your photos here;
 
-4.Go to the ```data``` folder and click on the ```places.json``` file;
+4.Go to the `data` folder and click on the `places.json` file;
 
 5. Add:
-    - your name;
-    - the type of pin: "sticker", if you left a CeSIUM sticker, "image", if not;
-    - the city and country you visited;
-    - the coordinates of the picture;
-    - the date;
-    - the path to your image file.
-  You can check the example below:
-
+   - your name;
+   - the type of pin: "sticker", if you left a CeSIUM sticker, "image", if not;
+   - the city and country you visited;
+   - the coordinates of the picture;
+   - the date;
+   - the path to your image file.
+     You can check the example below:
 
 ```
   {
@@ -82,6 +80,7 @@ git checkout -b af/howto
     "photo": "/photos/laraujo7/madrid.jpg"
   }
 ```
+
 <h2>Push changes</h2>
 
 1. After writing in your pin in your branch, commit your changes:
@@ -89,6 +88,7 @@ git checkout -b af/howto
 ```
 git commit -m "message"
 ```
+
 2. Push the changes to your git repository:
 
 ```
@@ -113,6 +113,4 @@ git push -u main af/howto
 
 4. Add a title and description to your pull request.
 
-
-
-And you're done! We'll revise your submission and if everything is correct, visit [CeSIUM Pelo Mundo](https://pelomundo.cesium.di.uminho.pt/) and check out the pin you created! 
+And you're done! We'll revise your submission and if everything is correct, visit [CeSIUM Pelo Mundo](https://pelomundo.cesium.di.uminho.pt/) and check out the pin you created!
