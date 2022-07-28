@@ -23,7 +23,7 @@ export const getNameString = (authors: string[] | string) => {
   if (authors.length <= 2) {
     return authors.join(' and ');
   }
-  
+
   var last = authors.pop();
   return authors.join(', ') + ' and ' + last;
 };
