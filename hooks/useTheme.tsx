@@ -6,21 +6,29 @@ import {
   useState
 } from 'react';
 
-type Theme = 'earth' | 'light' | 'dark';
+export type Theme = 'earth' | 'light' | 'dark';
 
-const ThemeContext = createContext({});
+export type GlobalTheme = {
+  theme: Theme;
+  changeTheme: (theme: Theme) => void;
+};
+
+const ThemeContext = createContext<GlobalTheme>({
+  theme: 'earth',
+  changeTheme: () => undefined
+});
 
 interface Props {
   children: React.ReactNode;
-  initialState: Theme;
+  initialTheme?: Theme;
 }
 
-export const ThemeProvider = ({ children, initialState = 'earth' }: Props) => {
-  const [theme, setTheme] = useState(initialState);
+export const ThemeProvider = ({ children, initialTheme = 'earth' }: Props) => {
+  const [theme, setTheme] = useState(initialTheme);
 
   useEffect(() => {
-    setTheme((localStorage.getItem('theme') as Theme) || 'earth');
-  }, []);
+    setTheme((localStorage.getItem('theme') as Theme) || initialTheme);
+  }, [initialTheme]);
 
   useEffect(() => {
     localStorage.setItem('theme', theme);

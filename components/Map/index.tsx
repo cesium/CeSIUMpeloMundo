@@ -7,9 +7,10 @@ import {
 import Marker from '~/components/Marker';
 import type { Pin } from '~/components/Marker';
 import useTheme from '~/hooks/useTheme';
+import type { Theme } from '~/hooks/useTheme';
 
 type Tyle = {
-  id: string;
+  id: Theme;
   name: string;
   url: string;
 };

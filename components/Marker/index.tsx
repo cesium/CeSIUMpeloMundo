@@ -15,10 +15,11 @@ export interface Pin {
   author: string;
   city: string;
   country: string;
-  coordinates: number[];
+  coordinates: [number, number];
   date: string;
   photo: string;
   type?: PinType;
+  streetview?: string;
 }
 
 const getIcon = (type: PinType): Icon => {
