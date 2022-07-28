@@ -47,7 +47,11 @@ const Marker = ({
   const icon = getIcon(type);
 
   return (
-    <MarkerContainer icon={icon} position={coordinates}>
+    <MarkerContainer
+      icon={icon}
+      position={coordinates}
+      title={`${getNameString(author)} at ${city}`}
+    >
       <Popup>
         <div>
           <div className={styles.text}>
