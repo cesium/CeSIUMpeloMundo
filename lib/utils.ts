@@ -24,5 +24,6 @@ export const getNameString = (authors: string[] | string) => {
     return authors.join(' and ');
   }
 
-  return authors.join(', ');
+  const last = authors.pop();
+  return authors.join(', ') + ' and ' + last;
 };
