@@ -10,7 +10,6 @@ import useTheme from '~/hooks/useTheme';
 
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import L from 'leaflet';
-import './style.css';
 
 type Tyle = {
   id: string;
