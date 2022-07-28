@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import Image from 'next/image';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
@@ -45,12 +46,13 @@ const Marker = ({
   date
 }: Pin) => {
   const icon = getIcon(type);
+  const name = useMemo(() => getNameString(author), [author]);
 
   return (
     <MarkerContainer
       icon={icon}
       position={coordinates}
-      title={`${getNameString(author)} at ${city}`}
+      title={`${name} at ${city}`}
     >
       <Popup>
         <div>
@@ -65,10 +67,10 @@ const Marker = ({
               </i>
             )}
             <br />
-            <span>{getNameString(author)}</span>
+            <span>{name}</span>
           </div>
           <Image
-            alt={`${getNameString(author)} at ${city}`}
+            alt={`${name} at ${city}`}
             src={photo}
             layout="fill"
             objectFit="cover"
