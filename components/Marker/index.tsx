@@ -45,12 +45,13 @@ const Marker = ({
   date
 }: Pin) => {
   const icon = getIcon(type);
+  const authors = getNameString(author);
 
   return (
     <MarkerContainer
       icon={icon}
       position={coordinates}
-      title={`${getNameString(author)} at ${city}`}
+      title={`${authors} at ${city}`}
     >
       <Popup>
         <div>
@@ -65,10 +66,10 @@ const Marker = ({
               </i>
             )}
             <br />
-            <span>{getNameString(author)}</span>
+            <span>{authors}</span>
           </div>
           <Image
-            alt={`${getNameString(author)} at ${city}`}
+            alt={`${authors} at ${city}`}
             src={photo}
             layout="fill"
             objectFit="cover"
