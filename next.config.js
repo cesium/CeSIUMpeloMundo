@@ -25,12 +25,5 @@ module.exports = withConfig({
     BUG_TRACKER: pkg.bugs,
     REPOSITORY_URL: pkg.repository.url,
     COMMIT_HASH: commitHash
-  },
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true
   }
 });
