@@ -224,5 +224,14 @@
     "coordinates": [46.05218163654292, 14.511751028966621],
     "date": "2022-07-10",
     "photo": "/photos/feliciofilipe,matildeopbravo/liubliana.jpg"
+  },
+  {
+    "author": "Diogo Matos",
+    "type": "sticker",
+    "city": "Zambujeira do Mar",
+    "country": "Portugal",
+    "coordinates": [37.525364, -8.786004],
+    "date": "2022-08-06",
+    "photo": "/photos/sassypocoyo/zambujeira1.jpg"
   }
 ]
