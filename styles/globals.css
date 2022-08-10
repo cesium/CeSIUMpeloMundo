@@ -3,7 +3,6 @@
 html,
 body {
   margin: 0;
-  background-color: #333;
 }
 
 .leaflet-popup-content {
@@ -23,4 +22,14 @@ body {
   width: 40px;
   font-weight: bold;
   font-size: 14px;
+}
+
+.sidebar {
+  position: absolute;
+  width: 33.3333%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
