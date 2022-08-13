@@ -13,7 +13,7 @@ export default function Home() {
       <div className="sidebar" style={{ width: '20%' }}>
         <Sidebar pins={pins as Pin[]} />
       </div>
-      <div className="map" style={{ marginLeft: '20%' }}>
+      <div className="map" style={{ marginLeft: '15%' }}>
         <ThemeProvider>
           <Map pins={pins as Pin[]} />
         </ThemeProvider>
