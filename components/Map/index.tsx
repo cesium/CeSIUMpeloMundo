@@ -121,7 +121,7 @@ export default function Map({ pins }: { pins: Pin[] }) {
         ))}
         {filters.map((filter: Filter) => filterPins(pins, filter))}
       </LayersControl>
-      <ZoomControl position='topright' />
+      <ZoomControl position="topright" />
     </MapContainer>
   );
 }
