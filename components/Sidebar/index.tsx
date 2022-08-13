@@ -2,7 +2,8 @@ import styles from './style.module.css';
 import {
   getFullDateString,
   getRelativeTimeString,
-  getNameString
+  getNameString,
+  sortByDistance
 } from '~/lib/utils';
 import { useMemo } from 'react';
 import Image from 'next/image';
@@ -49,10 +50,16 @@ const Location = ({
 };
 
 export default function Sidebar({ pins }: { pins: Pin[] }) {
+  pins.sort(sortByDistance);
   return (
     <div className={styles.list}>
       <div className={styles.heading}>
-        <Image src="/images/cesium.png" width={180} height={61} />
+        <Image
+          src="/images/cesium.png"
+          alt="CeSIUM Logo"
+          width={180}
+          height={61}
+        />
       </div>
       <div>
         {pins.map((pin: Pin) => (
