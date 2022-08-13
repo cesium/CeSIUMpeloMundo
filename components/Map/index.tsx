@@ -2,7 +2,8 @@ import {
   MapContainer,
   TileLayer,
   LayersControl,
-  LayerGroup
+  LayerGroup,
+  ZoomControl
 } from 'react-leaflet';
 import Marker from '~/components/Marker';
 import type { Pin } from '~/components/Marker';
@@ -112,6 +113,7 @@ export default function Map({ pins }: { pins: Pin[] }) {
       zoom={3.4}
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
+      zoomControl={false}
     >
       <LayersControl position="topright">
         {tiles.map((tile) => (
@@ -119,6 +121,7 @@ export default function Map({ pins }: { pins: Pin[] }) {
         ))}
         {filters.map((filter: Filter) => filterPins(pins, filter))}
       </LayersControl>
+      <ZoomControl position='topright' />
     </MapContainer>
   );
 }
