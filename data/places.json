@@ -233,5 +233,14 @@
     "coordinates": [37.525364, -8.786004],
     "date": "2022-08-06",
     "photo": "/photos/sassypocoyo/zambujeira1.jpg"
+  },
+  {
+    "author": "Filipe Felício",
+    "type": "picture",
+    "city": "Barcelona",
+    "country": "Spain",
+    "coordinates": [41.39437640777792, 2.1750122226070197],
+    "date": "2022-03-21",
+    "photo": "/photos/feliciofilipe/barcelona.jpg"
   }
 ]
