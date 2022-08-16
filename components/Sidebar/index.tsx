@@ -36,11 +36,11 @@ const Location = ({
       <Image
         src={`/images/markers/${type}-image.png`}
         alt="Marker"
-        width={60}
+        width={50}
         height={50}
-        style={{ float: 'left', paddingRight: '10px' }}
+        style={{ float: 'left' }}
       />
-      <div style={{ display: 'inline-block' }}>
+      <div style={{ display: 'inline-block', paddingLeft: '10px' }}>
         <b>
           {' '}
           {city}, {country}{' '}
