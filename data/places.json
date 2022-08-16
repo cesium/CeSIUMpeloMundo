@@ -242,5 +242,14 @@
     "coordinates": [41.39437640777792, 2.1750122226070197],
     "date": "2022-03-21",
     "photo": "/photos/feliciofilipe/barcelona.jpg"
+  },
+  {
+    "author":"Mário Rodrigues",
+    "type":"sticker",
+    "city":"Salamanca",
+    "country":"Spain",
+    "coordinates":[40.9588846, -5.6693875],
+    "date":"2022-08-16",
+    "photo":"/photos/mariorodrigues/salamanca.jpg"
   }
 ]
