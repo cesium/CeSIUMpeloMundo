@@ -10,10 +10,10 @@ const Map = dynamic(() => import('~/components/Map'), { ssr: false });
 export default function Home() {
   return (
     <div>
-      <div className="sidebar" style={{ width: '22%' }}>
+      <div className="sidebar" style={{ width: '23%' }}>
         <Sidebar pins={pins as Pin[]} />
       </div>
-      <div className="map" style={{ marginLeft: '17%' }}>
+      <div className="map" style={{ marginLeft: '18%' }}>
         <ThemeProvider>
           <Map pins={pins as Pin[]} />
         </ThemeProvider>

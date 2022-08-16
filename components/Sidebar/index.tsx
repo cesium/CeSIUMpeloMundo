@@ -40,7 +40,7 @@ const Location = ({
         height={50}
         style={{ float: 'left' }}
       />
-      <div style={{ display: 'inline-block', paddingLeft: '10px' }}>
+      <div style={{ display: 'inline-block', paddingLeft: '20px' }}>
         <b>
           {' '}
           {city}, {country}{' '}
