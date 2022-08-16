@@ -33,21 +33,42 @@ const Location = ({
   const name = useMemo(() => getNameString(author), [author]);
   return (
     <div className={styles.listings}>
-      <b>
-        {' '}
-        {city}, {country}{' '}
-      </b>
-      <br></br>
-      {date && (
-        <i>
-          {getFullDateString(date)} ({getRelativeTimeString(date)})
-        </i>
-      )}
-      <br />
-      <span>{name}</span>
+      <Image
+        src={`/images/markers/${type}-image.png`}
+        alt="Marker"
+        width={60}
+        height={50}
+        style={{ float: 'left', paddingRight: '10px' }}
+      />
+      <div style={{ display: 'inline-block' }}>
+        <b>
+          {' '}
+          {city}, {country}{' '}
+        </b>
+        <br></br>
+        {date && (
+          <i>
+            {getFullDateString(date)} ({getRelativeTimeString(date)})
+          </i>
+        )}
+        <br />
+        <span>{name}</span>
+      </div>
     </div>
   );
 };
+
+const When = ({ children, condition }) => {
+  const shouldRender =
+    typeof condition === 'function' ? condition() : !!condition;
+
+  if (!shouldRender) return null;
+
+  return children;
+};
+
+var showLocationList = true;
+var showLeaderboard = false;
 
 export default function Sidebar({ pins }: { pins: Pin[] }) {
   pins.sort(sortByDistance);
@@ -60,11 +81,25 @@ export default function Sidebar({ pins }: { pins: Pin[] }) {
           width={180}
           height={61}
         />
+        <br></br>
+        <div className={styles.buttons}>
+          <button className={styles.button} type={'button'} role="button">
+            {' '}
+            Locations{' '}
+          </button>
+          &nbsp;
+          <button className={styles.button} type={'button'} role="button">
+            {' '}
+            Leaderboard{' '}
+          </button>
+        </div>
       </div>
       <div>
-        {pins.map((pin: Pin) => (
-          <Location key={`${pin.coordinates}-${pin.author}`} {...pin} />
-        ))}
+        <When condition={showLocationList}>
+          {pins.map((pin: Pin) => (
+            <Location key={`${pin.coordinates}-${pin.author}`} {...pin} />
+          ))}
+        </When>
       </div>
     </div>
   );
