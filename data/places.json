@@ -46,6 +46,15 @@
     "photo": "/photos/nelsonmestevao/london.jpg"
   },
   {
+    "author": "Nelson Estevão",
+    "type": "sticker",
+    "city": "Porto",
+    "country": "Portugal",
+    "coordinates": [41.143507, -8.610342],
+    "date": "2022-08-04",
+    "photo": "/photos/nelsonmestevao/porto.jpg"
+  },
+  {
     "author": "Francisco Lira",
     "type": "sticker",
     "city": "Bern",
