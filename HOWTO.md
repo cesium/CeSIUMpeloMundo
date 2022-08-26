@@ -108,6 +108,9 @@ git push
 
 **4.** Add a convenient title and description to your pull request
 
+> **Note**  
+> Don't forget to assign a contributor or the **cesium/pelomundo** group for review.
+
 ## 🎉 You're done!
 
 If everything checks out, your submission will be reviewed and approved shortly.
