@@ -6,9 +6,9 @@
 [ci-style-status]: https://github.com/cesium/CeSIUMpeloMundo/actions/workflows/style.yml/badge.svg
 [ci-style-workflow]: https://github.com/cesium/CeSIUMpeloMundo/actions/workflows/style.yml
 
-# :world_map: CeSIUM pelo Mundo
+# CeSIUM pelo Mundo
 
-> A world map with the places we've been
+> :world_map: A world map with the places we've been
 
 [![Netlify Status][netlify-badge]][netlify-status]
 [![CI Style][ci-style-status]][ci-style-workflow]
