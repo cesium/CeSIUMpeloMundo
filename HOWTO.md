@@ -12,7 +12,7 @@
 
 **1.** Go to _your fork_ and click **Code**
 
-> **Note**  
+> **Note**
 > The link to your forked repository should be `https://github.com/<your-username>/CeSIUMpeloMundo`
 
 **2.** Copy the given HTTPS link
@@ -23,7 +23,7 @@
 git clone <https-link>
 ```
 
-> **Note**  
+> **Note**
 > If you'd rather clone with SSH, copy the SSH key and run `git clone <ssh-key>`
 
 **Now you have a copy of the repository you can work with.**
@@ -40,22 +40,22 @@ git checkout -b <branch>
 
 Where `<branch>` is the name of your branch.
 
-> **Note**  
+> **Note**
 > The name of your branch should follow the CeSIUM guidelines: `<first-letter-of-your-first-name><first-letter-of-your-last-name> + '/' + <branch-name>`.
 > For example: `af/readme`.
 
 ## 🗃️ Adding your pins
 
-**1.** Move to the `CeSIUMpeloMundo/public/photos` directory
+**1.** Move to the `public/photos` directory
 
 **2.** Create a folder and name it your GitHub username. You'll save your pictures here.
 
-**3.** Move to the `CeSIUMpeloMundo/data` directory and open the `places.json` file on your favorite editor
+**3.** Move to the `data` directory and open the `places.ts` file on your favorite editor
 
 **4.** Add a new object to the array containing:
 
 - `author` - your first and last name
-- `type` - pin type (**sticker** or **picture**)
+- `type` - pin type (**`ETheme.Sticker`** or **`ETheme.Picture`**)
 - `city` & `country` - city and country where the image was taken
 - `coordinates` - you can use [**this**](https://www.gps-coordinates.net/my-location) website
 - `date` - date of when the image was taken
@@ -63,19 +63,19 @@ Where `<branch>` is the name of your branch.
 
 **Check out this example:**
 
-```
+```typescript
   {
-    "author": "Luis Araújo",
-    "type": "sticker",
-    "city": "Madrid",
-    "country": "Spain",
-    "coordinates": [40.4213, -3.7011],
-    "date": "2021-07-06",
-    "photo": "/photos/laraujo7/madrid.jpg"
+    author: "Luis Araújo",
+    type: ETheme.Sticker,
+    city": "Madrid",
+    country": "Spain",
+    coordinates": [40.4213, -3.7011],
+    date: "2021-07-06",
+    photo: "/photos/laraujo7/madrid.jpg"
   }
 ```
 
-> **Warning**  
+> **Warning**
 > When placing a **sticker**, we appeal to everyone's common sense and civility. Don't vandalize.
 
 ## 🛫 Stage, commit and push your changes
@@ -108,7 +108,7 @@ git push
 
 **4.** Add a convenient title and description to your pull request
 
-> **Note**  
+> **Note**
 > Don't forget to assign a contributor or the **cesium/pelomundo** group for review.
 
 ## 🎉 You're done!
