@@ -1,73 +1,66 @@
-<h1>How to submit your photos to CeSIUM Pelo Mundo: </h1>
+# 📬 Submission Guide
 
-<h3>If you travelled recently and have pictures to share, this guide is for you!</h3>
+> Travelled recently? Have pictures to share? You're in the right place!
 
-<h2>Fork the repository</h2>
+## 🖇️ Forking the repository
 
-1. Go to [CeSIUM Pelo Mundo's repository](https://github.com/cesium/CeSIUMpeloMundo);
+**1.** Go to [CeSIUMpeloMundo](https://github.com/cesium/CeSIUMpeloMundo)
 
-2. Click on <b>Fork</b>.
+**2.** In the top right corner, click on **Fork**
 
-<h2>Clone the forked repository</h2>
+## 🔗 Cloning the forked repository to your machine
 
-1. Go to your fork and click <b>Code</b>;
+**1.** Go to *your fork* and click **Code**
 
-2. You can either choose to clone the repo through <b>HTTPS</b> or <b>SSH</b>.
+> **Note**  
+> The link to your forked repository should be `https://github.com/<your-username>/CeSIUMpeloMundo`
 
-   - If you choose to do it through HTTPS, copy the link `https://github.com/cesium/CeSIUMpeloMundo.git`, open the terminal and in the directory of your choice, run the following command:
+**2.** Copy the given HTTPS link
 
-   ```
-   git clone https://github.com/<your-github-username>/CeSIUMpeloMundo.git
-   ```
+**3.** On your terminal, run the following command:
 
-   - If you'd rather clone with SSH, copy `git@github.com:cesium/CeSIUMpeloMundo.git`, open the terminal and in the chosen directory, run:
+```
+git clone <https-link>
+```
+> **Note**  
+> If you'd rather clone with SSH, copy the SSH key and run `git clone <ssh-key>`
 
-   ```
-   git clone git@github.com:cesium/CeSIUMpeloMundo.git
-   ```
+**Now you have a copy of the repository you can work with.**
 
-Now you have a local copy of the repo.
+## ⛓️ Creating a branch
 
-<h2>Creating a branch</h2>
+**1.** Move to your cloned repository directory with `cd CeSIUMpeloMundo`
 
-1. On your directory, run this command to create a new branch and switch to it:
+**2.** Create a new branch with the following command:
 
 ```
 git checkout -b <branch>
 ```
 
-Where <branch> is the name of the branch.
+Where `<branch>` is the name of your branch.
 
-2. The name of the branch should follow the CeSIUM convention: `'first letter of first name' + 'first letter of last name'/'name of branch'`. Something like this:
+> **Note**  
+> The name of your branch should follow the CeSIUM guidelines: `<first-letter-of-your-first-name><first-letter-of-your-last-name> + '/' + <branch-name>`.
+> For example: `af/readme`.
 
-```
-af/howto
-```
+## 🗃️ Adding your pins
 
-The following command would look like this:
+**1.** Move to the `CeSIUMpeloMundo/public/photos` directory
 
-```
-git checkout -b af/howto
-```
+**2.** Create a folder and name it your GitHub username. You'll save your pictures here.
 
-<h2>Submitting your pins</h2>
+**3.** Move to the `CeSIUMpeloMundo/data` directory and open the `places.json` file on your favorite editor
 
-1. Go to the folder `public`;
+**4.** Add a new object to the array containing:
+   
+   - `author` - your first and last name
+   - `type` - pin type (**sticker** or **picture**)
+   - `city` & `country` - city and country where the image was taken
+   - `coordinates` - you can use [**this**](https://www.gps-coordinates.net/my-location) website
+   - `date` - date of when the image was taken
+   - `photo` - path to your image file
 
-2. Open the folder `photos`;
-
-3. Create another folder with your name or GitHub username. You'll save your photos here;
-
-4.Go to the `data` folder and click on the `places.json` file;
-
-5. Add:
-   - your name;
-   - the type of pin: "sticker", if you left a CeSIUM sticker, "image", if not;
-   - the city and country you visited;
-   - the coordinates of the picture;
-   - the date;
-   - the path to your image file.
-     You can check the example below:
+**Check out this example:**
 
 ```
   {
@@ -81,36 +74,41 @@ git checkout -b af/howto
   }
 ```
 
-<h2>Push changes</h2>
+> **Warning**  
+> When placing a **sticker**, we appeal to everyone's common sense and civility. Don't vandalize.
 
-1. After writing in your pin in your branch, commit your changes:
+## 🛫 Stage, commit and push your changes
 
-```
-git commit -m "message"
-```
-
-2. Push the changes to your git repository:
+**1.** Stage your changes:
 
 ```
-git push -u <remote> <your branch>
+git add .
 ```
 
-Here <remote> is the current branch's remote name (typically origin or main).
-
-Following the example above, the command would look like this:
+**2.** Commit your changes:
 
 ```
-git push -u main af/howto
+git commit -m "<commit-description>"
 ```
 
-<h2>Create pull request</h2>
+**3.** Push your changes to your forked repository:
 
-1. Go to your fork;
+```
+git push
+```
 
-2. Pick the branch you wish to merge (the one you created);
+## 🚀 Create a pull request
 
-3. Click on <b>Pull request</b>;
+**1.** Go to your fork
 
-4. Add a title and description to your pull request.
+**2.** Select the branch you created from the dropdown menu
 
-And you're done! We'll revise your submission and if everything is correct, visit [CeSIUM Pelo Mundo](https://pelomundo.cesium.di.uminho.pt/) and check out the pin you created!
+**3.** Click on **Pull request**
+
+**4.** Add a convenient title and description to your pull request
+
+## 🎉 You're done!
+
+If everything checks out, your submission will be reviewed and approved shortly.
+
+Visit the [CeSIUM Pelo Mundo](https://pelomundo.cesium.di.uminho.pt/) website and check out your pin!
