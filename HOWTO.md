@@ -10,7 +10,7 @@
 
 ## 🔗 Cloning the forked repository to your machine
 
-**1.** Go to *your fork* and click **Code**
+**1.** Go to _your fork_ and click **Code**
 
 > **Note**  
 > The link to your forked repository should be `https://github.com/<your-username>/CeSIUMpeloMundo`
@@ -22,6 +22,7 @@
 ```
 git clone <https-link>
 ```
+
 > **Note**  
 > If you'd rather clone with SSH, copy the SSH key and run `git clone <ssh-key>`
 
@@ -52,13 +53,13 @@ Where `<branch>` is the name of your branch.
 **3.** Move to the `CeSIUMpeloMundo/data` directory and open the `places.json` file on your favorite editor
 
 **4.** Add a new object to the array containing:
-   
-   - `author` - your first and last name
-   - `type` - pin type (**sticker** or **picture**)
-   - `city` & `country` - city and country where the image was taken
-   - `coordinates` - you can use [**this**](https://www.gps-coordinates.net/my-location) website
-   - `date` - date of when the image was taken
-   - `photo` - path to your image file
+
+- `author` - your first and last name
+- `type` - pin type (**sticker** or **picture**)
+- `city` & `country` - city and country where the image was taken
+- `coordinates` - you can use [**this**](https://www.gps-coordinates.net/my-location) website
+- `date` - date of when the image was taken
+- `photo` - path to your image file
 
 **Check out this example:**
 
