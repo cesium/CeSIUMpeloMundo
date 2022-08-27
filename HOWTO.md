@@ -64,19 +64,22 @@ Where `<branch>` is the name of your branch.
 **Check out this example:**
 
 ```typescript
-  {
-    author: "Luis Araújo",
-    type: ETheme.Sticker,
-    city": "Madrid",
-    country": "Spain",
-    coordinates": [40.4213, -3.7011],
-    date: "2021-07-06",
-    photo: "/photos/laraujo7/madrid.jpg"
-  }
+{
+  author: "Luis Araújo",
+  type: ETheme.Sticker,
+  city": "Madrid",
+  country": "Spain",
+  coordinates": [40.4213, -3.7011],
+  date: "2021-07-06",
+  photo: "/photos/laraujo7/madrid.jpg"
+}
 ```
 
 > **Warning**
 > When placing a **sticker**, we appeal to everyone's common sense and civility. Don't vandalize.
+
+> **Note**  
+> You can get a local preview of your changes by running the project on your machine, follow the [Contributing Guide](CONTRIBUTING.md) to know more.
 
 ## 🛫 Stage, commit and push your changes
 
