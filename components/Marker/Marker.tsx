@@ -1,41 +1,16 @@
 import { useMemo } from 'react';
 import Image from 'next/image';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
-import { Icon } from 'leaflet';
+
+import { IPin } from '~/lib/types';
 import {
   getFullDateString,
   getRelativeTimeString,
   getNameString
 } from '~/lib/utils';
+import { getIcon } from './utils';
 
 import styles from './style.module.css';
-
-type PinType = 'sticker' | 'picture' | 'special';
-
-export interface Pin {
-  author: string;
-  city: string;
-  country: string;
-  coordinates: [number, number];
-  date: string;
-  photo: string;
-  type?: PinType;
-  streetview?: string;
-}
-
-const getIcon = (type: PinType): Icon => {
-  switch (type) {
-    case 'sticker':
-    case 'picture':
-    case 'special':
-      return new Icon({
-        iconUrl: `/images/markers/${type}.png`,
-        iconSize: [45, 90]
-      });
-    default:
-      throw new Error(`Unknown action: ${type}`);
-  }
-};
 
 const Marker = ({
   type,
@@ -45,7 +20,7 @@ const Marker = ({
   author,
   photo,
   date
-}: Pin) => {
+}: IPin) => {
   const icon = getIcon(type);
   const name = useMemo(() => getNameString(author), [author]);
 
