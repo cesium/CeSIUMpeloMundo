@@ -62,3 +62,10 @@ export const sortByDistance = (a, b) => {
 
   return d1 - d2;
 };
+
+export function menu() {
+  if (document.getElementById('menu_checkbox').checked) {
+    return (document.getElementById('sidebar').style.display = 'block');
+  }
+  return (document.getElementById('sidebar').style.display = 'none');
+}

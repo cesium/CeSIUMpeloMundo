@@ -1,4 +1,9 @@
-import { MapContainer, LayersControl, LayerGroup } from 'react-leaflet';
+import {
+  MapContainer,
+  LayersControl,
+  LayerGroup,
+  ZoomControl
+} from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 
 import Marker from '~/components/Marker';
@@ -34,6 +39,7 @@ export default function Map({ pins }: { pins: IPin[] }) {
       zoom={3.4}
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
+      zoomControl={false}
     >
       <LayersControl position="topright">
         {DEFAULT_TILES.map((tile) => (
@@ -41,6 +47,7 @@ export default function Map({ pins }: { pins: IPin[] }) {
         ))}
         {DEFAULT_FILTERS.map((filter: IFilter) => filterPins(pins, filter))}
       </LayersControl>
+      <ZoomControl position="topright" />
     </MapContainer>
   );
 }
