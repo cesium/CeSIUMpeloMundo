@@ -2,13 +2,28 @@ import dynamic from 'next/dynamic';
 import { ThemeProvider } from '~/hooks/useTheme';
 
 import { PLACES } from '~/data/places';
+import Sidebar from '~/components/Sidebar';
+import { menu } from '~/lib/utils';
 
 const Map = dynamic(() => import('~/components/Map'), { ssr: false });
 
 export default function Home() {
   return (
-    <ThemeProvider>
-      <Map pins={PLACES} />
-    </ThemeProvider>
+    <div>
+      <input id="menu_checkbox" type={'checkbox'} onClick={menu} />
+      <label className="menu_label" htmlFor="menu_checkbox" title="Menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+      <div id="sidebar" className="sidebar">
+        <Sidebar pins={PLACES} />
+      </div>
+      <div className="map">
+        <ThemeProvider>
+          <Map pins={PLACES} />
+        </ThemeProvider>
+      </div>
+    </div>
   );
 }
