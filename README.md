@@ -13,6 +13,8 @@
 [![Netlify Status][netlify-badge]][netlify-status]
 [![CI Style][ci-style-status]][ci-style-workflow]
 
+Want to participate? Follow our [Submission Guide](HOWTO.md).
+
 ## 🤝 Contributing
 
 When contributing to this repository, please first discuss the change you wish
