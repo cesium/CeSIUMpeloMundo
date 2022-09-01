@@ -78,23 +78,14 @@ export const sortByLatest = (a, b) => {
     DateTime.fromISO(b.date).toMillis() - DateTime.fromISO(a.date).toMillis()
   );
 };
-/*
-export function menu() {
-  const input = document.getElementById(
-    'menu_checkbox'
-  ) as HTMLInputElement | null;
-  if (input.checked) {
-    return (document.getElementById('sidebar').style.display = 'block');
-  }
-  return (document.getElementById('sidebar').style.display = 'none');
-}
-*/
+
 export function menu() {
   const input = document.getElementById(
     'menu_checkbox'
   ) as HTMLInputElement | null;
   let box = document.getElementById('sidebar');
   let content = document.getElementById('content');
+
   if (input.checked) {
     box.classList.add('sidebar_show');
     setTimeout(function () {
@@ -106,4 +97,34 @@ export function menu() {
       box.classList.remove('sidebar_show');
     }, 400);
   }
+}
+
+export function byLatest() {
+  let latest = document.getElementById('latest');
+  let oldest = document.getElementById('oldest');
+  let distance = document.getElementById('distance');
+
+  latest.style.display = 'block';
+  oldest.style.display = 'none';
+  distance.style.display = 'none';
+}
+
+export function byOldest() {
+  let latest = document.getElementById('latest');
+  let oldest = document.getElementById('oldest');
+  let distance = document.getElementById('distance');
+
+  latest.style.display = 'none';
+  oldest.style.display = 'block';
+  distance.style.display = 'none';
+}
+
+export function byDistance() {
+  let latest = document.getElementById('latest');
+  let oldest = document.getElementById('oldest');
+  let distance = document.getElementById('distance');
+
+  latest.style.display = 'none';
+  oldest.style.display = 'none';
+  distance.style.display = 'block';
 }

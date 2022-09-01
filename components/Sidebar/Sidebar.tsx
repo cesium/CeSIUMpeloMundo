@@ -1,11 +1,17 @@
 import styles from './style.module.css';
-import { sortByDistance, sortByLatest } from '~/lib/utils';
+import {
+  sortByLatest,
+  sortByOldest,
+  sortByDistance,
+  byLatest,
+  byOldest,
+  byDistance
+} from '~/lib/utils';
 import Image from 'next/image';
 import type { IPin } from '~/lib/types';
 import Location from '../Location';
 
 export default function Sidebar({ pins }: { pins: IPin[] }) {
-  pins.sort(sortByLatest);
   return (
     <div>
       <div className={styles.heading}>
@@ -17,6 +23,7 @@ export default function Sidebar({ pins }: { pins: IPin[] }) {
         />
         <br></br>
         <div className={styles.buttons}>
+          {/*} - FOR FUTURE IMPLEMENTATION OF THE LEADERBOARD -
           <button className={styles.button} type={'button'} role="button">
             {' '}
             Locations{' '}
@@ -26,10 +33,52 @@ export default function Sidebar({ pins }: { pins: IPin[] }) {
             {' '}
             Leaderboard{' '}
           </button>
+          <br></br>
+          */}
+          <div style={{ paddingTop: '5px' }}>
+            <label>
+              <b>Sort by: </b>
+            </label>
+            <select className={styles.button}>
+              <option value="latest" onClick={byLatest}>
+                Latest
+              </option>
+              <option value="oldest" onClick={byOldest}>
+                Oldest
+              </option>
+              <option value="distance" onClick={byDistance}>
+                Distance
+              </option>
+            </select>
+          </div>
         </div>
       </div>
-      <div id="locations_list">
-        {pins.map((pin: IPin) => (
+      <div id="latest" style={{ display: 'block' }}>
+        {pins.sort(sortByLatest).map((pin: IPin) => (
+          <Location
+            type={pin.type}
+            city={pin.city}
+            country={pin.country}
+            author={pin.author}
+            date={pin.date}
+            key={null}
+          />
+        ))}
+      </div>
+      <div id="oldest" style={{ display: 'none' }}>
+        {pins.sort(sortByOldest).map((pin: IPin) => (
+          <Location
+            type={pin.type}
+            city={pin.city}
+            country={pin.country}
+            author={pin.author}
+            date={pin.date}
+            key={null}
+          />
+        ))}
+      </div>
+      <div id="distance" style={{ display: 'none' }}>
+        {pins.sort(sortByDistance).map((pin: IPin) => (
           <Location
             type={pin.type}
             city={pin.city}
