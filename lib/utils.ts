@@ -68,12 +68,16 @@ export const sortByDistance = (a, b) => {
 };
 
 export const sortByOldest = (a, b) => {
-  return DateTime.fromISO(a.date).toMillis() - DateTime.fromISO(b.date).toMillis();
-}
+  return (
+    DateTime.fromISO(a.date).toMillis() - DateTime.fromISO(b.date).toMillis()
+  );
+};
 
 export const sortByLatest = (a, b) => {
-  return DateTime.fromISO(b.date).toMillis() - DateTime.fromISO(a.date).toMillis();
-}
+  return (
+    DateTime.fromISO(b.date).toMillis() - DateTime.fromISO(a.date).toMillis()
+  );
+};
 /*
 export function menu() {
   const input = document.getElementById(
@@ -96,8 +100,7 @@ export function menu() {
     setTimeout(function () {
       content.classList.add('content_show');
     }, 400);
-  }
-  else {
+  } else {
     content.classList.remove('content_show');
     setTimeout(function () {
       box.classList.remove('sidebar_show');
