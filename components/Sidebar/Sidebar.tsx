@@ -1,13 +1,13 @@
 import styles from './style.module.css';
-import { sortByDistance } from '~/lib/utils';
+import { sortByDistance, sortByLatest } from '~/lib/utils';
 import Image from 'next/image';
 import type { IPin } from '~/lib/types';
 import Location from '../Location';
 
 export default function Sidebar({ pins }: { pins: IPin[] }) {
-  pins.sort(sortByDistance);
+  pins.sort(sortByLatest);
   return (
-    <div className={styles.list}>
+    <div>
       <div className={styles.heading}>
         <Image
           src="/images/cesium.png"

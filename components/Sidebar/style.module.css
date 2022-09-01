@@ -8,12 +8,6 @@
   font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
 }
 
-.list {
-  overflow: scroll;
-  height: 100%;
-  z-index: 2;
-}
-
 .buttons {
   padding: 10px;
 }

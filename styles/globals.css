@@ -32,7 +32,7 @@ body {
 
 .sidebar {
   position: absolute;
-  width: auto;
+  width: 0;
   height: 100%;
   top: 0;
   left: 0;
@@ -43,13 +43,28 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 2;
   background-color: white;
-  display: none;
+  transition: width 0.5s;
+}
+
+.sidebar_show {
+  width: 438px;
+}
+
+.content {
+  height: 100%;
+  overflow: scroll;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.content_show {
+  opacity: 1;
 }
 
 @media (max-width: 438px) {
   .sidebar {
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 100%;
     top: 0;
     left: 0;
@@ -60,7 +75,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
     background-color: white;
-    display: none;
+    transition: width 0.5s;
+  }
+
+  .sidebar_show {
+    width: 100%;
   }
 }
 

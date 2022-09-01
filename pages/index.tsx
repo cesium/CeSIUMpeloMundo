@@ -17,7 +17,9 @@ export default function Home() {
         <div></div>
       </label>
       <div id="sidebar" className="sidebar">
-        <Sidebar pins={PLACES} />
+        <div id="content" className="content">
+          <Sidebar pins={PLACES} />
+        </div>
       </div>
       <div className="map">
         <ThemeProvider>
