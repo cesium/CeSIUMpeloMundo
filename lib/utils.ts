@@ -67,6 +67,14 @@ export const sortByDistance = (a, b) => {
   return d1 - d2;
 };
 
+export const sortByOldest = (a, b) => {
+  return DateTime.fromISO(a.date).toMillis() - DateTime.fromISO(b.date).toMillis();
+}
+
+export const sortByLatest = (a, b) => {
+  return DateTime.fromISO(b.date).toMillis() - DateTime.fromISO(a.date).toMillis();
+}
+/*
 export function menu() {
   const input = document.getElementById(
     'menu_checkbox'
@@ -75,4 +83,24 @@ export function menu() {
     return (document.getElementById('sidebar').style.display = 'block');
   }
   return (document.getElementById('sidebar').style.display = 'none');
+}
+*/
+export function menu() {
+  const input = document.getElementById(
+    'menu_checkbox'
+  ) as HTMLInputElement | null;
+  let box = document.getElementById('sidebar');
+  let content = document.getElementById('content');
+  if (input.checked) {
+    box.classList.add('sidebar_show');
+    setTimeout(function () {
+      content.classList.add('content_show');
+    }, 400);
+  }
+  else {
+    content.classList.remove('content_show');
+    setTimeout(function () {
+      box.classList.remove('sidebar_show');
+    }, 400);
+  }
 }
