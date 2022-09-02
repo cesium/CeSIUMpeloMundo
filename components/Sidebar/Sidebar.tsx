@@ -1,29 +1,58 @@
-import styles from './style.module.css';
-import {
-  sortByLatest,
-  sortByOldest,
-  sortByDistance,
-  byLatest,
-  byOldest,
-  byDistance
-} from '~/lib/utils';
+import { useMemo, useState } from 'react';
+import { Transition } from '@headlessui/react';
+import { sortByLatest, sortByOldest, sortByDistance } from '~/lib/utils';
 import Image from 'next/image';
 import type { IPin } from '~/lib/types';
-import Location from '../Location';
+import Location from '~/components/Location';
 
-export default function Sidebar({ pins }: { pins: IPin[] }) {
+import styles from './style.module.css';
+interface Props {
+  pins: IPin[];
+  isOpen: boolean;
+}
+
+enum ESortKeys {
+  Latest = 'Latest',
+  Oldest = 'Oldest',
+  Distance = 'Distance'
+}
+
+const sortingFunctions = {
+  [ESortKeys.Latest]: sortByLatest,
+  [ESortKeys.Oldest]: sortByOldest,
+  [ESortKeys.Distance]: sortByDistance
+};
+
+export default function Sidebar({ pins, isOpen }: Props) {
+  const [sortKey, setSortKey] = useState<ESortKeys>(ESortKeys.Latest);
+  const sortedPins = useMemo(
+    () => pins.sort(sortingFunctions[sortKey]),
+    [pins, sortKey]
+  );
+
   return (
-    <div>
-      <div className={styles.heading}>
-        <Image
-          src="/images/cesium.png"
-          alt="CeSIUM Logo"
-          width={180}
-          height={61}
-        />
-        <br></br>
-        <div className={styles.buttons}>
-          {/*} - FOR FUTURE IMPLEMENTATION OF THE LEADERBOARD -
+    <Transition
+      show={isOpen}
+      enter="transition duration-100 ease-out"
+      enterFrom="transform scale-95 opacity-0"
+      enterTo="transform scale-100 opacity-100"
+      leave="transition duration-75 ease-out"
+      leaveFrom="transform scale-100 opacity-100"
+      leaveTo="transform scale-95 opacity-0"
+    >
+      <div className={styles.sidebar}>
+        <div className={styles.content}>
+          <div>
+            <div className={styles.heading}>
+              <Image
+                src="/images/cesium.png"
+                alt="CeSIUM Logo"
+                width={180}
+                height={61}
+              />
+              <br></br>
+              <div className={styles.buttons}>
+                {/*} - FOR FUTURE IMPLEMENTATION OF THE LEADERBOARD -
           <button className={styles.button} type={'button'} role="button">
             {' '}
             Locations{' '}
@@ -35,60 +64,36 @@ export default function Sidebar({ pins }: { pins: IPin[] }) {
           </button>
           <br></br>
           */}
-          <div style={{ paddingTop: '5px' }}>
-            <label>
-              <b>Sort by: </b>
-            </label>
-            <select className={styles.button}>
-              <option value="latest" onClick={byLatest}>
-                Latest
-              </option>
-              <option value="oldest" onClick={byOldest}>
-                Oldest
-              </option>
-              <option value="distance" onClick={byDistance}>
-                Distance
-              </option>
-            </select>
+                <div style={{ paddingTop: '5px' }}>
+                  <label>
+                    <b>Sort by: </b>
+                  </label>
+                  <select
+                    onChange={(e) => setSortKey(e.target.value as ESortKeys)}
+                    className={styles.button}
+                  >
+                    {Object.keys(ESortKeys).map((key) => (
+                      <option key={key} value={key}>
+                        {key}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+            {sortedPins.map((pin: IPin) => (
+              <Location
+                key={`${pin.coordinates[0]}#${pin.coordinates[1]}`}
+                type={pin.type}
+                city={pin.city}
+                country={pin.country}
+                author={pin.author}
+                date={pin.date}
+              />
+            ))}
           </div>
         </div>
       </div>
-      <div id="latest" style={{ display: 'block' }}>
-        {pins.sort(sortByLatest).map((pin: IPin) => (
-          <Location
-            type={pin.type}
-            city={pin.city}
-            country={pin.country}
-            author={pin.author}
-            date={pin.date}
-            key={null}
-          />
-        ))}
-      </div>
-      <div id="oldest" style={{ display: 'none' }}>
-        {pins.sort(sortByOldest).map((pin: IPin) => (
-          <Location
-            type={pin.type}
-            city={pin.city}
-            country={pin.country}
-            author={pin.author}
-            date={pin.date}
-            key={null}
-          />
-        ))}
-      </div>
-      <div id="distance" style={{ display: 'none' }}>
-        {pins.sort(sortByDistance).map((pin: IPin) => (
-          <Location
-            type={pin.type}
-            city={pin.city}
-            country={pin.country}
-            author={pin.author}
-            date={pin.date}
-            key={null}
-          />
-        ))}
-      </div>
-    </div>
+    </Transition>
   );
 }

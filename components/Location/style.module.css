@@ -1,4 +1,6 @@
 .listings {
+  display: flex;
+  justify-content: flex-start;
   height: 100%;
   padding: 20px;
   border-bottom: 1px solid #eee;
@@ -11,15 +13,23 @@
 }
 
 .marker {
-  float: left;
   height: 58px;
   width: 58px;
-  padding-top: 2px;
+  padding: 5px 10px 5px 0;
 }
 
 .text {
-  display: inline-block;
-  padding-left: 20px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.authors {
+  max-width: 100px;
+  white-space: wrap;
+}
+
+.paragraph {
+  margin: 0;
 }
 
 @media (max-width: 438px) {

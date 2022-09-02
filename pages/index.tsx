@@ -3,24 +3,18 @@ import { ThemeProvider } from '~/hooks/useTheme';
 
 import { PLACES } from '~/data/places';
 import Sidebar from '~/components/Sidebar';
-import { menu } from '~/lib/utils';
+import Menu from '~/components/Menu';
+import { useState } from 'react';
 
 const Map = dynamic(() => import('~/components/Map'), { ssr: false });
 
 export default function Home() {
+  const [isOpen, setOpen] = useState<boolean>(false);
+
   return (
     <div>
-      <input id="menu_checkbox" type={'checkbox'} onClick={menu} />
-      <label className="menu_label" htmlFor="menu_checkbox" title="Menu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </label>
-      <div id="sidebar" className="sidebar">
-        <div id="content" className="content">
-          <Sidebar pins={PLACES} />
-        </div>
-      </div>
+      <Menu isOpen={isOpen} setOpen={setOpen} />
+      <Sidebar isOpen={isOpen} pins={PLACES} />
       <div className="map">
         <ThemeProvider>
           <Map pins={PLACES} />

@@ -21,14 +21,17 @@ const Location = ({ type, city, country, author, date }) => {
         />
       </div>
       <div className={styles.text}>
-        <b>
-          {' '}
-          {city}, {country}{' '}
-        </b>
-        <br></br>
-        {date && <i>{getRelativeTimeString(date)}</i>}
-        <br />
-        <span>{name}</span>
+        <p className={styles.paragraph}>
+          <b>
+            {city}, {country}
+          </b>
+        </p>
+        <p className={styles.paragraph}>
+          {date && <i>{getRelativeTimeString(date)}</i>}
+        </p>
+        <p className={styles.paragraph}>
+          <span className={styles.authors}>{name}</span>
+        </p>
       </div>
     </div>
   );
