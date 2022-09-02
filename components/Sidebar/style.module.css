@@ -42,50 +42,14 @@
   height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow: scroll;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 2;
   background-color: white;
-}
-
-.entering {
-  transition: transform 0.5s;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-
-.leaving {
-  transition: transform 0.5s;
-  animation: 1s ease-out 0s 1 slideOutToLeft;
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOutToLeft {
-  100% {
-    transform: translateX(-100%);
-  }
-  0% {
-    transform: translateX(0);
-  }
-}
-
-.closed {
-  transform: translateX(-100%);
-}
-
-.content {
-  height: 100%;
-  overflow: scroll;
+  direction: rtl;
 }
 
 @media (max-width: 438px) {
@@ -95,13 +59,36 @@
     height: 100%;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow: scroll;
     border-right: 0px solid rgba(0, 0, 0, 0.25);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
     background-color: white;
-    transition: width 0.5s;
+    direction: rtl;
   }
+}
+
+.slide_enter {
+  transform: translateX(-100%);
+}
+
+.slide_enter_active {
+  transform: translateX(0);
+  transition: transform 500ms;
+}
+
+.slide_exit {
+  transform: translateX(0);
+}
+
+.slide_exit_active {
+  transform: translateX(-100%);
+  transition: transform 500ms;
+}
+
+.content {
+  height: 100%;
+  direction: ltr;
 }

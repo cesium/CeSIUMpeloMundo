@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
-import { Transition } from '@headlessui/react';
 import { sortByLatest, sortByOldest, sortByDistance } from '~/lib/utils';
 import Image from 'next/image';
 import type { IPin } from '~/lib/types';
 import Location from '~/components/Location';
-
 import styles from './style.module.css';
+import { CSSTransition } from 'react-transition-group';
+
 interface Props {
   pins: IPin[];
   isOpen: boolean;
@@ -31,14 +31,16 @@ export default function Sidebar({ pins, isOpen }: Props) {
   );
 
   return (
-    <Transition
-      show={isOpen}
-      enter="transition duration-100 ease-out"
-      enterFrom="transform scale-95 opacity-0"
-      enterTo="transform scale-100 opacity-100"
-      leave="transition duration-75 ease-out"
-      leaveFrom="transform scale-100 opacity-100"
-      leaveTo="transform scale-95 opacity-0"
+    <CSSTransition
+      in={isOpen}
+      timeout={500}
+      classNames={{
+        enter: styles.slide_enter,
+        enterActive: styles.slide_enter_active,
+        exit: styles.slide_exit,
+        exitActive: styles.slide_exit_active
+      }}
+      unmountOnExit
     >
       <div className={styles.sidebar}>
         <div className={styles.content}>
@@ -52,18 +54,18 @@ export default function Sidebar({ pins, isOpen }: Props) {
               />
               <br></br>
               <div className={styles.buttons}>
-                {/*} - FOR FUTURE IMPLEMENTATION OF THE LEADERBOARD -
-          <button className={styles.button} type={'button'} role="button">
-            {' '}
-            Locations{' '}
-          </button>
-          &nbsp;
-          <button className={styles.button} type={'button'} role="button">
-            {' '}
-            Leaderboard{' '}
-          </button>
-          <br></br>
-          */}
+                {/* - FOR FUTURE IMPLEMENTATION OF THE LEADERBOARD -
+                  <button className={styles.button} type={'button'} role="button">
+                    {' '}
+                    Locations{' '}
+                  </button>
+                  &nbsp;
+                  <button className={styles.button} type={'button'} role="button">
+                    {' '}
+                    Leaderboard{' '}
+                  </button>
+                  <br></br>
+                */}
                 <div style={{ paddingTop: '5px' }}>
                   <label>
                     <b>Sort by: </b>
@@ -94,6 +96,6 @@ export default function Sidebar({ pins, isOpen }: Props) {
           </div>
         </div>
       </div>
-    </Transition>
+    </CSSTransition>
   );
 }

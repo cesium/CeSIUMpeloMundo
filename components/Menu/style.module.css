@@ -7,7 +7,7 @@
   width: 30px;
   height: 30px;
   transform: translateY(-50%);
-  transition: 0.3s ease transform;
+  transition: 0.5s ease transform;
   cursor: pointer;
   z-index: 3;
   overflow: hidden;
@@ -17,13 +17,49 @@
   box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.3);
 }
 
+.line {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(255, 118, 73);
+  margin-left: 0;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom,
+    0.3s ease background-color;
+}
+
+.line:first-child {
+  width: 22px;
+}
+
+.line:nth-child(2) {
+  width: 15px;
+}
+
+.line:last-child {
+  width: 30px;
+  margin-bottom: 0;
+}
+
 .open {
   transform: translateY(-50%) rotateZ(-90deg);
 }
 
-.shortlines {
+.open_line {
   width: 6px;
   margin-left: 12px;
   margin-bottom: 3px;
   background-color: rgb(255, 118, 73);
+}
+
+.open_line:first-child {
+  width: 6px;
+}
+
+.open_line:nth-child(2) {
+  width: 6px;
+}
+
+.open_line:last-child {
+  width: 6px;
 }

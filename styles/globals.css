@@ -29,27 +29,3 @@ body {
   position: relative;
   z-index: 1;
 }
-
-label div {
-  width: 6px;
-  height: 6px;
-  background-color: rgb(255, 118, 73);
-  margin-left: 0;
-  margin-bottom: 6px;
-  border-radius: 4px;
-  transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom,
-    0.3s ease background-color;
-}
-
-label div:first-child {
-  width: 22px;
-}
-
-label div:nth-child(2) {
-  width: 15px;
-}
-
-label div:last-child {
-  width: 30px;
-  margin-bottom: 0;
-}

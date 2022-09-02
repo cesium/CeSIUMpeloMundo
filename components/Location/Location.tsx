@@ -22,7 +22,7 @@ const Location = ({ type, city, country, author, date }) => {
       </div>
       <div className={styles.text}>
         <p className={styles.paragraph}>
-          <b>
+          <b className={styles.title}>
             {city}, {country}
           </b>
         </p>

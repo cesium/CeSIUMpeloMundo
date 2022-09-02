@@ -15,7 +15,7 @@
 .marker {
   height: 58px;
   width: 58px;
-  padding: 5px 10px 5px 0;
+  padding: 10px 10px 5px 0;
 }
 
 .text {
@@ -30,6 +30,10 @@
 
 .paragraph {
   margin: 0;
+}
+
+.title {
+  font-size: 17px;
 }
 
 @media (max-width: 438px) {
@@ -50,9 +54,12 @@
   }
 
   .marker {
-    float: left;
-    height: 47px;
-    width: 47px;
-    padding-top: 9px;
+    height: 55px;
+    width: 55px;
+    padding: 10px 0px 5px 0px;
+  }
+
+  .title {
+    font-size: 15.2px;
   }
 }
