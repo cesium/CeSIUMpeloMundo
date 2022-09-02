@@ -27,6 +27,7 @@
     "test:format": "prettier --check . --ignore-path .gitignore"
   },
   "dependencies": {
+    "@types/react-transition-group": "^4.4.5",
     "classnames": "^2.3.1",
     "leaflet": "^1.8.0",
     "leaflet.markercluster": "^1.5.3",
