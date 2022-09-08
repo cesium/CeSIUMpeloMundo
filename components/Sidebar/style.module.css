@@ -9,7 +9,7 @@
 }
 
 .buttons {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 .button {
@@ -70,6 +70,11 @@
   }
 }
 
+.content {
+  height: 100%;
+  direction: ltr;
+}
+
 .slide_enter {
   transform: translateX(-100%);
 }
@@ -88,7 +93,38 @@
   transition: transform 500ms;
 }
 
-.content {
-  height: 100%;
-  direction: ltr;
+.locations_enter {
+  transform: translateX(-100%);
+}
+
+.locations_enter_active {
+  transform: translateX(0);
+  transition: transform 250ms;
+}
+
+.locations_exit {
+  transform: translateX(0);
+}
+
+.locations_exit_active {
+  transform: translateX(-100%);
+  transition: transform 250ms;
+}
+
+.leaderboard_enter {
+  transform: translateX(100%);
+}
+
+.leaderboard_enter_active {
+  transform: translateX(0);
+  transition: transform 250ms;
+}
+
+.leaderboard_exit {
+  transform: translateX(0);
+}
+
+.leaderboard_exit_active {
+  transform: translateX(100%);
+  transition: transform 250ms;
 }
