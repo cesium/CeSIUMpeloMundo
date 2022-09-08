@@ -26,11 +26,11 @@ export const getNameString = (authors: string[] | string) => {
     return authors.join();
   }
 
-  if (size > 3) {
-    return authors.slice(0, 2).join(', ') + ' and ' + (size - 2) + ' others';
+  if (size <= 3) {
+    return authors.slice(0, size - 1).join(', ') + ' and ' + authors[size - 1];
   }
 
-  return authors.slice(0, size - 1).join(', ') + ' and ' + authors[size - 1];
+  return authors.slice(0, 2).join(', ') + ' and ' + (size - 2) + ' others';
 };
 
 function distance(lat1, lat2, lon1, lon2) {

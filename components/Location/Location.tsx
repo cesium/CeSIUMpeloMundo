@@ -1,9 +1,5 @@
 import Image from 'next/image';
-import {
-  getFullDateString,
-  getRelativeTimeString,
-  getNameString
-} from '~/lib/utils';
+import { getRelativeTimeString, getNameString } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
 
