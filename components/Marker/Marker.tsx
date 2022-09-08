@@ -50,7 +50,7 @@ const Marker = ({
             src={photo}
             layout="fill"
             objectFit="cover"
-            style={{ borderRadius: '10px', overflow: 'hidden' }}
+            style={{ borderRadius: '12px', overflow: 'hidden' }}
           />
         </div>
       </Popup>

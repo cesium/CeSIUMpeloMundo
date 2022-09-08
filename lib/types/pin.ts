@@ -1,7 +1,8 @@
 export enum EPinType {
   Sticker = 'sticker',
   Picture = 'picture',
-  Special = 'special'
+  Special = 'special',
+  Leader = 'leader'
 }
 
 export interface IPin {

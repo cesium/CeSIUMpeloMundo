@@ -1,7 +1,7 @@
 .listings {
   display: flex;
   justify-content: flex-start;
-  height: 100%;
+  height: auto;
   padding: 20px;
   border-bottom: 1px solid #eee;
 

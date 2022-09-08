@@ -229,7 +229,7 @@ export const PLACES: IPin[] = [
     photo: '/photos/feliciofilipe,matildeopbravo/pula.jpg'
   },
   {
-    author: ['Filipe Felício', 'Matilde Bravo', 'José Nuno Macedo'],
+    author: ['Filipe Felício', 'Matilde Bravo', 'José Macedo'],
     type: EPinType.Picture,
     city: 'Ljubljana',
     country: 'Slovenia',
