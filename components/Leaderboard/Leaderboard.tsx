@@ -1,5 +1,6 @@
 import styles from './style.module.css';
 import { PLACES } from '~/data/places';
+import { sortByOldest } from '~/lib/utils';
 
 interface Player {
   author: string;
@@ -9,13 +10,16 @@ interface Player {
 function makeLeaderboard(places) {
   const authors = [];
   const leaderboard = [];
-  for (var i = 0; i < places.length; i++) {
-    if (Array.isArray(places[i].author)) {
-      for (var j = 0; j < places[i].author.length; j++) {
-        authors.push(places[i].author[j]);
+
+  const sortedPlaces = places.sort(sortByOldest);
+
+  for (var i = 0; i < sortedPlaces.length; i++) {
+    if (Array.isArray(sortedPlaces[i].author)) {
+      for (var j = 0; j < sortedPlaces[i].author.length; j++) {
+        authors.push(sortedPlaces[i].author[j]);
       }
     } else {
-      authors.push(places[i].author);
+      authors.push(sortedPlaces[i].author);
     }
   }
   const authorsSet = [...new Set(authors)];
@@ -44,65 +48,50 @@ function getOrdinals(num: number) {
   }
 }
 
-function getPlural(num: number) {
-  if (num === 1) {
-    return '';
-  } else {
-    return 's';
+function getBarStyle(num: number) {
+  switch (num) {
+    case 0:
+      return styles.bar_first;
+    case 1:
+      return styles.bar_second;
+    case 2:
+      return styles.bar_third;
+    default:
+      return styles.bar;
   }
 }
 
-function getPositionStyle(num: number) {
-  switch (num) {
-    case 0:
-      return styles.position_first;
-    case 1:
-      return styles.position_second;
-    case 2:
-      return styles.position_third;
-    default:
-      return styles.position;
-  }
-}
+function getWidth(index: number, leaderboard: Player[]) {
+  const maxPins = leaderboard[0].pins;
+  const pins = leaderboard[index].pins;
 
-function getPinsStyle(num: number) {
-  switch (num) {
-    case 0:
-    case 1:
-    case 2:
-      return styles.pins_top;
-    default:
-      return styles.pins;
-  }
-}
-
-function getNameStyle(num: number) {
-  switch (num) {
-    case 0:
-    case 1:
-    case 2:
-      return styles.name_top;
-    default:
-      return styles.name;
-  }
+  return (pins * 100) / maxPins + '%';
 }
 
 export default function Leaderboard() {
   const leaderboard = makeLeaderboard(PLACES);
   leaderboard.sort((a: Player, b: Player) => b.pins - a.pins);
   return (
-    <div>
+    <div className={styles.leaderboard}>
       {leaderboard.map((player: Player, index) => (
-        <div key={player.author} className={styles.line}>
-          <div className={getPositionStyle(index)}>
-            <b>
+        <div className={styles.line} key={index}>
+          <div className={styles.info}>
+            <div className={styles.position}>
+              {' '}
               {index + 1}
-              <sup>{getOrdinals(index)}</sup>
-            </b>
+              {getOrdinals(index)}{' '}
+            </div>
+            <div className={styles.name}> {player.author} </div>
+            <div className={styles.pins}>
+              {' '}
+              {player.pins} <i className="bi bi-pin-fill"></i>
+            </div>
           </div>
-          <div className={getNameStyle(index)}>{player.author}</div>
-          <div className={getPinsStyle(index)}>
-            {player.pins} Pin{getPlural(player.pins)}
+          <div className={styles.progress}>
+            <div
+              className={getBarStyle(index)}
+              style={{ width: getWidth(index, leaderboard) }}
+            ></div>
           </div>
         </div>
       ))}
