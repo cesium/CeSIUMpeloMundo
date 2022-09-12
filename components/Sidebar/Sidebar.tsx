@@ -108,16 +108,7 @@ export default function Sidebar({ pins, isOpen }: Props) {
             unmountOnExit
           >
             <div>
-              <div
-                style={{
-                  padding: '10px',
-                  textAlign: 'center',
-                  borderBottom: '1px solid #eee',
-                  fontFamily:
-                    'Haas Grot Text R Web, Helvetica Neue, Helvetica, Arial, sans-serif',
-                  fontSize: '14px'
-                }}
-              >
+              <div className={styles.sort}>
                 <label>
                   <b>Sort by: </b>
                 </label>
@@ -126,11 +117,7 @@ export default function Sidebar({ pins, isOpen }: Props) {
                   className={styles.button}
                 >
                   {Object.keys(ESortKeys).map((key) => (
-                    <option
-                      key={key}
-                      value={key}
-                      style={{ textAlign: 'center' }}
-                    >
+                    <option key={key} value={key}>
                       {key}
                     </option>
                   ))}
