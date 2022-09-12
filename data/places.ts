@@ -263,5 +263,14 @@ export const PLACES: IPin[] = [
     coordinates: [40.9588846, -5.6693875],
     date: '2022-08-16',
     photo: '/photos/mariorodrigues10/salamanca.jpg'
+  },
+  {
+    author: 'Vitor Lelis',
+    type: EPinType.Sticker,
+    city: 'Campos dos Goytacazes',
+    country: 'Brazil',
+    coordinates: [-21.758310, -41.337461],
+    date: '2022-09-12',
+    photo: '/photos/VitorLelis/campos-rio.jpg'
   }
 ];
