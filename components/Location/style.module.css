@@ -7,7 +7,7 @@
 
   color: #404040;
   text-decoration: none;
-  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  font: 400 15px/22px 'Rubik', sans-serif;
 
   z-index: 2;
 }
@@ -33,7 +33,7 @@
 }
 
 .title {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 @media (max-width: 438px) {
@@ -44,7 +44,7 @@
 
     color: #404040;
     text-decoration: none;
-    font: 400 13.2px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    font: 400 13.2px/20.2px 'Rubik', sans-serif;
 
     z-index: 2;
   }
@@ -60,6 +60,6 @@
   }
 
   .title {
-    font-size: 15.2px;
+    font-size: 14.2px;
   }
 }
