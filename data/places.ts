@@ -3,6 +3,7 @@ import { IPin, EPinType } from '~/lib/types';
 export const PLACES: IPin[] = [
   {
     author: 'Luis Araújo',
+    username: 'laraujo7',
     type: EPinType.Sticker,
     city: 'Madrid',
     country: 'Spain',
@@ -12,6 +13,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Luis Araújo',
+    username: 'laraujo7',
     type: EPinType.Sticker,
     city: 'Barcelona',
     country: 'Spain',
@@ -21,6 +23,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Nelson Estevão',
+    username: 'nelsonmestevao',
     type: EPinType.Sticker,
     city: 'Helsinki',
     country: 'Finland',
@@ -30,6 +33,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Nelson Estevão',
+    username: 'nelsonmestevao',
     type: EPinType.Special,
     city: 'Gualtar',
     country: 'Portugal',
@@ -39,6 +43,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Nelson Estevão',
+    username: 'nelsonmestevao',
     type: EPinType.Sticker,
     city: 'London',
     country: 'United Kingdom',
@@ -50,6 +55,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Nelson Estevão',
+    username: 'nelsonmestevao',
     type: EPinType.Sticker,
     city: 'Porto',
     country: 'Portugal',
@@ -59,6 +65,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Francisco Lira',
+    username: 'FranciscoLira',
     type: EPinType.Sticker,
     city: 'Bern',
     country: 'Switzerland',
@@ -68,6 +75,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Francisco Lira',
+    username: 'FranciscoLira',
     type: EPinType.Sticker,
     city: 'Köniz',
     country: 'Switzerland',
@@ -77,6 +85,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Filipe Felício',
+    username: 'feliciofilipe',
     type: EPinType.Sticker,
     city: 'Amesterdam',
     country: 'Netherlands',
@@ -86,6 +95,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Filipe Felício',
+    username: 'feliciofilipe',
     type: EPinType.Sticker,
     city: 'London',
     country: 'United Kingdom',
@@ -95,6 +105,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício', 'Nelson Estevão'],
+    username: ['feliciofilipe', 'nelsonmestevao'],
     type: EPinType.Picture,
     city: 'London',
     country: 'United Kingdom',
@@ -104,6 +115,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'João Correia',
+    username: 'jpcorreia99',
     type: EPinType.Sticker,
     city: 'EPFL, Lausanne',
     country: 'Switzerland',
@@ -113,6 +125,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'João Correia',
+    username: 'jpcorreia99',
     type: EPinType.Sticker,
     city: 'Mt. Pilatus, Lucerne',
     country: 'Switzerland',
@@ -122,6 +135,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'João Correia',
+    username: 'jpcorreia99',
     type: EPinType.Sticker,
     city: 'Dublin',
     country: 'Ireland',
@@ -131,6 +145,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Daniel Pereira',
+    username: 'danielpereira',
     type: EPinType.Sticker,
     city: 'Santa Cruz',
     country: 'United States of America',
@@ -140,6 +155,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Gerson Júnior',
+    username: 'GresosJ',
     type: EPinType.Sticker,
     city: 'Roma',
     country: 'Italy',
@@ -149,6 +165,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Gerson Júnior',
+    username: 'GresosJ',
     type: EPinType.Sticker,
     city: 'Napoli',
     country: 'Italy',
@@ -158,6 +175,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Gerson Júnior',
+    username: 'GresosJ',
     type: EPinType.Sticker,
     city: 'San Giorgio, Albanese',
     country: 'Italy',
@@ -167,6 +185,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Filipe Felício',
+    username: 'feliciofilipe',
     type: EPinType.Sticker,
     city: 'Rijeka',
     country: 'Croatia',
@@ -176,6 +195,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Filipe Felício',
+    username: 'feliciofilipe',
     type: EPinType.Sticker,
     city: 'Zagreb',
     country: 'Croatia',
@@ -185,6 +205,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
+    username: ['feliciofilipe', 'matildeopbravo'],
     type: EPinType.Sticker,
     city: 'Zagreb',
     country: 'Croatia',
@@ -194,6 +215,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
+    username: ['feliciofilipe', 'matildeopbravo'],
     type: EPinType.Sticker,
     city: 'Zagreb',
     country: 'Croatia',
@@ -203,6 +225,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo', 'Mariana Rodrigues'],
+    username: ['feliciofilipe', 'matildeopbravo', 'marianarodrigues'],
     type: EPinType.Picture,
     city: 'Rijeka',
     country: 'Croatia',
@@ -212,6 +235,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
+    username: ['feliciofilipe', 'matildeopbravo'],
     type: EPinType.Sticker,
     city: 'Trieste',
     country: 'Italy',
@@ -221,6 +245,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
+    username: ['feliciofilipe', 'matildeopbravo'],
     type: EPinType.Sticker,
     city: 'Pula',
     country: 'Croatia',
@@ -230,6 +255,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo', 'José Macedo'],
+    username: ['feliciofilipe', 'matildeopbravo', 'josemacedo'],
     type: EPinType.Picture,
     city: 'Ljubljana',
     country: 'Slovenia',
@@ -239,6 +265,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Diogo Matos',
+    username: 'sassypocoyo',
     type: EPinType.Sticker,
     city: 'Zambujeira do Mar',
     country: 'Portugal',
@@ -248,6 +275,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Filipe Felício',
+    username: 'feliciofilipe',
     type: EPinType.Picture,
     city: 'Barcelona',
     country: 'Spain',
@@ -257,6 +285,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Mário Rodrigues',
+    username: 'mariorodrigues10',
     type: EPinType.Sticker,
     city: 'Salamanca',
     country: 'Spain',

@@ -7,6 +7,7 @@ export enum EPinType {
 
 export interface IPin {
   author: string | string[];
+  username: string | string[];
   city: string;
   country: string;
   coordinates: [number, number];
