@@ -5,7 +5,6 @@ import {
   ZoomControl
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
-
 import Marker from '~/components/Marker';
 import TileController from '~/components/TileController/TileController';
 import type { IPin } from '~/lib/types';

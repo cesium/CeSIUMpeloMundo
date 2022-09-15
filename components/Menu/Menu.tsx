@@ -1,10 +1,6 @@
 import classnames from 'classnames';
 import styles from './style.module.css';
-
-interface Props {
-  isOpen: boolean;
-  setOpen: (boolean) => void;
-}
+import { Props } from './types';
 
 export default function Menu({ isOpen, setOpen }: Props) {
   return (

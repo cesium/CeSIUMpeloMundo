@@ -1,42 +1,12 @@
 import { useMemo, useState } from 'react';
-import { sortByLatest, sortByOldest, sortByDistance } from '~/lib/utils';
 import Image from 'next/image';
 import type { IPin } from '~/lib/types';
 import Location from '~/components/Location';
 import styles from './style.module.css';
 import { CSSTransition } from 'react-transition-group';
 import Leaderboard from '~/components/Leaderboard';
-
-interface Props {
-  pins: IPin[];
-  isOpen: boolean;
-}
-
-enum ESortKeys {
-  Latest = 'Latest',
-  Oldest = 'Oldest',
-  Distance = 'Distance'
-}
-
-const sortingFunctions = {
-  [ESortKeys.Latest]: sortByLatest,
-  [ESortKeys.Oldest]: sortByOldest,
-  [ESortKeys.Distance]: sortByDistance
-};
-
-function changeVariables(
-  view: boolean,
-  setLocations: (boolean) => void,
-  setLeaderboard: (boolean) => void
-) {
-  if (view) {
-    setLeaderboard(false);
-    setTimeout(() => setLocations(true), 250);
-  } else {
-    setLocations(false);
-    setTimeout(() => setLeaderboard(true), 250);
-  }
-}
+import { Props, ESortKeys } from './types';
+import { sortingFunctions, changeVariables } from './utils';
 
 export default function Sidebar({ pins, isOpen }: Props) {
   const [locations, setLocations] = useState<boolean>(true);
