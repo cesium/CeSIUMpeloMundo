@@ -10,14 +10,15 @@ const Map = dynamic(() => import('~/components/Map'), { ssr: false });
 
 export default function Home() {
   const [isOpen, setOpen] = useState<boolean>(false);
+  const [mapRef, setMapRef] = useState(null);
 
   return (
     <div>
       <Menu isOpen={isOpen} setOpen={setOpen} />
-      <Sidebar isOpen={isOpen} pins={PLACES} />
+      <Sidebar mapRef={mapRef} isOpen={isOpen} pins={PLACES} />
       <div className="map">
         <ThemeProvider>
-          <Map pins={PLACES} />
+          <Map setMapRef={setMapRef} pins={PLACES} />
         </ThemeProvider>
       </div>
     </div>

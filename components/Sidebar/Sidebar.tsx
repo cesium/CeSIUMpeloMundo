@@ -8,7 +8,7 @@ import Leaderboard from '~/components/Leaderboard';
 import { Props, ESortKeys } from './types';
 import { sortingFunctions, changeVariables } from './utils';
 
-export default function Sidebar({ pins, isOpen }: Props) {
+export default function Sidebar({ pins, isOpen, mapRef }: Props) {
   const [locations, setLocations] = useState<boolean>(true);
   const [leaderboard, setLeaderboard] = useState<boolean>(false);
   const [sortKey, setSortKey] = useState<ESortKeys>(ESortKeys.Latest);
@@ -101,6 +101,8 @@ export default function Sidebar({ pins, isOpen }: Props) {
                   country={pin.country}
                   author={pin.author}
                   date={pin.date}
+                  coordinates={pin.coordinates}
+                  map={mapRef}
                 />
               ))}
             </div>

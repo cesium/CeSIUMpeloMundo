@@ -9,7 +9,7 @@ import Marker from '~/components/Marker';
 import TileController from '~/components/TileController/TileController';
 import type { IPin } from '~/lib/types';
 import { createClusterCustomIcon } from './utils';
-import type { IFilter } from './types';
+import type { IFilter, Props } from './types';
 import { DEFAULT_TILES, DEFAULT_FILTERS } from './config';
 
 function filterPins(pins: IPin[], { name, type, checked }: IFilter) {
@@ -31,7 +31,7 @@ function filterPins(pins: IPin[], { name, type, checked }: IFilter) {
   );
 }
 
-export default function Map({ pins }: { pins: IPin[] }) {
+export default function Map({ pins, setMapRef }: Props) {
   return (
     <MapContainer
       center={[41.56157392223945, -8.397397824887639]}
@@ -39,6 +39,7 @@ export default function Map({ pins }: { pins: IPin[] }) {
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
       zoomControl={false}
+      ref={setMapRef}
     >
       <LayersControl position="topright">
         {DEFAULT_TILES.map((tile) => (
