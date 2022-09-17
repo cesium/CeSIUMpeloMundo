@@ -7,7 +7,6 @@ import { CSSTransition } from 'react-transition-group';
 import Leaderboard from '~/components/Leaderboard';
 import { Props, ESortKeys } from './types';
 import { sortingFunctions, changeVariables } from './utils';
-import { getBarStyle } from '../Leaderboard/utils';
 
 export default function Sidebar({ pins, isOpen, mapRef }: Props) {
   const [locations, setLocations] = useState<boolean>(true);
