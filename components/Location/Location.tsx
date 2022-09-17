@@ -3,12 +3,19 @@ import { getRelativeTimeString, getNameString } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
 
-const Location = ({ type, city, country, author, date, coordinates, map }) => {
+const Location = ({ type, city, country, author, date, coordinates, map, setOpen }) => {
   const name = useMemo(() => getNameString(author), [author]);
+
+  const onClick = () => {
+    if (screen.width <= 438) {
+      setOpen(false);
+    }
+    map.flyTo(coordinates, 10);
+  }
 
   return (
     <div className={styles.listings}>
-      <div className={styles.marker} onClick={() => map.flyTo(coordinates, 10)}>
+      <div className={styles.marker} onClick={onClick}>
         <Image
           src={`/images/markers/${type}-image.png`}
           alt="Marker"
