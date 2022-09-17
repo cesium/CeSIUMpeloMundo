@@ -35,11 +35,7 @@ const Location = ({
       </div>
       <div className={styles.text}>
         <p className={styles.paragraph}>
-          <b
-            className={styles.title}
-            onClick={() => map.flyTo(coordinates, 10)}
-            title="Go to pin"
-          >
+          <b className={styles.title} onClick={onClick} title="Go to pin">
             {city}, {country}
           </b>
         </p>
