@@ -2,7 +2,8 @@ import {
   MapContainer,
   LayersControl,
   LayerGroup,
-  ZoomControl
+  ZoomControl,
+  useMap
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import Marker from '~/components/Marker';
@@ -32,6 +33,11 @@ function filterPins(pins: IPin[], { name, type, checked }: IFilter) {
 }
 
 export default function Map({ pins, setMapRef }: Props) {
+  const Ref = () => {
+    setMapRef(useMap());
+    return null;
+  };
+
   return (
     <MapContainer
       center={[41.56157392223945, -8.397397824887639]}
@@ -39,8 +45,8 @@ export default function Map({ pins, setMapRef }: Props) {
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
       zoomControl={false}
-      ref={setMapRef}
     >
+      <Ref></Ref>
       <LayersControl position="topright">
         {DEFAULT_TILES.map((tile) => (
           <TileController key={tile.name} {...tile} />

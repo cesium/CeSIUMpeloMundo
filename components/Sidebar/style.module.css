@@ -132,7 +132,6 @@
   z-index: 2;
   background-color: white;
   direction: rtl;
-  /* scrollbar-width: thin; */
 }
 
 @media (max-width: 438px) {
@@ -151,7 +150,6 @@
     z-index: 2;
     background-color: white;
     direction: rtl;
-    /* scrollbar-width: thin; */
   }
 }
 
