@@ -15,7 +15,12 @@ export default function Home() {
   return (
     <div>
       <Menu isOpen={isOpen} setOpen={setOpen} />
-      <Sidebar mapRef={mapRef} isOpen={isOpen} setOpen={setOpen} pins={PLACES} />
+      <Sidebar
+        mapRef={mapRef}
+        isOpen={isOpen}
+        setOpen={setOpen}
+        pins={PLACES}
+      />
       <div className="map">
         <ThemeProvider>
           <Map setMapRef={setMapRef} pins={PLACES} />

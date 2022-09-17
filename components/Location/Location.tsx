@@ -3,7 +3,16 @@ import { getRelativeTimeString, getNameString } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
 
-const Location = ({ type, city, country, author, date, coordinates, map, setOpen }) => {
+const Location = ({
+  type,
+  city,
+  country,
+  author,
+  date,
+  coordinates,
+  map,
+  setOpen
+}) => {
   const name = useMemo(() => getNameString(author), [author]);
 
   const onClick = () => {
@@ -11,7 +20,7 @@ const Location = ({ type, city, country, author, date, coordinates, map, setOpen
       setOpen(false);
     }
     map.flyTo(coordinates, 10);
-  }
+  };
 
   return (
     <div className={styles.listings}>
