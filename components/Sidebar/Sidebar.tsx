@@ -7,15 +7,32 @@ import { CSSTransition } from 'react-transition-group';
 import Leaderboard from '~/components/Leaderboard';
 import { Props, ESortKeys } from './types';
 import { sortingFunctions, changeVariables } from './utils';
+import { getBarStyle } from '../Leaderboard/utils';
 
 export default function Sidebar({ pins, isOpen, mapRef }: Props) {
   const [locations, setLocations] = useState<boolean>(true);
   const [leaderboard, setLeaderboard] = useState<boolean>(false);
   const [sortKey, setSortKey] = useState<ESortKeys>(ESortKeys.Latest);
+
   const sortedPins = useMemo(
     () => pins.sort(sortingFunctions[sortKey]),
     [pins, sortKey]
   );
+
+  const getButtonStyle = (button: string) => {
+    if (button === 'locations') {
+      if (locations) {
+        return styles.button_active;
+      }
+      return styles.button;
+    }
+    if (button === 'leaderboard') {
+      if (leaderboard) {
+        return styles.button_active;
+      }
+      return styles.button;
+    }
+  };
 
   return (
     <CSSTransition
@@ -40,30 +57,32 @@ export default function Sidebar({ pins, isOpen, mapRef }: Props) {
             />
             <br></br>
             <div className={styles.buttons}>
-              <button
-                className={styles.button}
-                type={'button'}
-                role="button"
-                onClick={() =>
-                  changeVariables(true, setLocations, setLeaderboard)
-                }
-              >
-                {' '}
-                Locations{' '}
-              </button>
-              &nbsp;
-              <button
-                className={styles.button}
-                type={'button'}
-                role="button"
-                onClick={() =>
-                  changeVariables(false, setLocations, setLeaderboard)
-                }
-              >
-                {' '}
-                Leaderboard{' '}
-              </button>
-              <br></br>
+              <div className={styles.tab}>
+                <button
+                  className={getButtonStyle('locations')}
+                  type={'button'}
+                  role="button"
+                  onClick={() =>
+                    changeVariables(true, setLocations, setLeaderboard)
+                  }
+                >
+                  {' '}
+                  Locations <i className="bi bi-geo-fill"></i>{' '}
+                </button>
+                &nbsp;
+                <button
+                  className={getButtonStyle('leaderboard')}
+                  type={'button'}
+                  role="button"
+                  onClick={() =>
+                    changeVariables(false, setLocations, setLeaderboard)
+                  }
+                >
+                  {' '}
+                  Leaderboard <i className="bi bi-award-fill"></i>{' '}
+                </button>
+                <br></br>
+              </div>
             </div>
           </div>
           <CSSTransition
@@ -79,19 +98,21 @@ export default function Sidebar({ pins, isOpen, mapRef }: Props) {
           >
             <div>
               <div className={styles.sort}>
-                <label>
-                  <b>Sort by: </b>
-                </label>
-                <select
-                  onChange={(e) => setSortKey(e.target.value as ESortKeys)}
-                  className={styles.button}
-                >
-                  {Object.keys(ESortKeys).map((key) => (
-                    <option key={key} value={key}>
-                      {key}
-                    </option>
-                  ))}
-                </select>
+                <div className={styles.sort_back}>
+                  <label>
+                    <b>Sort by: </b>
+                  </label>
+                  <select
+                    onChange={(e) => setSortKey(e.target.value as ESortKeys)}
+                    className={styles.sort_button}
+                  >
+                    {Object.keys(ESortKeys).map((key) => (
+                      <option key={key} value={key}>
+                        {key}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
               {sortedPins.map((pin: IPin) => (
                 <Location
