@@ -280,7 +280,7 @@ export const PLACES: IPin[] = [
     country: 'Netherlands',
     coordinates: [52.377798043025265, 4.897756773311312],
     date: '2022-07-12',
-    photo: '/photos/MatildeBravo/amsterdam.jpg'
+    photo: '/photos/matildeopbravo/amsterdam.jpg'
   },
   {
     author: 'Matilde Bravo',
@@ -289,6 +289,6 @@ export const PLACES: IPin[] = [
     country: 'France',
     coordinates: [48.85946363288889, 2.287131396878628],
     date: '2022-07-17',
-    photo: '/photos/MatildeBravo/paris_camoes.jpg'
+    photo: '/photos/matildeopbravo/paris_camoes.jpg'
   }
 ];
