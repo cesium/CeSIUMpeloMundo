@@ -295,6 +295,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Vitor Lelis',
+    username: 'VitorLelis',
     type: EPinType.Sticker,
     city: 'Campos dos Goytacazes',
     country: 'Brazil',
@@ -304,6 +305,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Matilde Bravo',
+    username: 'matildeopbravo',
     type: EPinType.Sticker,
     city: 'Amsterdam',
     country: 'Netherlands',
@@ -313,6 +315,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Matilde Bravo',
+    username: 'matildeopbravo',
     type: EPinType.Sticker,
     city: 'Paris',
     country: 'France',
