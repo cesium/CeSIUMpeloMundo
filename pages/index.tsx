@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import { ThemeProvider } from '~/hooks/useTheme';
-
+import Head from 'next/head';
 import { PLACES } from '~/data/places';
 import Sidebar from '~/components/Sidebar';
 import Menu from '~/components/Menu';
@@ -14,6 +14,14 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>CeSIUM Pelo Mundo</title>
+        <meta
+          name="description"
+          content="A world map with the places we've been"
+          key="description"
+        />
+      </Head>
       <Menu isOpen={isOpen} setOpen={setOpen} />
       <Sidebar
         mapRef={mapRef}

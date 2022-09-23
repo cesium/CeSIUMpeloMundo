@@ -87,7 +87,7 @@ export const PLACES: IPin[] = [
     author: 'Filipe Felício',
     username: 'feliciofilipe',
     type: EPinType.Sticker,
-    city: 'Amesterdam',
+    city: 'Amsterdam',
     country: 'Netherlands',
     coordinates: [52.37548607644857, 4.896832185020905],
     date: '2022-02-23',
@@ -292,5 +292,32 @@ export const PLACES: IPin[] = [
     coordinates: [40.9588846, -5.6693875],
     date: '2022-08-16',
     photo: '/photos/mariorodrigues10/salamanca.jpg'
+  },
+  {
+    author: 'Vitor Lelis',
+    type: EPinType.Sticker,
+    city: 'Campos dos Goytacazes',
+    country: 'Brazil',
+    coordinates: [-21.75831, -41.337461],
+    date: '2022-09-12',
+    photo: '/photos/VitorLelis/campos-rio.jpg'
+  },
+  {
+    author: 'Matilde Bravo',
+    type: EPinType.Sticker,
+    city: 'Amsterdam',
+    country: 'Netherlands',
+    coordinates: [52.377798043025265, 4.897756773311312],
+    date: '2022-07-12',
+    photo: '/photos/matildeopbravo/amsterdam.jpg'
+  },
+  {
+    author: 'Matilde Bravo',
+    type: EPinType.Sticker,
+    city: 'Paris',
+    country: 'France',
+    coordinates: [48.85946363288889, 2.287131396878628],
+    date: '2022-07-17',
+    photo: '/photos/matildeopbravo/paris_camoes.jpg'
   }
 ];
