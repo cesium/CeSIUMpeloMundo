@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { IPin } from '~/lib/types';
 import Location from '~/components/Location';
 import styles from './style.module.css';
@@ -48,12 +49,15 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
       <div className={styles.sidebar}>
         <div className={styles.content}>
           <div className={styles.heading}>
-            <Image
-              src="/images/cesium.png"
-              alt="CeSIUM Logo"
-              width={180}
-              height={61}
-            />
+            <Link href="https://cesium.link/">
+              <Image
+                src="/images/cesium.png"
+                alt="CeSIUM Logo"
+                width={180}
+                height={61}
+                style={{ cursor: 'pointer' }}
+              />
+            </Link>
             <br></br>
             <div className={styles.buttons}>
               <div className={styles.tab}>
