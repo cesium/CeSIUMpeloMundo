@@ -12,7 +12,7 @@
 
 **1.** Go to _your fork_ and click **Code**
 
-> **Note**
+> **Note**  
 > The link to your forked repository should be `https://github.com/<your-username>/CeSIUMpeloMundo`
 
 **2.** Copy the given HTTPS link
@@ -23,7 +23,7 @@
 git clone <https-link>
 ```
 
-> **Note**
+> **Note**  
 > If you'd rather clone with SSH, copy the SSH key and run `git clone <ssh-key>`
 
 **Now you have a copy of the repository you can work with.**
@@ -40,7 +40,7 @@ git checkout -b <branch>
 
 Where `<branch>` is the name of your branch.
 
-> **Note**
+> **Note**  
 > The name of your branch should follow the CeSIUM guidelines: `<first-letter-of-your-first-name><first-letter-of-your-last-name> + '/' + <branch-name>`.
 > For example: `af/readme`.
 
@@ -55,27 +55,35 @@ Where `<branch>` is the name of your branch.
 **4.** Add a new object to the array containing:
 
 - `author` - your first and last name
-- `type` - pin type (**`ETheme.Sticker`** or **`ETheme.Picture`**)
+- `username` - your GitHub username
+- `type` - pin type (**`EPinType.<pin-type>`**)
 - `city` & `country` - city and country where the image was taken
-- `coordinates` - you can use [**this**](https://www.gps-coordinates.net/my-location) website
+- `coordinates` - you can use [**this website**](https://www.gps-coordinates.net/my-location)
 - `date` - date of when the image was taken
 - `photo` - path to your image file
+
+**Understanding Pin Types:**
+
+- `EPinType.Sticker` - You left a CeSIUM sticker somewhere
+- `EPinType.Picture` - Anything CeSIUM related that isn't a sticker
+- `EPinType.Missing` - You revisited a pin and the sticker is now missing
 
 **Check out this example:**
 
 ```typescript
 {
-  author: "Luis Araújo",
-  type: ETheme.Sticker,
-  city": "Madrid",
-  country": "Spain",
-  coordinates": [40.4213, -3.7011],
-  date: "2021-07-06",
-  photo: "/photos/laraujo7/madrid.jpg"
+  author: 'Filipe Felício',
+  username: 'feliciofilipe',
+  type: EPinType.Picture,
+  city: 'Barcelona',
+  country: 'Spain',
+  coordinates: [41.39437640777792, 2.1750122226070197],
+  date: '2022-03-21',
+  photo: '/photos/feliciofilipe/barcelona.jpg'
 }
 ```
 
-> **Warning**
+> **Warning**  
 > When placing a **sticker**, we appeal to everyone's common sense and civility. Don't vandalize.
 
 > **Note**  

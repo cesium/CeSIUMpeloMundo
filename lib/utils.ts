@@ -1,14 +1,5 @@
 import { DateTime } from 'luxon';
 
-export const getFullDateString = (date: string) => {
-  return new Date(date).toLocaleDateString(undefined, {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-};
-
 export const getRelativeTimeString = (date: string) => {
   return DateTime.fromISO(date)
     .toRelative(Date.now())
@@ -26,5 +17,15 @@ export const getNameString = (authors: string[] | string) => {
     return authors.join();
   }
 
-  return authors.slice(0, size - 1).join(', ') + ' and ' + authors[size - 1];
+  if (size <= 3) {
+    return authors.slice(0, size - 1).join(', ') + ' and ' + authors[size - 1];
+  }
+
+  return authors.slice(0, 2).join(', ') + ' and ' + (size - 2) + ' others';
+};
+
+export const sortByOldest = (a, b) => {
+  return (
+    DateTime.fromISO(a.date).toMillis() - DateTime.fromISO(b.date).toMillis()
+  );
 };

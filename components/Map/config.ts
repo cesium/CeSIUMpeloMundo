@@ -35,5 +35,10 @@ export const DEFAULT_FILTERS: IFilter[] = [
     name: 'Special',
     type: 'special',
     checked: true
+  },
+  {
+    name: 'Missing',
+    type: 'missing',
+    checked: true
   }
 ];
