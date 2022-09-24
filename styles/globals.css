@@ -27,8 +27,8 @@ body {
 }
 
 .leaflet-popup-content {
-  min-width: 300px;
-  min-height: 470px;
+  width: 301px;
+  height: 470px;
 }
 
 .custom-marker-cluster {
