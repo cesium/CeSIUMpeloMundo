@@ -56,11 +56,17 @@ Where `<branch>` is the name of your branch.
 
 - `author` - your first and last name
 - `username` - your GitHub username
-- `type` - pin type (**`ETheme.Sticker`** or **`ETheme.Picture`**)
+- `type` - pin type (**`EPinType.<pin-type>`**)
 - `city` & `country` - city and country where the image was taken
-- `coordinates` - you can use [**this**](https://www.gps-coordinates.net/my-location) website
+- `coordinates` - you can use [**this website**](https://www.gps-coordinates.net/my-location)
 - `date` - date of when the image was taken
 - `photo` - path to your image file
+
+**Understanding Pin Types:**
+
+- `EPinType.Sticker` - You left a CeSIUM sticker somewhere
+- `EPinType.Picture` - Anything CeSIUM related that isn't a sticker
+- `EPinType.Missing` - You revisited a pin and the sticker is now missing
 
 **Check out this example:**
 
