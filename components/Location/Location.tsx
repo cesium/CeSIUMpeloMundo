@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getRelativeTimeString, getNameString } from '~/lib/utils';
+import { getRelativeTimeString, getNameString, distance } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
 
@@ -11,7 +11,8 @@ const Location = ({
   date,
   coordinates,
   map,
-  setOpen
+  setOpen,
+  sortKey
 }) => {
   const name = useMemo(() => getNameString(author), [author]);
 
@@ -20,6 +21,25 @@ const Location = ({
       setOpen(false);
     }
     map.flyTo(coordinates, 10);
+  };
+
+  const getItalic = () => {
+    if (sortKey === 'Date') {
+      return getRelativeTimeString(date);
+    }
+    const x0 = 41.56157392223945;
+    const y0 = -8.397397824887639;
+
+    return (
+      Math.round(distance(x0, coordinates[0], y0, coordinates[1])) + ' km away'
+    );
+  };
+
+  const getIcon = () => {
+    if (sortKey === 'Distance') {
+      return <i className="bi bi-signpost-fill"></i>;
+    }
+    return <i className="bi bi-hourglass-split"></i>;
   };
 
   return (
@@ -40,7 +60,9 @@ const Location = ({
           </b>
         </p>
         <p className={styles.paragraph}>
-          {date && <i>{getRelativeTimeString(date)}</i>}
+          <i>
+            {getIcon()} {getItalic()}
+          </i>
         </p>
         <p className={styles.paragraph}>
           <span className={styles.authors}>{name}</span>

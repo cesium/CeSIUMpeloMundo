@@ -6,17 +6,20 @@ import Location from '~/components/Location';
 import styles from './style.module.css';
 import { CSSTransition } from 'react-transition-group';
 import Leaderboard from '~/components/Leaderboard';
-import { Props, ESortKeys } from './types';
+import { Props, ESortKeys, ESortDirection } from './types';
 import { sortingFunctions, changeVariables } from './utils';
 
 export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
   const [locations, setLocations] = useState<boolean>(true);
   const [leaderboard, setLeaderboard] = useState<boolean>(false);
-  const [sortKey, setSortKey] = useState<ESortKeys>(ESortKeys.Latest);
+  const [sortKey, setSortKey] = useState<ESortKeys>(ESortKeys.Date);
+  const [sortDirection, setSortDirection] = useState<ESortDirection>(
+    ESortDirection.Ascending
+  );
 
   const sortedPins = useMemo(
-    () => pins.sort(sortingFunctions[sortKey]),
-    [pins, sortKey]
+    () => pins.sort(sortingFunctions(sortKey, sortDirection)),
+    [pins, sortKey, sortDirection]
   );
 
   const getButtonStyle = (button: string) => {
@@ -115,6 +118,15 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
                       </option>
                     ))}
                   </select>
+                  <select
+                    onChange={(e) =>
+                      setSortDirection(e.target.value as ESortDirection)
+                    }
+                    className={styles.sort_button}
+                  >
+                    <option>↓</option>
+                    <option>↑</option>
+                  </select>
                 </div>
               </div>
               {sortedPins.map((pin: IPin) => (
@@ -128,6 +140,7 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
                   coordinates={pin.coordinates}
                   map={mapRef}
                   setOpen={setOpen}
+                  sortKey={sortKey}
                 />
               ))}
             </div>
