@@ -45,6 +45,7 @@ export default function Map({ pins, setMapRef }: Props) {
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
       zoomControl={false}
+      attributionControl={true}
     >
       <Ref></Ref>
       <LayersControl position="topright">

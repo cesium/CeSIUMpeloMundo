@@ -8,7 +8,11 @@ export interface Props {
 }
 
 export enum ESortKeys {
-  Latest = 'Latest',
-  Oldest = 'Oldest',
+  Date = 'Date',
   Distance = 'Distance'
+}
+
+export enum ESortDirection {
+  Ascending = '↓',
+  Descending = '↑'
 }
