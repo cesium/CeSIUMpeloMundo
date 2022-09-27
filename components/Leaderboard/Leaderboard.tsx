@@ -22,14 +22,17 @@ export default function Leaderboard() {
               {index + 1}
               {getOrdinals(index)}{' '}
             </div>
-            <div className={styles.name}>
+            <a
+              className={styles.name}
+              href={'https://github.com/' + player.username}
+            >
               {' '}
               {player.author}{' '}
               <div className={styles.username}>
                 {' '}
                 {getUsername(index, leaderboard)}{' '}
               </div>
-            </div>
+            </a>
             <div className={styles.pins}>
               {' '}
               {player.pins} <i className="bi bi-pin-fill"></i>

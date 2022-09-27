@@ -1,8 +1,9 @@
 import { ESortDirection, ESortKeys } from './types';
 import { DateTime } from 'luxon';
 import { sortByOldest, distance } from '~/lib/utils';
+import { IPin } from '~/lib/types';
 
-export const sortByDistanceAscending = (a, b) => {
+export const sortByDistanceAscending = (a: IPin, b: IPin) => {
   const x0 = 41.56157392223945;
   const y0 = -8.397397824887639;
 
@@ -17,7 +18,7 @@ export const sortByDistanceAscending = (a, b) => {
   return d1 - d2;
 };
 
-export const sortByDistanceDescending = (a, b) => {
+export const sortByDistanceDescending = (a: IPin, b: IPin) => {
   const x0 = 41.56157392223945;
   const y0 = -8.397397824887639;
 
@@ -32,7 +33,7 @@ export const sortByDistanceDescending = (a, b) => {
   return d2 - d1;
 };
 
-export const sortByLatest = (a, b) => {
+export const sortByLatest = (a: IPin, b: IPin) => {
   return (
     DateTime.fromISO(b.date).toMillis() - DateTime.fromISO(a.date).toMillis()
   );

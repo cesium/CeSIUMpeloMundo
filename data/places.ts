@@ -145,13 +145,13 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Daniel Pereira',
-    username: 'danielpereira',
+    username: 'danielsp45',
     type: EPinType.Sticker,
     city: 'Santa Cruz',
     country: 'United States of America',
     coordinates: [36.955797, -121.972159],
     date: '2022-07-04',
-    photo: '/photos/danielpereira/california.jpeg'
+    photo: '/photos/danielsp45/california.jpeg'
   },
   {
     author: 'Gerson Júnior',
