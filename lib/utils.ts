@@ -3,7 +3,6 @@ import { IPin } from '~/lib/types';
 
 // These functions are here cause they're used in more than one component/file across the project.
 
-
 // distance() - Used on Location and Sidebar components
 
 export function distance(lat1, lat2, lon1, lon2) {

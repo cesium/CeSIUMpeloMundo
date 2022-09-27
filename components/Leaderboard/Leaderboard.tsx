@@ -22,7 +22,10 @@ export default function Leaderboard() {
               {index + 1}
               {getOrdinals(index)}{' '}
             </div>
-            <a className={styles.name} href={"https://github.com/" + player.username}>
+            <a
+              className={styles.name}
+              href={'https://github.com/' + player.username}
+            >
               {' '}
               {player.author}{' '}
               <div className={styles.username}>

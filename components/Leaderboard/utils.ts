@@ -90,7 +90,7 @@ export function getUsername(index: number, leaderboard: Player[]) {
       acc++;
     }
   }
-  
+
   if (acc > 1) {
     return '@' + leaderboard[index].username;
   }
