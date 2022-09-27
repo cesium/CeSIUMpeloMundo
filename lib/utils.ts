@@ -1,4 +1,10 @@
 import { DateTime } from 'luxon';
+import { IPin } from '~/lib/types';
+
+// These functions are here cause they're used in more than one component/file across the project.
+
+
+// distance() - Used on Location and Sidebar components
 
 export function distance(lat1, lat2, lon1, lon2) {
   lon1 = (lon1 * Math.PI) / 180;
@@ -19,11 +25,15 @@ export function distance(lat1, lat2, lon1, lon2) {
   return c * r;
 }
 
+// getRelativeTimeString() - Used on Location and Marker components
+
 export const getRelativeTimeString = (date: string) => {
   return DateTime.fromISO(date)
     .toRelative(Date.now())
     .toLocaleString(DateTime.DATETIME_MED);
 };
+
+// getNameString() - Used on Location and Marker components
 
 export const getNameString = (authors: string[] | string) => {
   if (!Array.isArray(authors)) {
@@ -43,7 +53,9 @@ export const getNameString = (authors: string[] | string) => {
   return authors.slice(0, 2).join(', ') + ' and ' + (size - 2) + ' others';
 };
 
-export const sortByOldest = (a, b) => {
+// sortByOldest() - Used on Sidebar and Leaderboard components
+
+export const sortByOldest = (a: IPin, b: IPin) => {
   return (
     DateTime.fromISO(a.date).toMillis() - DateTime.fromISO(b.date).toMillis()
   );
