@@ -37,6 +37,8 @@
   position: relative;
   flex-grow: 1;
   font-weight: 400;
+  text-decoration: none;
+  color: white;
 }
 
 .username {
