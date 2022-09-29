@@ -13,7 +13,7 @@ import { useState, useMemo } from 'react';
 export default function Leaderboard() {
   const [leaderKey, setLeaderKey] = useState<ELeaderKeys>(ELeaderKeys.Pins);
 
-  function sortLeaderboard() {
+  function sortLeaderboard(leaderKey) {
     return makeLeaderboard(PLACES, leaderKey).sort((a, b) => {
       if (leaderKey === ELeaderKeys.Pins) {
         return b.pins - a.pins;
@@ -22,7 +22,10 @@ export default function Leaderboard() {
     });
   }
 
-  const sortedLeaderboard = useMemo(() => sortLeaderboard(), [leaderKey]);
+  const sortedLeaderboard = useMemo(
+    () => sortLeaderboard(leaderKey),
+    [leaderKey]
+  );
 
   const getIcon = () => {
     if (leaderKey === ELeaderKeys.Pins) {
