@@ -3,9 +3,9 @@ import { IPin } from '~/lib/types';
 
 // These functions are here cause they're used in more than one component/file across the project.
 
-// distance() - Used on Location and Sidebar components
+// getDistance() - Used on Location and Sidebar components
 
-export function distance(lat1, lat2, lon1, lon2) {
+function distance(lat1, lat2, lon1, lon2) {
   lon1 = (lon1 * Math.PI) / 180;
   lon2 = (lon2 * Math.PI) / 180;
   lat1 = (lat1 * Math.PI) / 180;
@@ -22,6 +22,15 @@ export function distance(lat1, lat2, lon1, lon2) {
   let r = 6371;
 
   return c * r;
+}
+
+export function getDistance(coordinates: IPin['coordinates']) {
+  const x0 = 41.56157392223945;
+  const y0 = -8.397397824887639;
+  const x1 = coordinates[0];
+  const y1 = coordinates[1];
+
+  return distance(x0, x1, y0, y1);
 }
 
 // getRelativeTimeString() - Used on Location and Marker components

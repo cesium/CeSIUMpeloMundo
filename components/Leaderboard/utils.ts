@@ -2,12 +2,22 @@ import { sortByOldest } from '~/lib/utils';
 import { IPin } from '~/lib/types';
 import styles from './style.module.css';
 import { Player, User } from './types';
+import { getDistance } from '~/lib/utils';
 
-export function getSet(arr: User[]) {
-  return [...new Map(arr.map((item) => [item['username'], item])).values()];
+function getSet(arr: User[]) {
+  return arr.filter(
+    (v, i, a) =>
+      a.findIndex((v2) => ['username'].every((k) => v2[k] === v[k])) === i
+  );
 }
 
-export function makeLeaderboard(places: IPin[]) {
+function sortByDistance(a: User, b: User) {
+  const d1 = getDistance(a.coordinates);
+  const d2 = getDistance(b.coordinates);
+  return d2 - d1;
+}
+
+export function makeLeaderboard(places: IPin[], type: string) {
   const users = [];
   const leaderboard = [];
   const places_copy = places.slice();
@@ -18,34 +28,51 @@ export function makeLeaderboard(places: IPin[]) {
       for (var j = 0; j < sortedPlaces[i].username.length; j++) {
         users.push({
           author: sortedPlaces[i].author[j],
-          username: sortedPlaces[i].username[j]
+          username: sortedPlaces[i].username[j],
+          coordinates: sortedPlaces[i].coordinates
         });
       }
     } else {
       users.push({
         author: sortedPlaces[i].author,
-        username: sortedPlaces[i].username
+        username: sortedPlaces[i].username,
+        coordinates: sortedPlaces[i].coordinates
       });
     }
   }
 
-  const usersSet = getSet(users);
+  if (type === 'Pins') {
+    const userSet = getSet(users);
 
-  for (var i = 0; i < usersSet.length; i++) {
-    var acc = 0;
-    for (var j = i; j < users.length; j++) {
-      if (usersSet[i].username === users[j].username) {
-        acc++;
+    for (var i = 0; i < userSet.length; i++) {
+      var acc = 0;
+      for (var j = 0; j < users.length; j++) {
+        if (userSet[i].username === users[j].username) {
+          acc++;
+        }
       }
+      leaderboard.push({
+        author: userSet[i].author,
+        username: userSet[i].username,
+        pins: acc
+      });
     }
-    leaderboard.push({
-      author: usersSet[i].author,
-      username: usersSet[i].username,
-      pins: acc
-    });
-  }
 
-  return leaderboard;
+    return leaderboard;
+  } else if (type === 'Distance') {
+    const sortedUsers = users.sort(sortByDistance);
+    const sortedSet = getSet(sortedUsers);
+
+    for (var i = 0; i < sortedSet.length; i++) {
+      leaderboard.push({
+        author: sortedSet[i].author,
+        username: sortedSet[i].username,
+        distance: getDistance(sortedSet[i].coordinates)
+      });
+    }
+
+    return leaderboard;
+  }
 }
 
 export function getOrdinals(num: number) {
@@ -74,11 +101,18 @@ export function getBarStyle(num: number) {
   }
 }
 
-export function getWidth(index: number, leaderboard: Player[]) {
-  const maxPins = leaderboard[0].pins;
-  const pins = leaderboard[index].pins;
+export function getWidth(index: number, leaderboard: Player[], type: string) {
+  if (type === 'Pins') {
+    const maxPins = leaderboard[0].pins;
+    const pins = leaderboard[index].pins;
 
-  return (pins * 100) / maxPins + '%';
+    return (pins * 100) / maxPins + '%';
+  }
+
+  const maxDistance = leaderboard[0].distance;
+  const distance = leaderboard[index].distance;
+
+  return (distance * 100) / maxDistance + '%';
 }
 
 export function getUsername(index: number, leaderboard: Player[]) {

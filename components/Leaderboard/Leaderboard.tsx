@@ -7,14 +7,54 @@ import {
   getBarStyle,
   getWidth
 } from './utils';
-import { Player } from './types';
+import { Player, ELeaderKeys } from './types';
+import { useState, useMemo } from 'react';
 
 export default function Leaderboard() {
-  const leaderboard = makeLeaderboard(PLACES);
-  leaderboard.sort((a: Player, b: Player) => b.pins - a.pins);
+  const [leaderKey, setLeaderKey] = useState<ELeaderKeys>(ELeaderKeys.Pins);
+
+  function sortLeaderboard() {
+    return makeLeaderboard(PLACES, leaderKey).sort((a, b) => {
+      if (leaderKey === ELeaderKeys.Pins) {
+        return b.pins - a.pins;
+      }
+      return b.distance - a.distance;
+    });
+  }
+
+  const sortedLeaderboard = useMemo(() => sortLeaderboard(), [leaderKey]);
+
+  const getIcon = () => {
+    if (leaderKey === ELeaderKeys.Pins) {
+      return <i className="bi bi-pin-fill"></i>;
+    }
+    return <i className="bi bi-signpost-fill"></i>;
+  };
+
+  const getNumber = (player: Player) => {
+    if (leaderKey === ELeaderKeys.Pins) {
+      return player.pins;
+    }
+    return Math.round(player.distance) + ' km';
+  };
+
   return (
     <div className={styles.leaderboard}>
-      {leaderboard.map((player: Player, index) => (
+      <div className={styles.sort}>
+        <div className={styles.sort_back}>
+          <label>
+            <b>Leading by: </b>
+          </label>
+          <select
+            onChange={(e) => setLeaderKey(e.target.value as ELeaderKeys)}
+            className={styles.sort_button}
+          >
+            <option>Pins</option>
+            <option>Distance</option>
+          </select>
+        </div>
+      </div>
+      {sortedLeaderboard.map((player: Player, index) => (
         <div className={styles.line} key={index}>
           <div className={styles.info}>
             <div className={styles.position}>
@@ -30,18 +70,18 @@ export default function Leaderboard() {
               {player.author}{' '}
               <div className={styles.username}>
                 {' '}
-                {getUsername(index, leaderboard)}{' '}
+                {getUsername(index, sortedLeaderboard)}{' '}
               </div>
             </a>
-            <div className={styles.pins}>
+            <div className={styles.number}>
               {' '}
-              {player.pins} <i className="bi bi-pin-fill"></i>
+              {getNumber(player)} {getIcon()}
             </div>
           </div>
           <div className={styles.progress}>
             <div
               className={getBarStyle(index)}
-              style={{ width: getWidth(index, leaderboard) }}
+              style={{ width: getWidth(index, sortedLeaderboard, leaderKey) }}
             ></div>
           </div>
         </div>

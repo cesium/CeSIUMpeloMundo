@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 25px;
 }
 
@@ -11,8 +11,9 @@
   flex-direction: column;
   position: relative;
   width: 90%;
-  height: 100%;
+  height: fit-content;
   margin: auto;
+  font-family: 'Rubik', sans-serif;
 }
 
 .info {
@@ -25,7 +26,6 @@
   text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
   z-index: 1;
   font-size: 18px;
-  font-family: 'Rubik', sans-serif;
 }
 
 .position {
@@ -46,7 +46,7 @@
   font-weight: 300;
 }
 
-.pins {
+.number {
   position: relative;
   font-weight: 400;
 }
@@ -54,7 +54,7 @@
 .progress {
   position: absolute;
   background-color: rgb(57, 57, 57);
-  border-radius: 500px;
+  border-radius: 30px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
@@ -68,28 +68,72 @@
     rgba(150, 93, 233, 1) 10.8%,
     rgba(99, 88, 238, 1) 94.3%
   );
-  border-radius: 500px;
+  border-radius: 30px;
   height: 100%;
   min-width: 55px;
 }
 
 .bar_first {
   background: linear-gradient(225deg, #fbf794 0%, #c67700 100%);
-  border-radius: 500px;
+  border-radius: 30px;
   height: 100%;
   min-width: 55px;
 }
 
 .bar_second {
   background: linear-gradient(45deg, #6c7175, #eee);
-  border-radius: 500px;
+  border-radius: 30px;
   height: 100%;
   min-width: 55px;
 }
 
 .bar_third {
   background-image: linear-gradient(45deg, #826055 0%, #dfa579 100%);
-  border-radius: 500px;
+  border-radius: 30px;
   height: 100%;
   min-width: 55px;
+}
+
+.sort {
+  padding-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #404040;
+}
+
+.sort_back {
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px;
+  width: fit-content;
+  margin: auto;
+}
+
+.sort_button {
+  background: rgba(255, 118, 73, 0.9);
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, 'Apple Color Emoji', 'Segoe UI Emoji',
+    NotoColorEmoji, 'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji',
+    EmojiSymbols, -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    'Noto Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin: 0 3px 0 3px;
 }
