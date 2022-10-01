@@ -137,3 +137,9 @@
   border: 0;
   margin: 0 3px 0 3px;
 }
+
+.leading_info {
+  display: inline;
+  margin-left: 5px;
+  cursor: pointer;
+}

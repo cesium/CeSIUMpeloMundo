@@ -1,8 +1,7 @@
 export interface Player {
   author: string;
   username: string;
-  pins: number;
-  distance: number;
+  value: number;
 }
 
 export interface User {

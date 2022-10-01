@@ -15,10 +15,7 @@ export default function Leaderboard() {
 
   function sortLeaderboard(leaderKey) {
     return makeLeaderboard(PLACES, leaderKey).sort((a, b) => {
-      if (leaderKey === ELeaderKeys.Pins) {
-        return b.pins - a.pins;
-      }
-      return b.distance - a.distance;
+      return b.value - a.value;
     });
   }
 
@@ -34,11 +31,11 @@ export default function Leaderboard() {
     return <i className="bi bi-signpost-fill"></i>;
   };
 
-  const getNumber = (player: Player) => {
-    if (leaderKey === ELeaderKeys.Pins) {
-      return player.pins;
+  const getValue = (player: Player) => {
+    if (leaderKey === ELeaderKeys.Distance) {
+      return Math.round(player.value) + ' km';
     }
-    return Math.round(player.distance) + ' km';
+    return player.value;
   };
 
   return (
@@ -55,6 +52,12 @@ export default function Leaderboard() {
             <option>Pins</option>
             <option>Distance</option>
           </select>
+          <div
+            className={styles.leading_info}
+            title="Distance values are calculated by summing the distance to the CeSIUM headquarters of all the pins from each author"
+          >
+            <i className="bi bi-info-circle-fill"></i>
+          </div>
         </div>
       </div>
       {sortedLeaderboard.map((player: Player, index) => (
@@ -68,6 +71,7 @@ export default function Leaderboard() {
             <a
               className={styles.name}
               href={'https://github.com/' + player.username}
+              title={'Go to ' + player.author + "'s GitHub"}
             >
               {' '}
               {player.author}{' '}
@@ -78,13 +82,13 @@ export default function Leaderboard() {
             </a>
             <div className={styles.number}>
               {' '}
-              {getNumber(player)} {getIcon()}
+              {getValue(player)} {getIcon()}
             </div>
           </div>
           <div className={styles.progress}>
             <div
               className={getBarStyle(index)}
-              style={{ width: getWidth(index, sortedLeaderboard, leaderKey) }}
+              style={{ width: getWidth(index, sortedLeaderboard) }}
             ></div>
           </div>
         </div>
