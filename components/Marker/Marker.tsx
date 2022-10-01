@@ -38,8 +38,7 @@ const Marker = ({
           <div className={styles.background}>
             <div className={styles.text}>
               <h1 className={styles.title}>
-                {city},<br />
-                {country}
+                {city}, {country}
               </h1>
               <span className={styles.date}>
                 <i className="bi bi-calendar"></i> {getFullDateString(date)} (
