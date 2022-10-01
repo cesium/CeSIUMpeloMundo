@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { IPin } from '~/lib/types';
-import { getRelativeTimeString, getNameString } from '~/lib/utils';
+import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
 
 import styles from './style.module.css';
@@ -40,9 +40,14 @@ const Marker = ({
               <h1 className={styles.title}>
                 {city}, {country}
               </h1>
-              <span className={styles.date}>
+              <span className={styles.light}>
                 <i className="bi bi-calendar"></i> {getFullDateString(date)} (
                 {getRelativeTimeString(date)})
+              </span>
+              <br />
+              <span className={styles.light}>
+                <i className="bi bi-signpost-fill"></i>{' '}
+                {Math.round(getDistance(coordinates))} km away
               </span>
               <br />
               <span>
