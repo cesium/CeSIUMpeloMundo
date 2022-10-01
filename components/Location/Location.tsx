@@ -39,7 +39,7 @@ const Location = ({
     if (sortKey === 'Distance') {
       return <i className="bi bi-signpost-fill"></i>;
     }
-    return <i className="bi bi-hourglass-split"></i>;
+    return <i className="bi bi-clock"></i>;
   };
 
   return (
@@ -65,7 +65,9 @@ const Location = ({
           </i>
         </p>
         <p className={styles.paragraph}>
-          <span className={styles.authors}>{name}</span>
+          <span className={styles.authors}>
+            <i className="bi bi-person-fill"></i> {name}
+          </span>
         </p>
       </div>
     </div>
