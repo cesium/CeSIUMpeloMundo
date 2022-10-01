@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getRelativeTimeString, getNameString, distance } from '~/lib/utils';
+import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
 
@@ -27,12 +27,7 @@ const Location = ({
     if (sortKey === 'Date') {
       return getRelativeTimeString(date);
     }
-    const x0 = 41.56157392223945;
-    const y0 = -8.397397824887639;
-
-    return (
-      Math.round(distance(x0, coordinates[0], y0, coordinates[1])) + ' km away'
-    );
+    return Math.round(getDistance(coordinates)) + ' km away';
   };
 
   const getIcon = () => {

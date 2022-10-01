@@ -1,35 +1,17 @@
 import { ESortDirection, ESortKeys } from './types';
 import { DateTime } from 'luxon';
-import { sortByOldest, distance } from '~/lib/utils';
+import { sortByOldest, getDistance } from '~/lib/utils';
 import { IPin } from '~/lib/types';
 
 export const sortByDistanceAscending = (a: IPin, b: IPin) => {
-  const x0 = 41.56157392223945;
-  const y0 = -8.397397824887639;
-
-  const x1 = a.coordinates[0];
-  const y1 = a.coordinates[1];
-  const x2 = b.coordinates[0];
-  const y2 = b.coordinates[1];
-
-  const d1 = distance(x0, x1, y0, y1);
-  const d2 = distance(x0, x2, y0, y2);
-
+  const d1 = getDistance(a.coordinates);
+  const d2 = getDistance(b.coordinates);
   return d1 - d2;
 };
 
 export const sortByDistanceDescending = (a: IPin, b: IPin) => {
-  const x0 = 41.56157392223945;
-  const y0 = -8.397397824887639;
-
-  const x1 = a.coordinates[0];
-  const y1 = a.coordinates[1];
-  const x2 = b.coordinates[0];
-  const y2 = b.coordinates[1];
-
-  const d1 = distance(x0, x1, y0, y1);
-  const d2 = distance(x0, x2, y0, y2);
-
+  const d1 = getDistance(a.coordinates);
+  const d2 = getDistance(b.coordinates);
   return d2 - d1;
 };
 
