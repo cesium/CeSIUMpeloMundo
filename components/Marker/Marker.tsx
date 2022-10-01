@@ -37,11 +37,11 @@ const Marker = ({
         <div>
           <div className={styles.background}>
             <div className={styles.text}>
-              <h1 style={{ lineHeight: '1.2' }}>
+              <h1 className={styles.title}>
                 {city},<br />
                 {country}
               </h1>
-              <span style={{ fontWeight: '400' }}>
+              <span className={styles.date}>
                 <i className="bi bi-calendar"></i> {getFullDateString(date)} (
                 {getRelativeTimeString(date)})
               </span>
@@ -56,7 +56,7 @@ const Marker = ({
             src={photo}
             layout="fill"
             objectFit="cover"
-            style={{ borderRadius: '10px', overflow: 'hidden', zIndex: '0' }}
+            className={styles.image}
           />
         </div>
       </Popup>

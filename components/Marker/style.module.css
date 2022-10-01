@@ -25,11 +25,16 @@
   line-height: 1.6;
 }
 
-.gradient {
-  background: linear-gradient(
-    360deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+.title {
+  line-height: 1.2;
+}
+
+.date {
+  font-weight: 400;
+}
+
+.image {
+  border-radius: 10px;
+  overflow: hidden;
   z-index: 0;
 }
