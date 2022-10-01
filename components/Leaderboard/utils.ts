@@ -41,38 +41,38 @@ export function makeLeaderboard(places: IPin[], type: string) {
     }
   }
 
-  if (type === 'Pins') {
-    const userSet = getSet(users);
+  const userSet = getSet(users);
 
-    for (var i = 0; i < userSet.length; i++) {
-      var acc = 0;
-      for (var j = 0; j < users.length; j++) {
-        if (userSet[i].username === users[j].username) {
-          acc++;
+  for (var i = 0; i < userSet.length; i++) {
+    var acc = 0;
+
+    switch (type) {
+      case 'Pins': {
+        for (var j = 0; j < users.length; j++) {
+          if (userSet[i].username === users[j].username) {
+            acc++;
+          }
         }
+        break;
       }
-      leaderboard.push({
-        author: userSet[i].author,
-        username: userSet[i].username,
-        pins: acc
-      });
+      case 'Distance': {
+        for (var j = 0; j < users.length; j++) {
+          if (userSet[i].username === users[j].username) {
+            acc += getDistance(users[j].coordinates);
+          }
+        }
+        break;
+      }
     }
 
-    return leaderboard;
-  } else if (type === 'Distance') {
-    const sortedUsers = users.sort(sortByDistance);
-    const sortedSet = getSet(sortedUsers);
-
-    for (var i = 0; i < sortedSet.length; i++) {
-      leaderboard.push({
-        author: sortedSet[i].author,
-        username: sortedSet[i].username,
-        distance: getDistance(sortedSet[i].coordinates)
-      });
-    }
-
-    return leaderboard;
+    leaderboard.push({
+      author: userSet[i].author,
+      username: userSet[i].username,
+      value: acc
+    });
   }
+
+  return leaderboard;
 }
 
 export function getOrdinals(num: number) {
@@ -101,18 +101,11 @@ export function getBarStyle(num: number) {
   }
 }
 
-export function getWidth(index: number, leaderboard: Player[], type: string) {
-  if (type === 'Pins') {
-    const maxPins = leaderboard[0].pins;
-    const pins = leaderboard[index].pins;
+export function getWidth(index: number, leaderboard: Player[]) {
+  const maxValue = leaderboard[0].value;
+  const value = leaderboard[index].value;
 
-    return (pins * 100) / maxPins + '%';
-  }
-
-  const maxDistance = leaderboard[0].distance;
-  const distance = leaderboard[index].distance;
-
-  return (distance * 100) / maxDistance + '%';
+  return (value * 100) / maxValue + '%';
 }
 
 export function getUsername(index: number, leaderboard: Player[]) {
