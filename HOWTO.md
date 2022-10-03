@@ -48,18 +48,18 @@ Where `<branch>` is the name of your branch.
 
 **1.** Move to the `public/photos` directory
 
-**2.** Create a folder and name it your GitHub username. You'll save your pictures here.
+**2.** Create a folder and name it your GitHub username(s). You'll save your pictures here
 
 **3.** Move to the `data` directory and open the `places.ts` file on your favorite editor
 
 **4.** Add a new object to the array containing:
 
-- `author` - your first and last name
-- `username` - your GitHub username
+- `author` - your first and last name(s)
+- `username` - your GitHub username(s)
 - `type` - pin type (**`EPinType.<pin-type>`**)
 - `city` & `country` - city and country where the image was taken
 - `coordinates` - you can use [**this website**](https://www.gps-coordinates.net/my-location)
-- `date` - date of when the image was taken
+- `date` - date of when the image was taken (year-month-day format)
 - `photo` - path to your image file
 
 **Understanding Pin Types:**
@@ -80,6 +80,21 @@ Where `<branch>` is the name of your branch.
   coordinates: [41.39437640777792, 2.1750122226070197],
   date: '2022-03-21',
   photo: '/photos/feliciofilipe/barcelona.jpg'
+}
+```
+
+**Multiple authors? Check this one:**
+
+```typescript
+{
+  author: ['Filipe Felício', 'Matilde Bravo', 'Mariana Rodrigues'],
+  username: ['feliciofilipe', 'matildeopbravo', 'marianarodrigues'],
+  type: EPinType.Picture,
+  city: 'Rijeka',
+  country: 'Croatia',
+  coordinates: [45.33264760505596, 14.455986441966521],
+  date: '2022-07-04',
+  photo: '/photos/feliciofilipe,matildeopbravo/rijeka.jpg'
 }
 ```
 
