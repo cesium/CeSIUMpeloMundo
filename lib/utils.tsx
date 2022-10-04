@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { DateTime } from 'luxon';
 import { IPin } from '~/lib/types';
 
@@ -68,3 +69,10 @@ export const sortByOldest = (a: IPin, b: IPin) => {
     DateTime.fromISO(a.date).toMillis() - DateTime.fromISO(b.date).toMillis()
   );
 };
+
+export function getAuthorIcon(author: string | string[]) {
+  if (Array.isArray(author)) {
+    return <i className="bi bi-people-fill"></i>;
+  }
+  return <i className="bi bi-person-fill"></i>;
+}

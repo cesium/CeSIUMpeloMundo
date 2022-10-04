@@ -2,7 +2,12 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { IPin } from '~/lib/types';
-import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
+import {
+  getRelativeTimeString,
+  getNameString,
+  getDistance,
+  getAuthorIcon
+} from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
 
 import styles from './style.module.css';
@@ -19,13 +24,6 @@ const Marker = ({
   const icon = getIcon(type);
 
   const name = useMemo(() => getNameString(author), [author]);
-
-  function getAuthorIcon() {
-    if (Array.isArray(author)) {
-      return <i className="bi bi-people-fill"></i>;
-    }
-    return <i className="bi bi-person-fill"></i>;
-  }
 
   return (
     <MarkerContainer
@@ -51,7 +49,7 @@ const Marker = ({
               </span>
               <br />
               <span>
-                {getAuthorIcon()} {name}
+                {getAuthorIcon(author)} {name}
               </span>
             </div>
           </div>
