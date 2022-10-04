@@ -69,6 +69,8 @@ export const sortByOldest = (a: IPin, b: IPin) => {
   );
 };
 
+// <AuthorIcon/> - Used on Marker and Location components
+
 interface Author {
   author: string | string[];
 }
