@@ -6,7 +6,7 @@ import {
   getRelativeTimeString,
   getNameString,
   getDistance,
-  getAuthorIcon
+  AuthorIcon
 } from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
 
@@ -49,7 +49,7 @@ const Marker = ({
               </span>
               <br />
               <span>
-                {getAuthorIcon(author)} {name}
+                <AuthorIcon author={author} /> {name}
               </span>
             </div>
           </div>

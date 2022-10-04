@@ -3,7 +3,7 @@ import {
   getRelativeTimeString,
   getNameString,
   getDistance,
-  getAuthorIcon
+  AuthorIcon
 } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
@@ -67,7 +67,7 @@ const Location = ({
         </p>
         <p className={styles.paragraph2}>
           <span className={styles.authors}>
-            {getAuthorIcon(author)} {name}
+            <AuthorIcon author={author} /> {name}
           </span>
         </p>
       </div>
