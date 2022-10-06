@@ -1,12 +1,8 @@
 import Image from 'next/image';
-import {
-  getRelativeTimeString,
-  getNameString,
-  getDistance,
-  AuthorIcon
-} from '~/lib/utils';
+import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
+import AuthorIcon from '../AuthorIcon';
 
 const Location = ({
   type,

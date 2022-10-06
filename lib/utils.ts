@@ -68,16 +68,3 @@ export const sortByOldest = (a: IPin, b: IPin) => {
     DateTime.fromISO(a.date).toMillis() - DateTime.fromISO(b.date).toMillis()
   );
 };
-
-// <AuthorIcon/> - Used on Marker and Location components
-
-interface Author {
-  author: string | string[];
-}
-
-export const AuthorIcon = ({ author }: Author) => {
-  if (Array.isArray(author)) {
-    return <i className="bi bi-people-fill"></i>;
-  }
-  return <i className="bi bi-person-fill"></i>;
-};

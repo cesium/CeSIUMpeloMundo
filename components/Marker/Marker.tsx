@@ -2,13 +2,9 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { IPin } from '~/lib/types';
-import {
-  getRelativeTimeString,
-  getNameString,
-  getDistance,
-  AuthorIcon
-} from '~/lib/utils';
+import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
+import AuthorIcon from '../AuthorIcon';
 
 import styles from './style.module.css';
 
