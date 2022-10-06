@@ -1,3 +1,3 @@
-export interface Author {
+export interface AuthorIconProps {
   author: string | string[];
 }
