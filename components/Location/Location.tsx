@@ -41,7 +41,7 @@ const Location = ({
     <div className={styles.listings}>
       <div className={styles.marker} onClick={onClick}>
         <Image
-          src={`/images/markers/${type}-image.png`}
+          src={`/images/markers/${type}-image.svg`}
           alt="Marker"
           title="Go to pin"
           width={70}
