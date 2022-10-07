@@ -27,6 +27,11 @@ export const DEFAULT_FILTERS: IFilter[] = [
     checked: true
   },
   {
+    name: 'Merch',
+    type: 'merch',
+    checked: true
+  },
+  {
     name: 'Picture',
     type: 'picture',
     checked: true

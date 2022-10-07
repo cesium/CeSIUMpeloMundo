@@ -106,7 +106,7 @@ export const PLACES: IPin[] = [
   {
     author: ['Filipe Felício', 'Nelson Estevão'],
     username: ['feliciofilipe', 'nelsonmestevao'],
-    type: EPinType.Picture,
+    type: EPinType.Merch,
     city: 'London',
     country: 'United Kingdom',
     coordinates: [51.486082974689104, -0.19962908422844805],
@@ -226,7 +226,7 @@ export const PLACES: IPin[] = [
   {
     author: ['Filipe Felício', 'Matilde Bravo', 'Mariana Rodrigues'],
     username: ['feliciofilipe', 'matildeopbravo', 'marianarodrigues'],
-    type: EPinType.Picture,
+    type: EPinType.Merch,
     city: 'Rijeka',
     country: 'Croatia',
     coordinates: [45.33264760505596, 14.455986441966521],
@@ -256,7 +256,7 @@ export const PLACES: IPin[] = [
   {
     author: ['Filipe Felício', 'Matilde Bravo', 'José Macedo'],
     username: ['feliciofilipe', 'matildeopbravo', 'josemacedo'],
-    type: EPinType.Picture,
+    type: EPinType.Merch,
     city: 'Ljubljana',
     country: 'Slovenia',
     coordinates: [46.05218163654292, 14.511751028966621],
@@ -276,7 +276,7 @@ export const PLACES: IPin[] = [
   {
     author: 'Filipe Felício',
     username: 'feliciofilipe',
-    type: EPinType.Picture,
+    type: EPinType.Merch,
     city: 'Barcelona',
     country: 'Spain',
     coordinates: [41.39437640777792, 2.1750122226070197],
