@@ -1,67 +1,81 @@
 .listings {
   display: flex;
-  justify-content: flex-start;
   height: auto;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
   border-bottom: 1px solid #eee;
 
   color: #404040;
   text-decoration: none;
-  font: 400 15px/22px 'Rubik', sans-serif;
+  font-family: Inter, sans-serif;
 
   z-index: 2;
 }
 
 .marker {
-  height: 58px;
-  width: 58px;
-  padding: 10px 10px 5px 0;
   cursor: pointer;
+  padding: 0 10px 0 10px;
+  margin-top: 4px;
+  height: 61px;
+  width: 61px;
+  flex-shrink: 0;
 }
 
 .text {
-  padding: 5px;
+  margin-top: 2px;
   overflow: hidden;
+  font-size: 15px;
 }
 
 .authors {
   max-width: 100px;
-  white-space: wrap;
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.paragraph1 {
+  margin: 0 0 3px 0;
 }
 
 .paragraph {
+  margin: 0 0 6px 0;
+}
+
+.paragraph2 {
   margin: 0;
 }
 
 .title {
   cursor: pointer;
-  font-size: 16px;
+  font: 700 16px Rubik, sans-serif;
 }
 
 @media (max-width: 438px) {
   .listings {
     height: 100%;
-    padding: 10px;
+    padding: 16px 16px 16px 0;
     border-bottom: 1px solid #eee;
 
     color: #404040;
     text-decoration: none;
-    font: 400 13.2px/20.2px 'Rubik', sans-serif;
 
     z-index: 2;
   }
 
   .text {
-    padding-left: 10px;
+    font-size: 13.2px;
   }
 
   .marker {
-    height: 55px;
-    width: 55px;
-    padding: 10px 0px 5px 0px;
+    padding: 0 8px 0 8px;
+    margin-top: 4px;
+    height: 56px;
+    width: 56px;
   }
 
   .title {
-    font-size: 14.2px;
+    font-size: 14.5px;
   }
 }

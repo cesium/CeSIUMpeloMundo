@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import styles from './style.module.css';
 import { useMemo } from 'react';
+import AuthorIcon from '../AuthorIcon';
 
 const Location = ({
   type,
@@ -46,22 +47,23 @@ const Location = ({
           title="Go to pin"
           width={70}
           height={70}
+          objectFit="scale-down"
         />
       </div>
       <div className={styles.text}>
         <p className={styles.paragraph}>
-          <b className={styles.title} onClick={onClick} title="Go to pin">
+          <span className={styles.title} onClick={onClick} title="Go to pin">
             {city}, {country}
-          </b>
+          </span>
         </p>
-        <p className={styles.paragraph}>
-          <i>
+        <p className={styles.paragraph1}>
+          <span className={styles.light}>
             {getIcon()} {getItalic()}
-          </i>
+          </span>
         </p>
-        <p className={styles.paragraph}>
+        <p className={styles.paragraph2}>
           <span className={styles.authors}>
-            <i className="bi bi-person-fill"></i> {name}
+            <AuthorIcon author={author} /> {name}
           </span>
         </p>
       </div>
