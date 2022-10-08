@@ -65,7 +65,8 @@ Where `<branch>` is the name of your branch.
 **Understanding Pin Types:**
 
 - `EPinType.Sticker` - You left a CeSIUM sticker somewhere
-- `EPinType.Picture` - Anything CeSIUM related that isn't a sticker
+- `EPinType.Merch` - You showed off your style with the CeSIUM merch
+- `EPinType.Picture` - You want to share a picture of your trip with the CeSIUM family
 - `EPinType.Missing` - You revisited a pin and the sticker is now missing
 
 **Check out this example:**
@@ -74,7 +75,7 @@ Where `<branch>` is the name of your branch.
 {
   author: 'Filipe Felício',
   username: 'feliciofilipe',
-  type: EPinType.Picture,
+  type: EPinType.Merch,
   city: 'Barcelona',
   country: 'Spain',
   coordinates: [41.39437640777792, 2.1750122226070197],

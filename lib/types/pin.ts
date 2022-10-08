@@ -1,5 +1,6 @@
 export enum EPinType {
   Sticker = 'sticker',
+  Merch = 'merch',
   Picture = 'picture',
   Missing = 'missing',
   Leader = 'leader',
