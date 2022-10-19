@@ -265,7 +265,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Diogo Matos',
-    username: 'sassypocoyo',
+    username: 'diogogmatos',
     type: EPinType.Sticker,
     city: 'Zambujeira do Mar',
     country: 'Portugal',
