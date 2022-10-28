@@ -324,13 +324,19 @@ export const PLACES: IPin[] = [
     photo: '/photos/matildeopbravo/paris_camoes.jpg'
   },
   {
-    author : ['Filipe Felício','Nélson Estevão','Luís Araújo','Francisco Lira'],
-    username: ['feliciofilipe', 'nelsonmestevao','laraujo7','FranciscoLira'],
+    author: [
+      'Filipe Felício',
+      'Nélson Estevão',
+      'Luís Araújo',
+      'Francisco Lira'
+    ],
+    username: ['feliciofilipe', 'nelsonmestevao', 'laraujo7', 'FranciscoLira'],
     type: EPinType.Merch,
     city: 'Porto',
-    country : 'Portugal',
-    coordinates : [41.153721824645636, -8.587570915034126],
-    date: "2022-10-27",
-    photo : "/photos/feliciofilpe,nelsonmestevao,laraujo7,FranciscoLira/porto.jpeg"
-  },
+    country: 'Portugal',
+    coordinates: [41.153721824645636, -8.587570915034126],
+    date: '2022-10-27',
+    photo:
+      '/photos/feliciofilpe,nelsonmestevao,laraujo7,FranciscoLira/porto.jpeg'
+  }
 ];
