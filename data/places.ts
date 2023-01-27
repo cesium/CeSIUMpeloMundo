@@ -322,5 +322,25 @@ export const PLACES: IPin[] = [
     coordinates: [48.85946363288889, 2.287131396878628],
     date: '2022-07-17',
     photo: '/photos/matildeopbravo/paris_camoes.jpg'
+  },
+  {
+    author: 'Matilde Bravo',
+    username: 'matildeopbravo',
+    type: EPinType.Sticker,
+    city: 'Trogir',
+    country: 'Croatia',
+    coordinates: [43.5159178,16.2518851],
+    date: '2022-08-20',
+    photo: '/photos/matildeopbravo/trogir.jpg'
+  },
+  {
+    author: 'Matilde Bravo',
+    username: 'matildeopbravo',
+    type: EPinType.Sticker,
+    city: 'Lund',
+    country: 'Sweden',
+    coordinates: [55.7074486,13.1876206],
+    date: '2023-01-27',
+    photo: '/photos/matildeopbravo/lund.jpeg'
   }
 ];
