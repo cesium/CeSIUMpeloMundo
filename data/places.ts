@@ -329,7 +329,7 @@ export const PLACES: IPin[] = [
     type: EPinType.Sticker,
     city: 'Trogir',
     country: 'Croatia',
-    coordinates: [43.5159178,16.2518851],
+    coordinates: [43.5159178, 16.2518851],
     date: '2022-08-20',
     photo: '/photos/matildeopbravo/trogir.jpg'
   },
@@ -339,7 +339,7 @@ export const PLACES: IPin[] = [
     type: EPinType.Sticker,
     city: 'Lund',
     country: 'Sweden',
-    coordinates: [55.7074486,13.1876206],
+    coordinates: [55.7074486, 13.1876206],
     date: '2023-01-27',
     photo: '/photos/matildeopbravo/lund.jpeg'
   }
