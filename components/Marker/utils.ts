@@ -3,7 +3,7 @@ import { EPinType } from '~/lib/types';
 
 export const getIcon = (type: EPinType): Icon =>
   new Icon({
-    iconUrl: `/images/markers/${type}.svg`,
+    iconUrl: `/images/markers/default.png`,
     iconSize: [45, 90]
   });
 

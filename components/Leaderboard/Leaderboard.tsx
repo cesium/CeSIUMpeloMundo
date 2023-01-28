@@ -70,7 +70,7 @@ export default function Leaderboard() {
             </div>
             <a
               className={styles.name}
-              href={'https://github.com/' + player.username}
+              href={'https://instagram.com/' + player.username}
               title={'Go to ' + player.author + "'s GitHub"}
             >
               {' '}

@@ -47,7 +47,7 @@
 }
 
 .button_active {
-  background: rgba(255, 118, 73, 0.9);
+  background: rgba(0, 0, 0, 1);
   border-radius: 999px;
   /* box-shadow: rgb(255, 118, 73, 0.9) 0 10px 20px -10px; */
   box-sizing: border-box;
@@ -74,7 +74,7 @@
 }
 
 .sort_button {
-  background: rgba(255, 118, 73, 0.9);
+  background: rgba(0, 0, 0, 1);
   border-radius: 999px;
   box-sizing: border-box;
   color: #ffffff;

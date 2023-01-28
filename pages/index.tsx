@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>CeSIUM Pelo Mundo</title>
+        <title>Focus Jiu-Jitsu pelo Mundo</title>
         <meta
           name="description"
           content="A world map with the places we've been"
@@ -41,10 +41,10 @@ export default function Home() {
         <link
           rel="mask-icon"
           href="/favicon/safari-pinned-tab.svg"
-          color="#ff7649"
+          color="#000000"
         />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#ff7649" />
+        <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"
           content="/favicon/browserconfig.xml"
