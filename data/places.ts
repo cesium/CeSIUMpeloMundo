@@ -13,7 +13,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['João Castro', 'Pedro Brandão', 'Diogo Pacheco'],
-    username: ['castro_gmr', 'el_pach89', 'focus.jiujitsubraga'],
+    username: ['castro_gmr', 'focus.jiujitsubraga', 'el_pach89'],
     type: EPinType.Merch,
     city: 'Lisboa',
     country: 'Portugal',
@@ -23,7 +23,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício','João Castro', 'Pedro Brandão'],
-    username: ['felicio.filipe','castro_gmr', 'el_pach89', 'focus.jiujitsubraga'],
+    username: ['felicio.filipe','castro_gmr', 'focus.jiujitsubraga'],
     type: EPinType.Merch,
     city: 'Estádio Dom Afonso Henriques, Guimarães',
     country: 'Portugal',
@@ -33,7 +33,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: ['Filipe Felício','João Castro', 'Pedro Brandão'],
-    username: ['felicio.filipe','castro_gmr', 'el_pach89', 'focus.jiujitsubraga'],
+    username: ['felicio.filipe','castro_gmr', 'focus.jiujitsubraga'],
     type: EPinType.Merch,
     city: 'Ponte de Lima',
     country: 'Portugal',
