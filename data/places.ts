@@ -19,6 +19,26 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [38.742848143417774, -9.128892489772834],
     date: '2022-12-18',
-    photo: '/photos/openlisboa2022.png'
-  }
+    photo: '/photos/open_lisboa_2022.png'
+  },
+  {
+    author: ['Filipe Felício','João Castro', 'Pedro Brandão'],
+    username: ['felicio.filipe','castro_gmr', 'el_pach89', 'focus.jiujitsubraga'],
+    type: EPinType.Merch,
+    city: 'Estádio Dom Afonso Henriques, Guimarães',
+    country: 'Portugal',
+    coordinates: [41.44612371111313, -8.300825155979249],
+    date: '2023-01-27',
+    photo: '/photos/guimaraes.png'
+  },
+  {
+    author: ['Filipe Felício','João Castro', 'Pedro Brandão'],
+    username: ['felicio.filipe','castro_gmr', 'el_pach89', 'focus.jiujitsubraga'],
+    type: EPinType.Merch,
+    city: 'Ponte de Lima',
+    country: 'Portugal',
+    coordinates: [41.79274805002724, -8.54324705605865],
+    date: '2023-01-27',
+    photo: '/photos/ponte_de_lima.png'
+  },
 ];
