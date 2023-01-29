@@ -52,6 +52,14 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
       <div className={styles.sidebar}>
         <div className={styles.content}>
           <div className={styles.heading}>
+            <Image
+                src="/images/castrobjj.png"
+                alt="Castro Jiu-Jitsu Logo"
+                width={100}
+                height={98}
+                style={{ cursor: 'pointer' }}
+                priority
+            />
             <Link href="https://www.focusjiujitsuhq.com/">
               <Image
                 src="/images/focus.webp"
