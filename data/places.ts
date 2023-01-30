@@ -38,7 +38,7 @@ export const PLACES: IPin[] = [
     city: 'Ponte de Lima',
     country: 'Portugal',
     coordinates: [41.79274805002724, -8.54324705605865],
-    date: '2023-01-27',
+    date: '2023-01-14',
     photo: '/photos/ponte_de_lima.png'
   },
 ];
