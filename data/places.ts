@@ -25,7 +25,7 @@ export const PLACES: IPin[] = [
     author: ['Filipe Felício','João Castro', 'Pedro Brandão'],
     username: ['felicio.filipe','castro_gmr', 'focus.jiujitsubraga'],
     type: EPinType.Merch,
-    city: 'Estádio Dom Afonso Henriques, Guimarães',
+    city: 'Estádio D. Afonso Henriques, Guimarães',
     country: 'Portugal',
     coordinates: [41.44612371111313, -8.300825155979249],
     date: '2023-01-27',
