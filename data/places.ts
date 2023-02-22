@@ -379,10 +379,10 @@ export const PLACES: IPin[] = [
     type: EPinType.Sticker,
     city: 'Shibuya, Tokyo',
     country: 'Japan',
-    coordinates: [35.66269,139.69526],
+    coordinates: [35.66269, 139.69526],
     date: '2023-02-18',
     photo: '/photos/jpcorreia99/shibuya_tokyo.jpg'
-  }, 
+  },
   {
     author: 'João Correia',
     username: 'jpcorreia99',
@@ -410,7 +410,7 @@ export const PLACES: IPin[] = [
     city: 'Fushimi Inari, Kyoto',
     country: 'Japan',
     coordinates: [34.96672, 135.77494],
-    date: '2023-02-16',
+    date: '2023-02-17',
     photo: '/photos/jpcorreia99/fushimi_inari_kyoto.jpg'
   }
 ];
