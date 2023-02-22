@@ -342,5 +342,75 @@ export const PLACES: IPin[] = [
     coordinates: [55.7074486, 13.1876206],
     date: '2023-01-27',
     photo: '/photos/matildeopbravo/lund.jpeg'
+  },
+  {
+    author: 'João Correia',
+    username: 'jpcorreia99',
+    type: EPinType.Picture,
+    city: 'AWS, Dublin',
+    country: 'Ireland',
+    coordinates: [53.33132494708253, -6.246354987702219],
+    date: '2023-01-27',
+    photo: '/photos/jpcorreia99/aws_dublin.jpg'
+  },
+  {
+    author: 'João Correia',
+    username: 'jpcorreia99',
+    type: EPinType.Picture,
+    city: 'Changgyeonggung, Seoul',
+    country: 'South Korea',
+    coordinates: [37.58482, 126.97762],
+    date: '2023-02-07',
+    photo: '/photos/jpcorreia99/changgyeonggung_seoul.jpg'
+  },
+  {
+    author: 'João Correia',
+    username: 'jpcorreia99',
+    type: EPinType.Sticker,
+    city: 'Namsam, Seoul',
+    country: 'South Korea',
+    coordinates: [37.55103, 126.99098],
+    date: '2023-02-07',
+    photo: '/photos/jpcorreia99/namsam_seoul.jpg'
+  },
+  {
+    author: 'João Correia',
+    username: 'jpcorreia99',
+    type: EPinType.Sticker,
+    city: 'Shibuya, Tokyo',
+    country: 'Japan',
+    coordinates: [35.66269,139.69526],
+    date: '2023-02-18',
+    photo: '/photos/jpcorreia99/shibuya_tokyo.jpg'
+  }, 
+  {
+    author: 'João Correia',
+    username: 'jpcorreia99',
+    type: EPinType.Picture,
+    city: 'Meiji Jingu, Tokyo',
+    country: 'Japan',
+    coordinates: [35.67334, 139.70186],
+    date: '2023-02-14',
+    photo: '/photos/jpcorreia99/meiji_jingu_tokyo.jpg'
+  },
+  {
+    author: 'João Correia',
+    username: 'jpcorreia99',
+    type: EPinType.Picture,
+    city: 'Shitennoji, Osaka',
+    country: 'Japan',
+    coordinates: [34.65373, 135.51643],
+    date: '2023-02-16',
+    photo: '/photos/jpcorreia99/shitennoji_osaka.jpg'
+  },
+  {
+    author: 'João Correia',
+    username: 'jpcorreia99',
+    type: EPinType.Picture,
+    city: 'Fushimi Inari, Kyoto',
+    country: 'Japan',
+    coordinates: [34.96672, 135.77494],
+    date: '2023-02-16',
+    photo: '/photos/jpcorreia99/fushimi_inari_kyoto.jpg'
   }
 ];
