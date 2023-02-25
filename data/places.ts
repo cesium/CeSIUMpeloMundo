@@ -412,5 +412,15 @@ export const PLACES: IPin[] = [
     coordinates: [34.96672, 135.77494],
     date: '2023-02-17',
     photo: '/photos/jpcorreia99/fushimi_inari_kyoto.jpg'
+  },
+  {
+    author: 'Gerson Júnior',
+    username: 'GresosJ',
+    type: EPinType.Sticker,
+    city: 'Bragança',
+    country: 'Portugal',
+    coordinates: [41.716682, -6.857647],
+    date: '2022-08-13',
+    photo: '/photos/GresosJ/Bragança.jpg'
   }
 ];
