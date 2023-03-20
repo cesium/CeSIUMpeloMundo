@@ -429,8 +429,8 @@ export const PLACES: IPin[] = [
     type: EPinType.Sticker,
     city: 'Braga',
     country: 'Portugal',
-    coordinates: [38.722252, -9.139337],
+    coordinates: [41.5604125, -8.3955131],
     date: '2023-03-20',
-    photo: '/photos/Ze-Limao/aula_de_Redes.jpg'
+    photo: '/photos/Ze-Limao/aula_de_redes.jpg'
   }
 ];
