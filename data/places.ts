@@ -422,5 +422,15 @@ export const PLACES: IPin[] = [
     coordinates: [41.716682, -6.857647],
     date: '2022-08-13',
     photo: '/photos/GresosJ/Bragança.jpg'
+  },
+  {
+    author: 'José Correia',
+    username: 'Ze-Limao',
+    type: EPinType.Sticker,
+    city: 'Braga',
+    country: 'Portugal',
+    coordinates: [38.722252, -9.139337],
+    date: '2023-03-20',
+    photo: '/photos/Ze-Limao/aula_de_Redes.jpg'
   }
 ];
