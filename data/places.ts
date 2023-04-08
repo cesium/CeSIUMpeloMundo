@@ -422,5 +422,15 @@ export const PLACES: IPin[] = [
     coordinates: [41.716682, -6.857647],
     date: '2022-08-13',
     photo: '/photos/GresosJ/Bragança.jpg'
+  },
+  {
+    author: 'Daniel Pereira',
+    username: 'danielsp45',
+    type: EPinType.Sticker,
+    city: 'Berlin',
+    country: 'Germany',
+    coordinates: [52.503042, 13.445205],
+    date: '2023-04-07',
+    photo: '/photos/danielsp45/berlin_wall.jpg'
   }
 ];
