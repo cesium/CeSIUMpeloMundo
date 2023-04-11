@@ -440,7 +440,7 @@ export const PLACES: IPin[] = [
     city: 'Ericeira',
     country: 'Portugal',
     coordinates: [38.96014, -9.41691],
-    date: '2023-08-20',
+    date: '2022-08-20',
     photo: '/photos/JulioJPinto/ericeira.jpg'
   }
 ];
