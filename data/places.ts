@@ -432,5 +432,15 @@ export const PLACES: IPin[] = [
     coordinates: [52.503042, 13.445205],
     date: '2023-04-07',
     photo: '/photos/danielsp45/berlin_wall.jpg'
+  },
+  {
+    author: ['Júlio Pinto', 'Jéssica Fernandes'],
+    username: ['JulioJPinto', 'MFJess'],
+    type: EPinType.Sticker,
+    city: 'Ericeira',
+    country: 'Portugal',
+    coordinates: [38.96014, -9.41691],
+    date: '2022-08-20',
+    photo: '/photos/JulioJPinto/ericeira.jpg'
   }
 ];
