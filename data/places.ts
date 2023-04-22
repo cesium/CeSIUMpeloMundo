@@ -104,7 +104,7 @@ export const PLACES: IPin[] = [
     photo: '/photos/feliciofilipe/london.jpg'
   },
   {
-    author: ['Filipe Felício', 'Nelson Estevão'],
+    author: ['Filipe Felício', 'Nelson Estevão', 'José Valim'],
     username: ['feliciofilipe', 'nelsonmestevao'],
     type: EPinType.Merch,
     city: 'London',
@@ -112,6 +112,24 @@ export const PLACES: IPin[] = [
     coordinates: [51.486082974689104, -0.19962908422844805],
     date: '2022-06-09',
     photo: '/photos/feliciofilipe,nelsonmestevao/london.jpg'
+  },
+  {
+    author: [
+      'José Valim',
+      'Chris McCord',
+      'Filipe Felício',
+      'Nelson Estevão',
+      'Luís Araújo',
+      'Francisco Lira'
+    ],
+    username: ['feliciofilipe', 'nelsonmestevao'],
+    type: EPinType.Merch,
+    city: 'Lisboa',
+    country: 'Portugal',
+    coordinates: [38.72089957160629, -9.150110630930728],
+    date: '2023-04-22',
+    photo:
+      '/photos/feliciofilipe,nelsonmestevao,laraujo7,FranciscoLira/lisboa.jpg'
   },
   {
     author: 'João Correia',
