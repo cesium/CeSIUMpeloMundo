@@ -15,7 +15,7 @@ export const PLACES: IPin[] = [
     author: ['João Castro', 'Pedro Brandão', 'Diogo Pacheco'],
     username: ['castro_gmr', 'focus.jiujitsubraga', 'el_pach89'],
     type: EPinType.Merch,
-    city: 'Lisboa',
+    city: 'Lisboa Open 2022',
     country: 'Portugal',
     coordinates: [38.742848143417774, -9.128892489772834],
     date: '2022-12-18',
@@ -40,5 +40,15 @@ export const PLACES: IPin[] = [
     coordinates: [41.79274805002724, -8.54324705605865],
     date: '2023-01-14',
     photo: '/photos/ponte_de_lima.png'
+  },
+  {
+    author: ['Filipe Felício','João Santos'],
+    username: ['felicio.filipe', 'gracielisboa_jiujitsu'],
+    type: EPinType.Merch,
+    city: 'Lisboa',
+    country: 'Portugal',
+    coordinates: [38.73934071555419, -9.130128685492226],
+    date: '2023-04-20',
+    photo: '/photos/gracie_lisboa.png'
   },
 ];
