@@ -460,5 +460,15 @@ export const PLACES: IPin[] = [
     coordinates: [38.96014, -9.41691],
     date: '2022-08-20',
     photo: '/photos/JulioJPinto/ericeira.jpg'
+  },
+  {
+    author: ['Filipe Felício', 'Daniel Pereira'],
+    username: ['feliciofilipe', 'danielsp45'],
+    type: EPinType.Sticker,
+    city: 'Chaves',
+    country: 'Portugal',
+    coordinates: [41.73677900798794, -7.464917455479609],
+    date: '2023-07-06',
+    photo: '/photos/feliciofilipe,danielsp45/chaves.jpg'
   }
 ];
