@@ -470,5 +470,63 @@ export const PLACES: IPin[] = [
     coordinates: [41.73677900798794, -7.464917455479609],
     date: '2023-07-06',
     photo: '/photos/feliciofilipe,danielsp45/chaves.jpg'
+  },
+  {
+    author: [
+      'Luis Araújo',
+      'Francisco Lira',
+      'Bárbara Ferreira',
+      'João Vilaça',
+      'Miguel Brandão',
+      'Jéssica Lemos',
+      'Márcia Teixeira',
+      'Catarina Machado'
+    ],
+    username: [
+      'laraujo7',
+      'FranciscoLira',
+      'Barbara29',
+      'machadovilaca',
+      'miguelbrandao',
+      'jessicalemos',
+      'teixeiramarcia',
+      'catarinamachado'
+    ],
+    type: EPinType.Sticker,
+    city: 'Amsterdam',
+    country: 'Nederlands',
+    coordinates: [52.477, 4.81467],
+    date: '2021-04-13',
+    photo:
+      '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/amsterdam1.jpg'
+  },
+  {
+    author: [
+      'Luis Araújo',
+      'Francisco Lira',
+      'Bárbara Ferreira',
+      'João Vilaça',
+      'Miguel Brandão',
+      'Jéssica Lemos',
+      'Márcia Teixeira',
+      'Catarina Machado'
+    ],
+    username: [
+      'laraujo7',
+      'FranciscoLira',
+      'Barbara29',
+      'machadovilaca',
+      'miguelbrandao',
+      'jessicalemos',
+      'teixeiramarcia',
+      'catarinamachado'
+    ],
+    type: EPinType.Sticker,
+    city: 'Zaandam',
+    country: 'Nederlands',
+    coordinates: [52.36119, 4.888508],
+    date: '2021-04-13',
+    photo:
+      '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/zaandam.jpg'
   }
 ];
