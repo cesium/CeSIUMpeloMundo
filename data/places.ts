@@ -528,5 +528,25 @@ export const PLACES: IPin[] = [
     date: '2021-04-13',
     photo:
       '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/zaandam.jpg'
+  },
+  {
+    author: 'Rui Lopes',
+    username: 'RuiL1904',
+    type: EPinType.Sticker,
+    city: 'Sagres',
+    country: 'Portugal',
+    coordinates: [37.001527, -8.947717],
+    date: '2023-08-01',
+    photo: '/photos/RuiL1904/sagres.jpg'
+  },
+  {
+    author: 'Rui Lopes',
+    username: 'RuiL1904',
+    type: EPinType.Sticker,
+    city: 'Quarteira',
+    country: 'Portugal',
+    coordinates: [37.067041, -8.102513],
+    date: '2023-08-05',
+    photo: '/photos/RuiL1904/quarteira.jpg'
   }
 ];
