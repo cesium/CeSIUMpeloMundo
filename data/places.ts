@@ -530,6 +530,7 @@ export const PLACES: IPin[] = [
       '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/zaandam.jpg'
   },
   {
+
     author: ['Filipe Felício', 'Luis Araújo'],
     username: ['feliciofilipe', 'laraujo7'],
     type: EPinType.Sticker,
@@ -548,5 +549,24 @@ export const PLACES: IPin[] = [
     coordinates: [43.472395, -3.917568],
     date: '2023-07-28',
     photo: '/photos/feliciofilipe,laraujo7/playa_de_arnia.jpg'
+  },
+    author: 'Rui Lopes',
+    username: 'RuiL1904',
+    type: EPinType.Sticker,
+    city: 'Sagres',
+    country: 'Portugal',
+    coordinates: [37.001527, -8.947717],
+    date: '2023-08-01',
+    photo: '/photos/RuiL1904/sagres.jpg'
+  },
+  {
+    author: 'Rui Lopes',
+    username: 'RuiL1904',
+    type: EPinType.Sticker,
+    city: 'Quarteira',
+    country: 'Portugal',
+    coordinates: [37.067041, -8.102513],
+    date: '2023-08-05',
+    photo: '/photos/RuiL1904/quarteira.jpg'
   }
 ];
