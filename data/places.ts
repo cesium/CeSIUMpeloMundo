@@ -568,5 +568,15 @@ export const PLACES: IPin[] = [
     coordinates: [37.067041, -8.102513],
     date: '2023-08-05',
     photo: '/photos/RuiL1904/quarteira.jpg'
+  },
+  {
+    author: 'Filipe Felício',
+    username: 'feliciofilipe',
+    type: EPinType.Sticker,
+    city: 'Vigo',
+    country: 'Spain',
+    coordinates: [42.24133604109711, -8.72293898782188],
+    date: '2023-08-06',
+    photo: '/photos/feliciofilipe/vigo.jpg'
   }
 ];
