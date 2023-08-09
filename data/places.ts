@@ -495,10 +495,10 @@ export const PLACES: IPin[] = [
     type: EPinType.Sticker,
     city: 'Amsterdam',
     country: 'Nederlands',
-    coordinates: [52.477, 4.81467],
-    date: '2021-04-13',
+    coordinates: [52.36119, 4.888508],
+    date: '2023-03-12',
     photo:
-      '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/amsterdam1.jpg'
+      '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/amsterdam.jpg'
   },
   {
     author: [
@@ -524,13 +524,12 @@ export const PLACES: IPin[] = [
     type: EPinType.Sticker,
     city: 'Zaandam',
     country: 'Nederlands',
-    coordinates: [52.36119, 4.888508],
-    date: '2021-04-13',
+    coordinates: [52.477, 4.81467],
+    date: '2023-03-13',
     photo:
       '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/zaandam.jpg'
   },
   {
-
     author: ['Filipe Felício', 'Luis Araújo'],
     username: ['feliciofilipe', 'laraujo7'],
     type: EPinType.Sticker,
@@ -550,6 +549,7 @@ export const PLACES: IPin[] = [
     date: '2023-07-28',
     photo: '/photos/feliciofilipe,laraujo7/playa_de_arnia.jpg'
   },
+  {
     author: 'Rui Lopes',
     username: 'RuiL1904',
     type: EPinType.Sticker,
