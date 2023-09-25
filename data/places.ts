@@ -551,23 +551,23 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Rui Lopes',
-    username: 'RuiL1904',
+    username: 'ruilopesm',
     type: EPinType.Sticker,
     city: 'Sagres',
     country: 'Portugal',
     coordinates: [37.001527, -8.947717],
     date: '2023-08-01',
-    photo: '/photos/RuiL1904/sagres.jpg'
+    photo: '/photos/ruilopesm/sagres.jpg'
   },
   {
     author: 'Rui Lopes',
-    username: 'RuiL1904',
+    username: 'ruilopesm',
     type: EPinType.Sticker,
     city: 'Quarteira',
     country: 'Portugal',
     coordinates: [37.067041, -8.102513],
     date: '2023-08-05',
-    photo: '/photos/RuiL1904/quarteira.jpg'
+    photo: '/photos/ruilopesm/quarteira.jpg'
   },
   {
     author: 'Filipe Felício',
