@@ -578,5 +578,15 @@ export const PLACES: IPin[] = [
     coordinates: [42.24133604109711, -8.72293898782188],
     date: '2023-08-06',
     photo: '/photos/feliciofilipe/vigo.jpg'
+  },
+  {
+    author: ['João Lobo', 'Rita Camacho'],
+    username: ['joaodiaslobo', 'ritacamacho'],
+    type: EPinType.Sticker,
+    city: 'Amsterdam',
+    country: 'Netherlands',
+    coordinates: [52.377524, 4.899008],
+    date: '2023-06-28',
+    photo: '/photos/joaodiaslobo,ritacamacho/amsterdam.jpeg'
   }
 ];
