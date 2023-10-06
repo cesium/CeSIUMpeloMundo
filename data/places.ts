@@ -587,6 +587,6 @@ export const PLACES: IPin[] = [
     country: 'Netherlands',
     coordinates: [52.377524, 4.899008],
     date: '2023-06-28',
-    photo: '/photos/joaodiaslobo,ritacamacho/amsterdam.jpeg'  
+    photo: '/photos/joaodiaslobo,ritacamacho/amsterdam.jpeg'
   }
 ];
