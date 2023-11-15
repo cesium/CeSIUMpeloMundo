@@ -46,6 +46,7 @@ export default function Map({ pins, setMapRef }: Props) {
       style={{ height: '100vh' }}
       zoomControl={false}
       attributionControl={true}
+      maxZoom={18}
     >
       <Ref></Ref>
       <LayersControl position="topright">
