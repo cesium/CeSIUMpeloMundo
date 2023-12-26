@@ -598,5 +598,15 @@ export const PLACES: IPin[] = [
     coordinates: [52.5208, 13.41275],
     date: '2023-10-22',
     photo: '/photos/laraujo7,feliciofilipe,nelsonmestevao/berlin.jpg'
+  },
+  {
+    author: 'Gerson Júnior',
+    username: 'GresosJ',
+    type: EPinType.Sticker,
+    city: 'Eindhoven',
+    country: 'Netherlands',
+    coordinates: [51.4400423, 5.4774228],
+    date: '2023-12-26',
+    photo: '/photos/GresosJ/Eindhoven.jpg'
   }
 ];
