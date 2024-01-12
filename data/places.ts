@@ -608,5 +608,15 @@ export const PLACES: IPin[] = [
     coordinates: [51.4400423, 5.4774228],
     date: '2023-12-26',
     photo: '/photos/GresosJ/Eindhoven.jpg'
+  },
+  {
+    author: ['João Lobo', 'Rita Camacho'],
+    username: ['joaodiaslobo', 'ritacamacho'],
+    type: EPinType.Picture,
+    city: 'Prague',
+    country: 'Czech Republic',
+    coordinates: [50.09190612588056, 14.406278379658675],
+    date: '2024-01-07',
+    photo: '/photos/joaodiaslobo,ritacamacho/prague.png'
   }
 ];
