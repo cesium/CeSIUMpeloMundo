@@ -618,5 +618,15 @@ export const PLACES: IPin[] = [
     coordinates: [50.09190612588056, 14.406278379658675],
     date: '2024-01-07',
     photo: '/photos/joaodiaslobo,ritacamacho/prague.png'
+  },
+  {
+    author: 'Guilherme Costa',
+    username: 'xrosta',
+    type: EPinType.Sticker,
+    city: 'Horta',
+    country: 'Portugal',
+    coordinates: [38.580415, -28.7069807],
+    date: '2024-01-28',
+    photo: '/photos/xrosta/caldeira.jpg'
   }
 ];
