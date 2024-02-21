@@ -126,7 +126,11 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
                     className={styles.sort_button}
                   >
                     <option>↓</option>
-                    <option>↑</option>
+                    <option
+                      {...(sortDirection == '↑' ? { selected: true } : {})}
+                    >
+                      ↑
+                    </option>
                   </select>
                 </div>
               </div>
