@@ -124,13 +124,10 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
                       setSortDirection(e.target.value as ESortDirection)
                     }
                     className={styles.sort_button}
+                    value={sortDirection}
                   >
                     <option>↓</option>
-                    <option
-                      {...(sortDirection == '↑' ? { selected: true } : {})}
-                    >
-                      ↑
-                    </option>
+                    <option>↑</option>
                   </select>
                 </div>
               </div>
