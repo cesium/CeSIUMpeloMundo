@@ -628,5 +628,15 @@ export const PLACES: IPin[] = [
     coordinates: [38.580415, -28.7069807],
     date: '2024-01-28',
     photo: '/photos/xrosta/caldeira.jpg'
+  },
+  {
+    author: 'NIAEFEUP',
+    username: 'NIAEFEUP',
+    type: EPinType.Sticker,
+    city: 'Porto',
+    country: 'Portugal',
+    coordinates: [41.177745794059135, -8.595977428835305],
+    date: '2024-03-09',
+    photo: '/photos/NIAEFEUP/porto.jpeg'
   }
 ];
