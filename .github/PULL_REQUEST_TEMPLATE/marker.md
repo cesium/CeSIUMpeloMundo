@@ -4,8 +4,8 @@ When adding a new marker, you must do 2 things:
 - Edit the `places.ts` file under `data`, adding an entry with the following shape:
 ```ts
 {
-    author: '...', // First and Last name of the people involved
-    username: '...', // username or usernames of the people involved
+    author: '...', // First and Last name of the people involved, or a list whose elements match that definition
+    username: '...', // username or list of usernames of the people involved
     type: ..., // type of the marker, see below
     city: '...', // the city where the image was taken
     country: '...', // the country where the image was taken
@@ -23,33 +23,31 @@ Available pin types are:
 - Missing
   
 > Note: Missing should be used when updating a marker
-
-More information is available in this repository's [HOWTO](https://github.com/cesium/CeSIUMpeloMundo/blob/main/HOWTO.md)
 ---
 
 > More information is present in this repository's [HOWTO](https://github.com/cesium/CeSIUMpeloMundo/blob/main/HOWTO.md). This is just so the maintainers have the information immediately available
 
-##  **Date**:
+## **Date**:
 
-<!-- Pleas write this date in the format  (YYYY-MM-DD)
+<!-- Please write this date in the format  (YYYY-MM-DD)
  -->
 
 ...
 
-##  **Location**:
+## **Location**:
 
 <!-- Write the location and coordinates. Additionally add a Google Maps link (this should not and will not be present in the code)
  -->
 
 ...
 
-##  **People present**: ...
+## **People present**: ...
 
 <!-- All the people that were present should be listed in this section. Optionally, if those people belong to an organization/association, write the name of said organization/association
  -->
+
 ...
 
-##  **Image**: ...
+## **Image**: ...
 
 <!-- Add the image taken in this section -->
-
