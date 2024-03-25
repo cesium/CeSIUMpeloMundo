@@ -638,5 +638,15 @@ export const PLACES: IPin[] = [
     coordinates: [41.177745794059135, -8.595977428835305],
     date: '2024-03-09',
     photo: '/photos/NIAEFEUP/porto.jpeg'
+  },
+  {
+    author: 'Dário Guimarães',
+    username: 'darguima',
+    type: EPinType.Sticker,
+    city: 'Lisboa',
+    country: 'Portugal',
+    coordinates: [38.707222222222, -9.1366666666667],
+    date: '2024-03-15',
+    photo: '/photos/darguima/lisboa_terreiro_paco.jpg'
   }
 ];
