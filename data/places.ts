@@ -648,5 +648,15 @@ export const PLACES: IPin[] = [
     coordinates: [38.707222222222, -9.1366666666667],
     date: '2024-03-15',
     photo: '/photos/darguima/lisboa_terreiro_paco.jpg'
+  },
+  {
+    author: 'Dário Guimarães',
+    username: 'darguima',
+    type: EPinType.Sticker,
+    city: 'Coimbra',
+    country: 'Portugal',
+    coordinates: [40.206944, -8.424215],
+    date: '2024-06-04',
+    photo: '/photos/darguima/coimbra_universidade.jpg'
   }
 ];
