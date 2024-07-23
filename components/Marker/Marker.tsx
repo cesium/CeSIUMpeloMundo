@@ -40,7 +40,10 @@ const Marker = ({
 
       {showModal && (
         <div className={styles.modalOverlay} onClick={handleCloseModal}>
-          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className={styles.imageContainer}>
               <Image
                 alt={`${name} at ${city}`}
