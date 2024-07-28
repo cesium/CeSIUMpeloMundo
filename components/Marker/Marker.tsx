@@ -17,6 +17,7 @@ const Marker = ({
   date
 }: IPin) => {
   const [showModal, setShowModal] = useState(false);
+  const [imageOrientation, setImageOrientation] = useState('vertical');
   const icon = getIcon(type);
 
   const name = useMemo(() => getNameString(author), [author]);
@@ -27,6 +28,13 @@ const Marker = ({
 
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.target as HTMLImageElement;
+    setImageOrientation(
+      img.naturalWidth > img.naturalHeight ? 'horizontal' : 'vertical'  
+    );                                                               
   };
 
   return (
@@ -41,7 +49,7 @@ const Marker = ({
       {showModal && (
         <div className={styles.modalOverlay} onClick={handleCloseModal}>
           <div
-            className={styles.modalContent}
+            className={`${styles.modalContent} ${styles[imageOrientation]}`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className={styles.imageContainer}>
@@ -50,21 +58,25 @@ const Marker = ({
                 src={photo}
                 layout="fill"
                 className={styles.image}
+                onLoad={handleImageLoad}
               />
-            </div>
-            <div className={styles.text}>
-              <h2 className={styles.title}>{`${city}, ${country}`}</h2>
-              <span className={styles.detail}>
-                <i className="bi bi-calendar"></i> {getFullDateString(date)} (
-                {getRelativeTimeString(date)})
-              </span>
-              <span className={styles.detail}>
-                <i className="bi bi-signpost-fill"></i>{' '}
-                {Math.round(getDistance(coordinates))} km away
-              </span>
-              <span className={styles.detail}>
-                <AuthorIcon author={author} /> {name}
-              </span>
+              <button className={styles.closeButton} onClick={handleCloseModal}>
+                &times;
+              </button>
+              <div className={styles.textOverlay}>
+                <h2 className={styles.title}>{`${city}, ${country}`}</h2>
+                <span className={styles.detail}>
+                  <i className="bi bi-calendar"></i> {getFullDateString(date)} (
+                  {getRelativeTimeString(date)})
+                </span>
+                <span className={styles.detail}>
+                  <i className="bi bi-signpost-fill"></i>{' '}
+                  {Math.round(getDistance(coordinates))} km away
+                </span>
+                <span className={styles.detail}>
+                  <AuthorIcon author={author} /> {name}
+                </span>
+              </div>
             </div>
           </div>
         </div>
