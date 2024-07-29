@@ -1,6 +1,6 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import Image from 'next/image';
-import { Marker as MarkerContainer } from 'react-leaflet';
+import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { IPin } from '~/lib/types';
 import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
@@ -14,74 +14,52 @@ const Marker = ({
   country,
   author,
   photo,
-  date
+  date,
+  orientation = 'default' // Default to 'default' orientation
 }: IPin) => {
-  const [showModal, setShowModal] = useState(false);
-  const [imageOrientation, setImageOrientation] = useState('vertical');
   const icon = getIcon(type);
-
   const name = useMemo(() => getNameString(author), [author]);
 
-  const handleMarkerClick = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
-  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    const img = e.target as HTMLImageElement;
-    setImageOrientation(
-      img.naturalWidth > img.naturalHeight ? 'horizontal' : 'vertical'  
-    );                                                               
-  };
+  const popupClassName = `${styles.popup} ${
+    orientation === 'horizontal' ? 'horizontal' : ''
+  }`;
 
   return (
-    <>
-      <MarkerContainer
-        icon={icon}
-        position={coordinates}
-        title={`${name} at ${city}`}
-        eventHandlers={{ click: handleMarkerClick }}
-      />
-
-      {showModal && (
-        <div className={styles.modalOverlay} onClick={handleCloseModal}>
-          <div
-            className={`${styles.modalContent} ${styles[imageOrientation]}`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className={styles.imageContainer}>
-              <Image
-                alt={`${name} at ${city}`}
-                src={photo}
-                layout="fill"
-                className={styles.image}
-                onLoad={handleImageLoad}
-              />
-              <button className={styles.closeButton} onClick={handleCloseModal}>
-                &times;
-              </button>
-              <div className={styles.textOverlay}>
-                <h2 className={styles.title}>{`${city}, ${country}`}</h2>
-                <span className={styles.detail}>
-                  <i className="bi bi-calendar"></i> {getFullDateString(date)} (
-                  {getRelativeTimeString(date)})
-                </span>
-                <span className={styles.detail}>
-                  <i className="bi bi-signpost-fill"></i>{' '}
-                  {Math.round(getDistance(coordinates))} km away
-                </span>
-                <span className={styles.detail}>
-                  <AuthorIcon author={author} /> {name}
-                </span>
-              </div>
-            </div>
+    <MarkerContainer
+      icon={icon}
+      position={coordinates}
+      title={`${name} at ${city}`}
+    >
+      <Popup className={popupClassName}>
+        <div>
+          <Image
+            alt={`${name} at ${city}`}
+            src={photo}
+            layout="fill"
+            objectFit="cover"
+            className={styles.image}
+          />
+          <div className={styles.textOverlay}>
+            <h1 className={styles.title}>
+              {city}, {country}
+            </h1>
+            <span className={styles.light}>
+              <i className="bi bi-calendar"></i> {getFullDateString(date)} (
+              {getRelativeTimeString(date)})
+            </span>
+            <br />
+            <span className={styles.light}>
+              <i className="bi bi-signpost-fill"></i>{' '}
+              {Math.round(getDistance(coordinates))} km away
+            </span>
+            <br />
+            <span>
+              <AuthorIcon author={author} /> {name}
+            </span>
           </div>
         </div>
-      )}
-    </>
+      </Popup>
+    </MarkerContainer>
   );
 };
 

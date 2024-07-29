@@ -22,13 +22,21 @@ body {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.4);
 }
 
 .leaflet-popup-content {
-  width: 301px;
-  height: 470px;
+  width: 301px !important;
+  height: 470px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.horizontal .leaflet-popup-content {
+  width: 651px !important;
+  height: 400px !important;
 }
 
 .custom-marker-cluster {
@@ -48,4 +56,18 @@ body {
 .map {
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .leaflet-popup-content {
+    width: 201px !important;
+    height: 350px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .horizontal .leaflet-popup-content {
+    width: 351px !important;
+    height: 200px !important;
+  }
 }

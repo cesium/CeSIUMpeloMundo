@@ -17,4 +17,5 @@ export interface IPin {
   photo: string;
   type?: EPinType;
   streetview?: string;
+  orientation?: string;
 }

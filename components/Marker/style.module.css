@@ -1,118 +1,30 @@
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modalContent {
-  padding: 0px;
-  max-width: 90%;
-  max-height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-.modalContent.vertical .imageContainer {
-  width: 900px;
-  height: 950px;
-}
-
-.modalContent.horizontal .imageContainer {
-  width: 1200px;
-  height: 800px;
+.image {
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .textOverlay {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   color: white;
-}
-
-.imageContainer {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.image {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
-
-.closeButton:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.text {
-  margin-top: 20px;
-  text-align: center;
-  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .title {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+  margin: 0 0 10px;
+  font-size: 18px;
 }
 
-.detail {
-  display: block;
-  margin: 5px 0;
-  font-size: 16px;
-  color: white;
-}
-
-.bi {
-  margin-right: 8px;
-  color: white;
-}
-
-@media (max-width: 500px) {
-  .modalContent {
-    padding: 10px;
-  }
-
-  .modalContent.vertical .imageContainer, 
-  .modalContent.horizontal .imageContainer { 
-    height: 350px;
-    width: 400px;
-  }
-
-  .title {
-    font-size: 20px;
-  }
-
-  .detail {
-    font-size: 14px;
-  }
+.light {
+  font-size: 14px;
+  opacity: 0.8;
 }
