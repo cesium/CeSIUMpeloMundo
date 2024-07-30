@@ -15,7 +15,7 @@ const Marker = ({
   author,
   photo,
   date,
-  orientation = 'default' // Default to 'default' orientation
+  orientation = 'vertical'
 }: IPin) => {
   const icon = getIcon(type);
   const name = useMemo(() => getNameString(author), [author]);
