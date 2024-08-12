@@ -658,5 +658,15 @@ export const PLACES: IPin[] = [
     coordinates: [40.206944, -8.424215],
     date: '2024-06-04',
     photo: '/photos/darguima/coimbra_universidade.jpg'
+  },
+  {
+    author: 'Humberto Gomes',
+    username: 'voidbert',
+    type: EPinType.Merch,
+    city: 'Bilbao',
+    country: 'Spain',
+    coordinates: [43.26925725801514, -2.93479144050948],
+    date: '2024-08-04',
+    photo: '/photos/voidbert/bilbao.jpg'
   }
 ];
