@@ -1,10 +1,10 @@
-import { useMemo } from 'react';
-import Image from 'next/image';
+import { useState, useMemo} from 'react';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { IPin } from '~/lib/types';
 import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
 import AuthorIcon from '../AuthorIcon';
+import Image from 'next/image';
 import styles from './style.module.css';
 
 const Marker = ({
@@ -15,13 +15,24 @@ const Marker = ({
   author,
   photo,
   date,
-  orientation = 'vertical'
+  orientation,
 }: IPin) => {
+  const [imageOrientation, setImageOrientation] = useState(orientation || 'vertical');
   const icon = getIcon(type);
   const name = useMemo(() => getNameString(author), [author]);
 
+
+
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.target as HTMLImageElement;
+    setImageOrientation(
+      img.naturalWidth > img.naturalHeight ? 'horizontal' : 'vertical'  
+    );                                                               
+  };
+  
+
   const popupClassName = `${styles.popup} ${
-    orientation === 'horizontal' ? 'horizontal' : ''
+    imageOrientation === 'horizontal' ? 'horizontal' : 'vertical'
   }`;
 
   return (
@@ -31,13 +42,13 @@ const Marker = ({
       title={`${name} at ${city}`}
     >
       <Popup className={popupClassName}>
-        <div>
+        <div className={styles.imageContainer}>
           <Image
             alt={`${name} at ${city}`}
             src={photo}
             layout="fill"
             objectFit="cover"
-            className={styles.image}
+            className={`${styles.image} ${styles[imageOrientation]}`}
           />
           <div className={styles.textOverlay}>
             <h1 className={styles.title}>

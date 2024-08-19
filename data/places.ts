@@ -129,7 +129,8 @@ export const PLACES: IPin[] = [
     coordinates: [38.72089957160629, -9.150110630930728],
     date: '2023-04-22',
     photo:
-      '/photos/feliciofilipe,nelsonmestevao,laraujo7,FranciscoLira/lisboa.jpg'
+      '/photos/feliciofilipe,nelsonmestevao,laraujo7,FranciscoLira/lisboa.jpg',
+    orientation: 'horizontal'
   },
   {
     author: 'João Correia',
@@ -279,7 +280,7 @@ export const PLACES: IPin[] = [
     country: 'Slovenia',
     coordinates: [46.05218163654292, 14.511751028966621],
     date: '2022-07-10',
-    photo: '/photos/feliciofilipe,matildeopbravo/liubliana.jpg'
+    photo: '/photos/feliciofilipe,matildeopbravo/liubliana.jpg',
   },
   {
     author: 'Diogo Matos',
