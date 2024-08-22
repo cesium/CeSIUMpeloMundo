@@ -129,8 +129,7 @@ export const PLACES: IPin[] = [
     coordinates: [38.72089957160629, -9.150110630930728],
     date: '2023-04-22',
     photo:
-      '/photos/feliciofilipe,nelsonmestevao,laraujo7,FranciscoLira/lisboa.jpg',
-    orientation: 'horizontal'
+      '/photos/feliciofilipe,nelsonmestevao,laraujo7,FranciscoLira/lisboa.jpg'
   },
   {
     author: 'João Correia',

@@ -34,3 +34,13 @@
   font-size: 14px;
   opacity: 1;
 }
+
+.horizontalImage {
+  width: 651px !important;
+  height: 400px !important;
+}
+
+.verticalImage {
+  width: 301px !important;
+  height: 470px !important;
+}

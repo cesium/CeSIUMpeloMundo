@@ -1,11 +1,12 @@
-import { useState, useMemo} from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { IPin } from '~/lib/types';
 import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
 import AuthorIcon from '../AuthorIcon';
+import localStyles from './style.module.css'; 
+import 'styles/globals.css'; 
 import Image from 'next/image';
-import styles from './style.module.css';
 
 const Marker = ({
   type,
@@ -17,23 +18,25 @@ const Marker = ({
   date,
   orientation,
 }: IPin) => {
-  const [imageOrientation, setImageOrientation] = useState(orientation || 'vertical');
   const icon = getIcon(type);
   const name = useMemo(() => getNameString(author), [author]);
 
+  const [imageOrientation, setImageOrientation] = useState(orientation || 'vertical');
 
+  useEffect(() => {
+    if (!orientation) {
+      const img = new window.Image();
+      img.src = photo;
 
-  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    const img = e.target as HTMLImageElement;
-    setImageOrientation(
-      img.naturalWidth > img.naturalHeight ? 'horizontal' : 'vertical'  
-    );                                                               
-  };
-  
+      img.onload = () => {
+        const calculatedOrientation = img.width > img.height ? 'horizontal' : 'vertical';
+        setImageOrientation(calculatedOrientation);
+      };
+    }
+  }, [photo, orientation]);
 
-  const popupClassName = `${styles.popup} ${
-    imageOrientation === 'horizontal' ? 'horizontal' : 'vertical'
-  }`;
+  const popupClassName = `${localStyles.popup} ${imageOrientation}`;
+  const imageClassName = imageOrientation === 'horizontal' ? localStyles.horizontalImage : localStyles.verticalImage;
 
   return (
     <MarkerContainer
@@ -42,24 +45,24 @@ const Marker = ({
       title={`${name} at ${city}`}
     >
       <Popup className={popupClassName}>
-        <div className={styles.imageContainer}>
+        <div className={localStyles.imageContainer}>
           <Image
             alt={`${name} at ${city}`}
             src={photo}
             layout="fill"
             objectFit="cover"
-            className={`${styles.image} ${styles[imageOrientation]}`}
+            className={`${localStyles.image} ${imageClassName}`}
           />
-          <div className={styles.textOverlay}>
-            <h1 className={styles.title}>
+          <div className={localStyles.textOverlay}>
+            <h1 className={localStyles.title}>
               {city}, {country}
             </h1>
-            <span className={styles.light}>
+            <span className={localStyles.light}>
               <i className="bi bi-calendar"></i> {getFullDateString(date)} (
               {getRelativeTimeString(date)})
             </span>
             <br />
-            <span className={styles.light}>
+            <span className={localStyles.light}>
               <i className="bi bi-signpost-fill"></i>{' '}
               {Math.round(getDistance(coordinates))} km away
             </span>
