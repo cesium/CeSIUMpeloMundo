@@ -35,12 +35,12 @@
   opacity: 1;
 }
 
-.horizontalImage {
+.horizontal img {
   width: 651px !important;
   height: 400px !important;
 }
 
-.verticalImage {
+.vertical img {
   width: 301px !important;
   height: 470px !important;
 }

@@ -23,20 +23,36 @@ const Marker = ({
 
   const [imageOrientation, setImageOrientation] = useState(orientation || 'vertical');
 
+  console.log("imageOrientation inicial: ", imageOrientation);
+
   useEffect(() => {
-    if (!orientation) {
+    if (!orientation && photo) {
       const img = new window.Image();
       img.src = photo;
 
       img.onload = () => {
         const calculatedOrientation = img.width > img.height ? 'horizontal' : 'vertical';
-        setImageOrientation(calculatedOrientation);
+        if (calculatedOrientation !== imageOrientation) {
+          setImageOrientation(calculatedOrientation);
+        }
+      };
+
+      img.onerror = () => {
+        console.error('Failed to load image:', photo);
+        setImageOrientation('vertical');
       };
     }
-  }, [photo, orientation]);
+  }, [photo, orientation, imageOrientation]);
 
-  const popupClassName = `${localStyles.popup} ${imageOrientation}`;
-  const imageClassName = imageOrientation === 'horizontal' ? localStyles.horizontalImage : localStyles.verticalImage;
+  console.log("imageOrientation final: ", imageOrientation);
+  console.log("localStyles.horizontal: ", localStyles.horizontal);
+  console.log("localStyles.vertical: ", localStyles.vertical);
+
+  const popupClassName = imageOrientation === 'vertical' ? 'vertical' : 'horizontal';
+  const imageClassName = imageOrientation === 'vertical' ? localStyles.vertical : localStyles.horizontal;
+
+  console.log("imageClassName: ", imageClassName);
+  console.log("popupClassName: ", popupClassName);
 
   return (
     <MarkerContainer
