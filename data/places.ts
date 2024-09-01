@@ -279,7 +279,7 @@ export const PLACES: IPin[] = [
     country: 'Slovenia',
     coordinates: [46.05218163654292, 14.511751028966621],
     date: '2022-07-10',
-    photo: '/photos/feliciofilipe,matildeopbravo/liubliana.jpg',
+    photo: '/photos/feliciofilipe,matildeopbravo/liubliana.jpg'
   },
   {
     author: 'Diogo Matos',

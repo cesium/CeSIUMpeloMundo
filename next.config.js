@@ -29,6 +29,6 @@ module.exports = withConfig({
     HOMEPAGE: pkg.homepage,
     BUG_TRACKER: pkg.bugs,
     REPOSITORY_URL: pkg.repository.url,
-    COMMIT_HASH: commitHash,
-  },
+    COMMIT_HASH: commitHash
+  }
 });

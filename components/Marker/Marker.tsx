@@ -4,8 +4,8 @@ import { IPin } from '~/lib/types';
 import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
 import { getIcon, getFullDateString } from './utils';
 import AuthorIcon from '../AuthorIcon';
-import localStyles from './style.module.css'; 
-import 'styles/globals.css'; 
+import localStyles from './style.module.css';
+import 'styles/globals.css';
 import Image from 'next/future/image';
 
 const Marker = ({
@@ -16,12 +16,14 @@ const Marker = ({
   author,
   photo,
   date,
-  orientation,
+  orientation
 }: IPin) => {
   const icon = getIcon(type);
   const name = useMemo(() => getNameString(author), [author]);
 
-  const [imageOrientation, setImageOrientation] = useState(orientation || 'vertical');
+  const [imageOrientation, setImageOrientation] = useState(
+    orientation || 'vertical'
+  );
 
   useEffect(() => {
     if (!orientation && photo) {
@@ -29,7 +31,8 @@ const Marker = ({
       img.src = photo;
 
       img.onload = () => {
-        const calculatedOrientation = img.width > img.height ? 'horizontal' : 'vertical';
+        const calculatedOrientation =
+          img.width > img.height ? 'horizontal' : 'vertical';
         setImageOrientation(calculatedOrientation);
       };
 
@@ -40,7 +43,8 @@ const Marker = ({
     }
   }, [photo, orientation]);
 
-  const popupClassName = imageOrientation === 'horizontal' ? '651:400' : '301:470';
+  const popupClassName =
+    imageOrientation === 'horizontal' ? '651:400' : '301:470';
 
   const [width, height] = popupClassName.split(':').map(Number);
 
@@ -58,7 +62,7 @@ const Marker = ({
             width={width}
             height={height}
             layout="raw"
-            className={localStyles.roundedImage} 
+            className={localStyles.roundedImage}
           />
           <div className={localStyles.textOverlay}>
             <h1 className={localStyles.title}>
