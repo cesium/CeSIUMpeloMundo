@@ -27,33 +27,52 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
+/* Para popups horizontais */
 .horizontal .leaflet-popup-content-wrapper {
-  width: 651px !important;
-  height: 400px !important;
+  width: 650px !important;
+  height: 399px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
+/* Para popups verticais */
 .vertical .leaflet-popup-content-wrapper {
-  width: 301px !important;
-  height: 470px !important;
+  width: 300px !important;
+  height: 469px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.horizontal img {
-  width: 651px !important;
-  height: 400px !important;
+/* Estilos gerais para o conteúdo do popup */
+.leaflet-popup-content {
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* Borda arredondada para todo o popup */
+  overflow: hidden; /* Esconde as partes que extrapolam os limites */
 }
 
-.vertical img {
-  width: 301px !important;
-  height: 470px !important;
-}
-
+/* Estilo para garantir que as imagens se ajustem ao tamanho do container */
 .leaflet-popup-content-wrapper img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
-
+  object-fit: cover;
+  display: block;
+  border: none !important;
 }
 
+/* Responsividade para dispositivos móveis */
 @media (max-width: 500px) {
   .leaflet-popup-content-wrapper {
     width: 351px !important;
@@ -73,19 +92,7 @@ body {
   }
 }
 
-.leaflet-popup-content {
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.leaflet-popup-content-wrapper {
-  overflow: hidden;
-}
-
+/* Estilo para o overlay de texto nas imagens */
 .textOverlay {
   padding: 10px;
   position: absolute;
@@ -94,6 +101,7 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   color: white;
+  border-radius: 0 0 15px 15px; /* Bordas arredondadas para o overlay */
 }
 
 .custom-marker-cluster {

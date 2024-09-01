@@ -6,7 +6,7 @@ import { getIcon, getFullDateString } from './utils';
 import AuthorIcon from '../AuthorIcon';
 import localStyles from './style.module.css'; 
 import 'styles/globals.css'; 
-import Image from 'next/image';
+import Image from 'next/future/image';
 
 const Marker = ({
   type,
@@ -23,8 +23,6 @@ const Marker = ({
 
   const [imageOrientation, setImageOrientation] = useState(orientation || 'vertical');
 
-  console.log("imageOrientation inicial: ", imageOrientation);
-
   useEffect(() => {
     if (!orientation && photo) {
       const img = new window.Image();
@@ -32,9 +30,7 @@ const Marker = ({
 
       img.onload = () => {
         const calculatedOrientation = img.width > img.height ? 'horizontal' : 'vertical';
-        if (calculatedOrientation !== imageOrientation) {
-          setImageOrientation(calculatedOrientation);
-        }
+        setImageOrientation(calculatedOrientation);
       };
 
       img.onerror = () => {
@@ -42,17 +38,11 @@ const Marker = ({
         setImageOrientation('vertical');
       };
     }
-  }, [photo, orientation, imageOrientation]);
+  }, [photo, orientation]);
 
-  console.log("imageOrientation final: ", imageOrientation);
-  console.log("localStyles.horizontal: ", localStyles.horizontal);
-  console.log("localStyles.vertical: ", localStyles.vertical);
+  const popupClassName = imageOrientation === 'horizontal' ? '651:400' : '301:470';
 
-  const popupClassName = imageOrientation === 'vertical' ? 'vertical' : 'horizontal';
-  const imageClassName = imageOrientation === 'vertical' ? localStyles.vertical : localStyles.horizontal;
-
-  console.log("imageClassName: ", imageClassName);
-  console.log("popupClassName: ", popupClassName);
+  const [width, height] = popupClassName.split(':').map(Number);
 
   return (
     <MarkerContainer
@@ -60,14 +50,15 @@ const Marker = ({
       position={coordinates}
       title={`${name} at ${city}`}
     >
-      <Popup className={popupClassName}>
-        <div className={localStyles.imageContainer}>
+      <Popup className={localStyles.popup}>
+        <div className={localStyles.imageContainer} style={{ width, height }}>
           <Image
             alt={`${name} at ${city}`}
             src={photo}
-            layout="fill"
-            objectFit="cover"
-            className={`${localStyles.image} ${imageClassName}`}
+            width={width}
+            height={height}
+            layout="raw"
+            className={localStyles.roundedImage} 
           />
           <div className={localStyles.textOverlay}>
             <h1 className={localStyles.title}>

@@ -1,7 +1,7 @@
 // @ts-check
 const pkg = require('./package.json');
 
-// starts a command line process to get the git hash
+// Starts a command line process to get the git hash
 const commitHash = require('child_process')
   .execSync('git rev-parse HEAD')
   .toString()
@@ -16,6 +16,11 @@ const { withGlobalCss } = require('next-global-css');
 const withConfig = withGlobalCss();
 
 module.exports = withConfig({
+  experimental: {
+    images: {
+      allowFutureImage: true
+    }
+  },
   env: {
     APP_NAME: pkg.name,
     APP_DESCRIPTION: pkg.description,
@@ -24,6 +29,6 @@ module.exports = withConfig({
     HOMEPAGE: pkg.homepage,
     BUG_TRACKER: pkg.bugs,
     REPOSITORY_URL: pkg.repository.url,
-    COMMIT_HASH: commitHash
-  }
+    COMMIT_HASH: commitHash,
+  },
 });
