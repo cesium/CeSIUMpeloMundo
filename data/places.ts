@@ -668,5 +668,35 @@ export const PLACES: IPin[] = [
     coordinates: [43.26925725801514, -2.93479144050948],
     date: '2024-08-04',
     photo: '/photos/voidbert/bilbao.jpg'
+  },
+  {
+    author: 'João Lobo',
+    username: 'joaodiaslobo',
+    type: EPinType.Sticker,
+    city: 'Milan',
+    country: 'Italy',
+    coordinates: [45.465573884554935, 9.196202807173558],
+    date: '2024-08-23',
+    photo: '/photos/joaodiaslobo/milan.jpeg'
+  },
+  {
+    author: 'João Lobo',
+    username: ['joaodiaslobo', 'feliciofilipe'],
+    type: EPinType.Sticker,
+    city: 'Florence',
+    country: 'Italy',
+    coordinates: [43.772933334813324, 11.254459280022479],
+    date: '2024-08-27',
+    photo: '/photos/joaodiaslobo/florence.jpeg'
+  },
+  {
+    author: 'João Lobo',
+    username: 'joaodiaslobo',
+    type: EPinType.Sticker,
+    city: 'Pisa',
+    country: 'Italy',
+    coordinates: [43.722511398105596, 10.395425388135308],
+    date: '2024-08-27',
+    photo: '/photos/joaodiaslobo/pisa.jpeg'
   }
 ];
