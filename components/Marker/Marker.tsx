@@ -27,16 +27,21 @@ const Marker = ({
 
   const handleImageLoad = (img: HTMLImageElement): void => {
     setImageOrientation(img.width > img.height ? 'horizontal' : 'vertical');
-  }
+  };
   useEffect(() => {
-    if(orientation || !photo) return;
+    if (orientation || !photo) return;
     const img = new window.Image();
     img.src = photo;
     img.onload = () => handleImageLoad(img);
   }, [photo, orientation]);
-  const popupClassName = useMemo(() => imageOrientation === 'horizontal' ? '651:400' : '301:470', [imageOrientation]);
-  const [width, height] = useMemo(() => popupClassName.split(':').map(Number), [popupClassName]);
-
+  const popupClassName = useMemo(
+    () => (imageOrientation === 'horizontal' ? '651:400' : '301:470'),
+    [imageOrientation]
+  );
+  const [width, height] = useMemo(
+    () => popupClassName.split(':').map(Number),
+    [popupClassName]
+  );
 
   return (
     <MarkerContainer
