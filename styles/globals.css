@@ -27,7 +27,6 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* Para popups horizontais */
 .horizontal .leaflet-popup-content-wrapper {
   width: 650px !important;
   height: 399px !important;
@@ -38,7 +37,6 @@ body {
   border: none !important;
 }
 
-/* Para popups verticais */
 .vertical .leaflet-popup-content-wrapper {
   width: 300px !important;
   height: 469px !important;
@@ -49,7 +47,6 @@ body {
   border: none !important;
 }
 
-/* Estilos gerais para o conteúdo do popup */
 .leaflet-popup-content {
   width: auto !important;
   max-width: none !important;
@@ -59,20 +56,25 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10px; /* Borda arredondada para todo o popup */
-  overflow: hidden; /* Esconde as partes que extrapolam os limites */
+  border-radius: 10px; 
+  overflow: hidden; 
 }
 
-/* Estilo para garantir que as imagens se ajustem ao tamanho do container */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 12px;
+}
+
 .leaflet-popup-content-wrapper img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 10px;
   border: none !important;
 }
 
-/* Responsividade para dispositivos móveis */
 @media (max-width: 500px) {
   .leaflet-popup-content-wrapper {
     width: 351px !important;
@@ -92,7 +94,6 @@ body {
   }
 }
 
-/* Estilo para o overlay de texto nas imagens */
 .textOverlay {
   padding: 10px;
   position: absolute;
@@ -101,7 +102,7 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  border-radius: 0 0 15px 15px; /* Bordas arredondadas para o overlay */
+  border-radius: 0 0 15px 15px; 
 }
 
 .custom-marker-cluster {

@@ -6,7 +6,7 @@ import { getIcon, getFullDateString } from './utils';
 import AuthorIcon from '../AuthorIcon';
 import localStyles from './style.module.css';
 import 'styles/globals.css';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 const Marker = ({
   type,
@@ -18,35 +18,25 @@ const Marker = ({
   date,
   orientation
 }: IPin) => {
-  const icon = getIcon(type);
+  const icon = useMemo(() => getIcon(type), [type]);
   const name = useMemo(() => getNameString(author), [author]);
 
   const [imageOrientation, setImageOrientation] = useState(
     orientation || 'vertical'
   );
 
+  const handleImageLoad = (img: HTMLImageElement): void => {
+    setImageOrientation(img.width > img.height ? 'horizontal' : 'vertical');
+  }
   useEffect(() => {
-    if (!orientation && photo) {
-      const img = new window.Image();
-      img.src = photo;
-
-      img.onload = () => {
-        const calculatedOrientation =
-          img.width > img.height ? 'horizontal' : 'vertical';
-        setImageOrientation(calculatedOrientation);
-      };
-
-      img.onerror = () => {
-        console.error('Failed to load image:', photo);
-        setImageOrientation('vertical');
-      };
-    }
+    if(orientation || !photo) return;
+    const img = new window.Image();
+    img.src = photo;
+    img.onload = () => handleImageLoad(img);
   }, [photo, orientation]);
+  const popupClassName = useMemo(() => imageOrientation === 'horizontal' ? '651:400' : '301:470', [imageOrientation]);
+  const [width, height] = useMemo(() => popupClassName.split(':').map(Number), [popupClassName]);
 
-  const popupClassName =
-    imageOrientation === 'horizontal' ? '651:400' : '301:470';
-
-  const [width, height] = popupClassName.split(':').map(Number);
 
   return (
     <MarkerContainer
@@ -61,7 +51,7 @@ const Marker = ({
             src={photo}
             width={width}
             height={height}
-            layout="raw"
+            layout="fill"
             className={localStyles.roundedImage}
           />
           <div className={localStyles.textOverlay}>
