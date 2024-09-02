@@ -27,26 +27,6 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.horizontal .leaflet-popup-content-wrapper {
-  width: 650px !important;
-  height: 399px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.vertical .leaflet-popup-content-wrapper {
-  width: 300px !important;
-  height: 469px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
 .leaflet-popup-content {
   width: auto !important;
   max-width: none !important;
