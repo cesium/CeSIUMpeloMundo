@@ -1,7 +1,7 @@
 // @ts-check
 const pkg = require('./package.json');
 
-// Starts a command line process to get the git hash
+// starts a command line process to get the git hash
 const commitHash = require('child_process')
   .execSync('git rev-parse HEAD')
   .toString()
