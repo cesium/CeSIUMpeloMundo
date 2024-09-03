@@ -16,11 +16,6 @@ const { withGlobalCss } = require('next-global-css');
 const withConfig = withGlobalCss();
 
 module.exports = withConfig({
-  experimental: {
-    images: {
-      allowFutureImage: true
-    }
-  },
   env: {
     APP_NAME: pkg.name,
     APP_DESCRIPTION: pkg.description,
