@@ -1,3 +1,14 @@
+.imageContainer {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.popup {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 .image {
   object-fit: cover;
   border-radius: 10px;
@@ -35,12 +46,46 @@
   opacity: 1;
 }
 
+/* Estilos para orientação horizontal */
 .horizontal img {
   width: 651px !important;
   height: 400px !important;
 }
 
+/* Estilos para orientação vertical */
 .vertical img {
   width: 301px !important;
   height: 470px !important;
+}
+
+/* Estilos adicionais para dispositivos móveis */
+@media (max-width: 500px) {
+  .leaflet-popup-content-wrapper {
+    width: 351px !important;
+    height: 550px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .horizontal .leaflet-popup-content-wrapper {
+    width: 351px !important;
+    height: 200px !important;
+  }
+
+  .vertical .leaflet-popup-content-wrapper {
+    width: 351px !important;
+    height: 550px !important;
+  }
+
+  /* Estilos para orientação horizontal */
+.horizontal img {
+  width: 351px !important;
+  height: 200px !important;
+}
+
+/* Estilos para orientação vertical */
+.vertical img {
+  width: 351px !important;
+  height: 550px !important;
+}
 }
