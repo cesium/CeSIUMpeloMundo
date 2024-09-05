@@ -31,15 +31,11 @@ const Marker = ({
 
   const popupClassName = useMemo(() => {
     const isMobile = window.innerWidth <= 500;
-    
+
     if (isMobile) {
-      return imageOrientation === 'horizontal'
-        ? '351:200' 
-        : '351:550';
+      return imageOrientation === 'horizontal' ? '351:200' : '351:550';
     } else {
-      return imageOrientation === 'horizontal'
-        ? '651:400' 
-        : '301:470';
+      return imageOrientation === 'horizontal' ? '651:400' : '301:470';
     }
   }, [imageOrientation]);
 
@@ -61,14 +57,14 @@ const Marker = ({
       position={coordinates}
       title={`${name} at ${city}`}
     >
-      <Popup className={localStyles.popup} >
+      <Popup className={localStyles.popup}>
         <div className={localStyles.imageContainer} style={{ width, height }}>
           <Image
             alt={`${name} at ${city}`}
             src={photo}
             width={width}
             height={height}
-            layout='fill'
+            layout="fill"
             className={localStyles.roundedImage}
           />
           <div className={localStyles.textOverlay}>

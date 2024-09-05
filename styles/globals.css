@@ -58,8 +58,6 @@ body {
 
 @media (max-width: 500px) {
   .leaflet-popup-content-wrapper {
-    width: 351px !important;
-    height: 550px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
