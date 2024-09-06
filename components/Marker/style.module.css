@@ -46,6 +46,20 @@
   opacity: 1;
 }
 
+
+@media(max-width: 500px) {
+  .title {
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 0.5;
+  }
+  
+  .light {
+    font-size: 12px;
+    opacity: 1;
+  }
+  
+}
 .horizontal img {
   width: 651px !important;
   height: 400px !important;
