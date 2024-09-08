@@ -47,6 +47,12 @@ export default function Map({ pins, setMapRef }: Props) {
       zoomControl={false}
       attributionControl={true}
       maxZoom={18}
+      minZoom={3}
+      maxBounds={[
+        [90, -180],
+        [-90, 180]
+      ]}
+      maxBoundsViscosity={1}
     >
       <Ref></Ref>
       <LayersControl position="topright">
