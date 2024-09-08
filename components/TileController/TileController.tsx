@@ -16,6 +16,7 @@ const TileController = ({ id, url, name }: ITyle) => {
             changeTheme(id);
           }
         }}
+        noWrap={true}
       />
     </LayersControl.BaseLayer>
   );
