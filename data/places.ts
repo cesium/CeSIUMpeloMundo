@@ -698,5 +698,15 @@ export const PLACES: IPin[] = [
     coordinates: [43.722511398105596, 10.395425388135308],
     date: '2024-08-27',
     photo: '/photos/joaodiaslobo/pisa.jpeg'
+  },
+  {
+    author: ['Afonso Dionísio', 'Gerson Júnior', 'Júlio Pinto'],
+    username: ['Afonso-santos','GresosJ', 'JulioJPinto'],
+    type: EPinType.Sticker,
+    city: 'Vila Real',
+    country: 'Portugal',
+    coordinates: [41.2706315,-7.8500863], 
+    date: '2024-09-08',
+    photo: '/photos/JulioJPinto/vilareal.jpg'
   }
 ];
