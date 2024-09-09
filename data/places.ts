@@ -707,6 +707,6 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.2706315,-7.8500863], 
     date: '2024-09-08',
-    photo: '/photos/JulioJPinto/vilareal.jpg'
+    photo: '/photos/JulioJPinto,GresosJ,Afonso-santos/vilareal.jpg'
   }
 ];
