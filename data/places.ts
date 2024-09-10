@@ -698,5 +698,25 @@ export const PLACES: IPin[] = [
     coordinates: [43.722511398105596, 10.395425388135308],
     date: '2024-08-27',
     photo: '/photos/joaodiaslobo/pisa.jpeg'
+  },
+  {
+    author: 'Afonso',
+    username: 'afonso',
+    type: EPinType.Sticker,
+    city: 'africa',
+    country: 'Africa',
+    coordinates: [25.36417124183381, -2.8866700566372288],
+    date: '2024-08-27',
+    photo: '/photos/joaodiaslobo/pisa.jpeg'
+  },
+  {
+    author: 'Afonso',
+    username: 'afonso',
+    type: EPinType.Sticker,
+    city: 'africa',
+    country: 'Africa',
+    coordinates: [24.36417124183381, -2.8866700566372288],
+    date: '2024-08-27',
+    photo: '/photos/joaodiaslobo/pisa.jpeg'
   }
 ];

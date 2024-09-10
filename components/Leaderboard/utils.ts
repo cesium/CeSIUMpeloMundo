@@ -1,9 +1,14 @@
+import {
+  calculateDistanceBetweenPins,
+  getDistance,
+  isWithinRadiusAndTime
+} from '~/lib/utils';
 import { sortByOldest } from '~/lib/utils';
 import { IPin } from '~/lib/types';
 import styles from './style.module.css';
 import { Player, User } from './types';
-import { getDistance } from '~/lib/utils';
 
+// Função para remover duplicatas com base no 'username'
 function getSet(arr: User[]) {
   return arr.filter(
     (v, i, a) =>
@@ -11,56 +16,112 @@ function getSet(arr: User[]) {
   );
 }
 
-function sortByDistance(a: User, b: User) {
-  const d1 = getDistance(a.coordinates);
-  const d2 = getDistance(b.coordinates);
-  return d2 - d1;
-}
-
+// Função para criar a leaderboard
 export function makeLeaderboard(places: IPin[], type: string) {
   const users = [];
   const leaderboard = [];
   const places_copy = places.slice();
   const sortedPlaces = places_copy.sort(sortByOldest);
 
-  for (var i = 0; i < sortedPlaces.length; i++) {
+  // Objeto para manter os stats de cada usuário
+  const userStats: {
+    [username: string]: {
+      pins: number;
+      totalDistance: number;
+      previousPins: IPin[];
+    };
+  } = {};
+
+  // Processa os places e popula o array de usuários
+  for (let i = 0; i < sortedPlaces.length; i++) {
     if (Array.isArray(sortedPlaces[i].username)) {
-      for (var j = 0; j < sortedPlaces[i].username.length; j++) {
+      for (let j = 0; j < sortedPlaces[i].username.length; j++) {
         users.push({
           author: sortedPlaces[i].author[j],
           username: sortedPlaces[i].username[j],
-          coordinates: sortedPlaces[i].coordinates
+          coordinates: sortedPlaces[i].coordinates,
+          date: sortedPlaces[i].date
         });
       }
     } else {
       users.push({
         author: sortedPlaces[i].author,
         username: sortedPlaces[i].username,
-        coordinates: sortedPlaces[i].coordinates
+        coordinates: sortedPlaces[i].coordinates,
+        date: sortedPlaces[i].date
       });
     }
   }
 
+  // Gera um conjunto único de usuários
   const userSet = getSet(users);
 
-  for (var i = 0; i < userSet.length; i++) {
-    var acc = 0;
+  // Para cada usuário, calcula o total de pins e a distância, levando em consideração proximidade e tempo
+  for (let i = 0; i < userSet.length; i++) {
+    const username = userSet[i].username;
+
+    if (!userStats[username]) {
+      userStats[username] = { pins: 0, totalDistance: 0, previousPins: [] };
+    }
+
+    for (let j = 0; j < users.length; j++) {
+      if (userSet[i].username === users[j].username) {
+        let isNearby = false;
+
+        // Verifica se o pin atual está dentro do raio e intervalo de tempo de algum pin anterior do mesmo usuário
+        for (let k = 0; k < userStats[username].previousPins.length; k++) {
+          const previousPin = userStats[username].previousPins[k];
+          if (isWithinRadiusAndTime(previousPin, users[j])) {
+            isNearby = true;
+            break;
+          }
+        }
+
+        // Se houver proximidade e o pin for do mesmo usuário em um intervalo de tempo permitido, não adiciona distância
+        if (isNearby) {
+          userStats[username].pins += 1;
+        } else {
+          // Adiciona a distância se não houver proximidade com outros pins do mesmo usuário dentro do tempo
+          if (userStats[username].previousPins.length > 0) {
+            const lastPin =
+              userStats[username].previousPins[
+                userStats[username].previousPins.length - 1
+              ];
+            const distanceBetweenPins =
+              calculateDistanceBetweenPins(users[j], lastPin) || 0;
+            if (
+              distanceBetweenPins < 100 &&
+              getDistance(users[j].coordinates) <
+                getDistance(lastPin.coordinates)
+            ) {
+              userStats[username].totalDistance += getDistance(
+                lastPin.coordinates
+              );
+            } else {
+              userStats[username].totalDistance += getDistance(
+                users[j].coordinates
+              );
+            }
+          }
+          userStats[username].pins += 1;
+          userStats[username].previousPins.push(users[j]); // Adiciona o pin atual à lista de pins anteriores
+        }
+      }
+    }
+  }
+
+  // Cria o leaderboard com base no tipo selecionado
+  for (let i = 0; i < userSet.length; i++) {
+    const username = userSet[i].username;
+    let acc = 0;
 
     switch (type) {
       case 'Pins': {
-        for (var j = 0; j < users.length; j++) {
-          if (userSet[i].username === users[j].username) {
-            acc++;
-          }
-        }
+        acc = userStats[username].pins;
         break;
       }
       case 'Distance': {
-        for (var j = 0; j < users.length; j++) {
-          if (userSet[i].username === users[j].username) {
-            acc += getDistance(users[j].coordinates);
-          }
-        }
+        acc = userStats[username].totalDistance;
         break;
       }
     }
@@ -111,8 +172,8 @@ export function getWidth(index: number, leaderboard: Player[]) {
 export function getUsername(index: number, leaderboard: Player[]) {
   const author = leaderboard[index].author;
 
-  var acc = 0;
-  for (var i = 0; i < leaderboard.length; i++) {
+  let acc = 0;
+  for (let i = 0; i < leaderboard.length; i++) {
     if (leaderboard[i].author === author) {
       acc++;
     }
@@ -123,3 +184,7 @@ export function getUsername(index: number, leaderboard: Player[]) {
   }
   return '';
 }
+
+//TODO: Just need to get the distance good for some cases
+//TODO: Like are some cases where people dosent get some distance
+//TODO: o problema é quando não há outros pins perto uns dos outros não conta a distancia por alguma razao
