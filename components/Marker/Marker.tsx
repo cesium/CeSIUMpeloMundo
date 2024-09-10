@@ -33,7 +33,7 @@ const Marker = ({
     const isMobile = window.innerWidth <= 500;
 
     if (isMobile) {
-      return imageOrientation === 'horizontal' ? '351:200' : '351:550';
+      return imageOrientation === 'horizontal' ? '401:250' : '351:550';
     } else {
       return imageOrientation === 'horizontal' ? '651:400' : '301:470';
     }

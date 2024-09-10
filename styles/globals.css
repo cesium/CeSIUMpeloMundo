@@ -42,7 +42,7 @@ body {
 
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: transparent !important;
+  background: white !important;
   border: none !important;
   border-radius: 12px;
 }
@@ -63,8 +63,8 @@ body {
   }
 
   .horizontal .leaflet-popup-content-wrapper {
-    width: 351px !important;
-    height: 200px !important;
+    width: 401px !important;
+    height: 250px !important;
   }
 
   .vertical .leaflet-popup-content-wrapper {
