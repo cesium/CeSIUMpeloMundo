@@ -45,6 +45,7 @@ body {
   background: white !important;
   border: none !important;
   border-radius: 12px;
+  padding: 0px;
 }
 
 .leaflet-popup-content-wrapper img {
