@@ -29,15 +29,22 @@ const Marker = ({
     setImageOrientation(img.width > img.height ? 'horizontal' : 'vertical');
   };
 
+  const mobileSizes = {
+    horizontal: '401:250',
+    vertical: '351:550',
+  };
+  const desktopSizes = {
+    horizontal: '651:400',
+    vertical: '301:470',
+  };
+
   const popupClassName = useMemo(() => {
     const isMobile = window.innerWidth <= 500;
-
-    if (isMobile) {
-      return imageOrientation === 'horizontal' ? '401:250' : '351:550';
-    } else {
-      return imageOrientation === 'horizontal' ? '651:400' : '301:470';
-    }
+    const sizeMapping = isMobile ? mobileSizes : desktopSizes;
+    return imageOrientation === 'horizontal' ? sizeMapping.horizontal : sizeMapping.vertical;
   }, [imageOrientation]);
+
+
 
   useEffect(() => {
     if (orientation || !photo) return;
