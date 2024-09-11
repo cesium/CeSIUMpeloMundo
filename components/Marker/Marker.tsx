@@ -31,20 +31,20 @@ const Marker = ({
 
   const mobileSizes = {
     horizontal: '401:250',
-    vertical: '351:550',
+    vertical: '351:550'
   };
   const desktopSizes = {
     horizontal: '651:400',
-    vertical: '301:470',
+    vertical: '301:470'
   };
 
   const popupClassName = useMemo(() => {
     const isMobile = window.innerWidth <= 500;
     const sizeMapping = isMobile ? mobileSizes : desktopSizes;
-    return imageOrientation === 'horizontal' ? sizeMapping.horizontal : sizeMapping.vertical;
+    return imageOrientation === 'horizontal'
+      ? sizeMapping.horizontal
+      : sizeMapping.vertical;
   }, [imageOrientation]);
-
-
 
   useEffect(() => {
     if (orientation || !photo) return;
