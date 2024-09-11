@@ -3,7 +3,7 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "18.12.0"
+  NODE_VERSION = "20.11.1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
