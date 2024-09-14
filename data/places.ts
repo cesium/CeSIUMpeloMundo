@@ -658,5 +658,55 @@ export const PLACES: IPin[] = [
     coordinates: [40.206944, -8.424215],
     date: '2024-06-04',
     photo: '/photos/darguima/coimbra_universidade.jpg'
+  },
+  {
+    author: 'Humberto Gomes',
+    username: 'voidbert',
+    type: EPinType.Merch,
+    city: 'Bilbao',
+    country: 'Spain',
+    coordinates: [43.26925725801514, -2.93479144050948],
+    date: '2024-08-04',
+    photo: '/photos/voidbert/bilbao.jpg'
+  },
+  {
+    author: 'João Lobo',
+    username: 'joaodiaslobo',
+    type: EPinType.Sticker,
+    city: 'Milan',
+    country: 'Italy',
+    coordinates: [45.465573884554935, 9.196202807173558],
+    date: '2024-08-23',
+    photo: '/photos/joaodiaslobo/milan.jpeg'
+  },
+  {
+    author: 'João Lobo',
+    username: ['joaodiaslobo', 'feliciofilipe'],
+    type: EPinType.Sticker,
+    city: 'Florence',
+    country: 'Italy',
+    coordinates: [43.772933334813324, 11.254459280022479],
+    date: '2024-08-27',
+    photo: '/photos/joaodiaslobo/florence.jpeg'
+  },
+  {
+    author: 'João Lobo',
+    username: 'joaodiaslobo',
+    type: EPinType.Sticker,
+    city: 'Pisa',
+    country: 'Italy',
+    coordinates: [43.722511398105596, 10.395425388135308],
+    date: '2024-08-27',
+    photo: '/photos/joaodiaslobo/pisa.jpeg'
+  },
+  {
+    author: ['Afonso Dionísio', 'Gerson Júnior', 'Júlio Pinto'],
+    username: ['Afonso-santos', 'GresosJ', 'JulioJPinto'],
+    type: EPinType.Sticker,
+    city: 'Vila Real',
+    country: 'Portugal',
+    coordinates: [41.2706315, -7.8500863],
+    date: '2024-09-08',
+    photo: '/photos/JulioJPinto,GresosJ,Afonso-santos/vilareal.jpg'
   }
 ];
