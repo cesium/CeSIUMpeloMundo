@@ -710,13 +710,28 @@ export const PLACES: IPin[] = [
     photo: '/photos/JulioJPinto,GresosJ,Afonso-santos/vilareal.jpg'
   },
   {
-    author: ['Afonso Martins', 'Gerson Júnior', 'Júlio Pinto', 'João Lobo', 'Mário Rodrigues', 'Salomé Faria'],
-    username: ['AfonsoMartins26', 'GresosJ', 'JulioJPinto', 'joaodiaslobo', 'MarioRodrigues10', 'faria-s'],
+    author: [
+      'Afonso Martins',
+      'Gerson Júnior',
+      'Júlio Pinto',
+      'João Lobo',
+      'Mário Rodrigues',
+      'Salomé Faria'
+    ],
+    username: [
+      'AfonsoMartins26',
+      'GresosJ',
+      'JulioJPinto',
+      'joaodiaslobo',
+      'MarioRodrigues10',
+      'faria-s'
+    ],
     type: EPinType.Sticker,
     city: 'Aveiro',
     country: 'Portugal',
     coordinates: [40.64233213659726, -8.655239407017632],
     date: '2024-08-16',
-    photo: '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
+    photo:
+      '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
   }
 ];
