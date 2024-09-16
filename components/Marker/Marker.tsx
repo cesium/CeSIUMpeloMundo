@@ -64,7 +64,6 @@ const Marker = ({
             src={photo}
             width={width}
             height={height}
-            layout="fill"
             className={localStyles.roundedImage}
           />
           <div className={localStyles.textOverlay}>
