@@ -743,5 +743,30 @@ export const PLACES: IPin[] = [
     coordinates: [40.6331741, -8.660137],
     date: '2023-10-01',
     photo: '/photos/AETTUA/aettua.jpeg'
+  },
+  {
+    author: [
+      'Afonso Santos',
+      'Gerson Júnior',
+      'Mário Rodrigues',
+      'Martim Ferreira',
+      'Matilde Bravo',
+      'Vitor Lelis'
+    ],
+    username: [
+      'Afonso-santos',
+      'GresosJ',
+      'MarioRodrigues10',
+      'MartimMelo',
+      'matildeopbravo',
+      'VitorLelis'
+    ],
+    type: EPinType.Sticker,
+    city: 'Aveiro',
+    country: 'Portugal',
+    coordinates: [40.626917, -8.657037],
+    date: '2023-09-30',
+    photo:
+      '/photos/Afonso-santos,GresosJ,MarioRodrigues10,MartimMelo,matildeopbravo,VitorLelis/aveiro.jpeg'
   }
 ];
