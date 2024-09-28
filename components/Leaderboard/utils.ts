@@ -1,78 +1,122 @@
-import { sortByOldest } from '~/lib/utils';
-import { IPin } from '~/lib/types';
+import { sortByOldest, getDistance } from '~/lib/utils';
+import { IPin} from '~/lib/types';
 import styles from './style.module.css';
-import { Player, User } from './types';
-import { getDistance } from '~/lib/utils';
+import { User , Player } from './types';
 
-function getSet(arr: User[]) {
+function getSet(arr: User[]): User[] {
   return arr.filter(
     (v, i, a) =>
       a.findIndex((v2) => ['username'].every((k) => v2[k] === v[k])) === i
   );
 }
 
-function sortByDistance(a: User, b: User) {
-  const d1 = getDistance(a.coordinates);
-  const d2 = getDistance(b.coordinates);
-  return d2 - d1;
+function distance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371; // Radius of the earth in km
+  const dLat = deg2rad(lat2 - lat1);
+  const dLon = deg2rad(lon2 - lon1);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c; // Distance in km
 }
 
-export function makeLeaderboard(places: IPin[], type: string) {
-  const users = [];
-  const leaderboard = [];
-  const places_copy = places.slice();
-  const sortedPlaces = places_copy.sort(sortByOldest);
+function deg2rad(deg: number): number {
+  return deg * (Math.PI / 180);
+}
 
-  for (var i = 0; i < sortedPlaces.length; i++) {
-    if (Array.isArray(sortedPlaces[i].username)) {
-      for (var j = 0; j < sortedPlaces[i].username.length; j++) {
+function groupPins(pins: IPin[], maxDistance: number): IPin[][] {
+  const groups: IPin[][] = [];
+
+  for (const pin of pins) {
+    let added = false;
+    for (const group of groups) {
+      if (group.some(p => distance(
+        p.coordinates[0], p.coordinates[1],
+        pin.coordinates[0], pin.coordinates[1]
+      ) <= maxDistance)) {
+        group.push(pin);
+        added = true;
+        break;
+      }
+    }
+    if (!added) {
+      groups.push([pin]);
+    }
+  }
+
+  return groups;
+}
+
+export function makeLeaderboard(places: IPin[], type: string): Player[] {
+  const users: User[] = [];
+  const leaderboard: Player[] = [];
+  const sortedPlaces = places.slice().sort(sortByOldest);
+
+  // Populate users array
+  for (const place of sortedPlaces) {
+    if (Array.isArray(place.username) && Array.isArray(place.author)) {
+      for (let j = 0; j < place.username.length; j++) {
         users.push({
-          author: sortedPlaces[i].author[j],
-          username: sortedPlaces[i].username[j],
-          coordinates: sortedPlaces[i].coordinates
+          author: place.author[j],
+          username: place.username[j],
+          coordinates: place.coordinates
         });
       }
-    } else {
+    } else if (typeof place.username === 'string' && typeof place.author === 'string') {
       users.push({
-        author: sortedPlaces[i].author,
-        username: sortedPlaces[i].username,
-        coordinates: sortedPlaces[i].coordinates
+        author: place.author,
+        username: place.username,
+        coordinates: place.coordinates
       });
+    } else {
+      console.error('Unexpected type for username or author:', place);
     }
   }
 
   const userSet = getSet(users);
 
-  for (var i = 0; i < userSet.length; i++) {
-    var acc = 0;
+  for (const user of userSet) {
+    let acc = 0;
+
+    const userPins = sortedPlaces.filter(place => 
+      (Array.isArray(place.username) ? place.username[0] : place.username) === user.username
+    );
 
     switch (type) {
       case 'Pins': {
-        for (var j = 0; j < users.length; j++) {
-          if (userSet[i].username === users[j].username) {
-            acc++;
-          }
-        }
+        acc = userPins.length;
         break;
       }
       case 'Distance': {
-        for (var j = 0; j < users.length; j++) {
-          if (userSet[i].username === users[j].username) {
-            acc += getDistance(users[j].coordinates);
+        // Group pins that are close together (within 10 km)
+        const groups = groupPins(userPins, 130);
+        
+        // Calculate total distance considering all pins
+        acc = groups.reduce((totalDistance, group) => {
+          if (group.length > 1) {
+            // For groups with multiple pins, calculate average distance
+            const groupDistance = group.reduce((sum, pin) => sum + getDistance(pin.coordinates), 0);
+            return totalDistance + (groupDistance / group.length);
+          } else {
+            // For isolated pins, just add their distance
+            return totalDistance + getDistance(group[0].coordinates);
           }
-        }
+        }, 0);
         break;
       }
     }
 
     leaderboard.push({
-      author: userSet[i].author,
-      username: userSet[i].username,
+      author: user.author,
+      username: user.username,
       value: acc
     });
   }
 
-  return leaderboard;
+  // Sort leaderboard by value in descending order
+  return leaderboard.sort((a, b) => b.value - a.value);
 }
 
 export function getOrdinals(num: number) {
