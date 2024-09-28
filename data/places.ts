@@ -786,37 +786,37 @@ export const PLACES: IPin[] = [
       'MarioRodrigues10',
       'faria-s'
     ],
-  type: EPinType.Sticker,
-  city: 'Aveiro',
-  country: 'Portugal',
-  coordinates: [16.606273, 9.924821],
-  date: '2024-08-16',
-  photo:
-    '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
+    type: EPinType.Sticker,
+    city: 'Aveiro',
+    country: 'Portugal',
+    coordinates: [16.606273, 9.924821],
+    date: '2024-08-16',
+    photo:
+      '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
   },
-  {author: [
-    'Afonso Martins',
-    'Gerson Júnior',
-    'Júlio Pinto',
-    'João Lobo',
-    'Mário Rodrigues',
-    'Salomé Faria'
-  ],
-  username: [
-    'AfonsoMartins26',
-    'GresosJ',
-    'JulioJPinto',
-    'joaodiaslobo',
-    'MarioRodrigues10',
-    'faria-s'
-  ],
-type: EPinType.Sticker,
-city: 'Aveiro',
-country: 'Portugal',
-coordinates: [16.606273, 10.924821],
-date: '2024-08-16',
-photo:
-  '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
-}
-
+  {
+    author: [
+      'Afonso Martins',
+      'Gerson Júnior',
+      'Júlio Pinto',
+      'João Lobo',
+      'Mário Rodrigues',
+      'Salomé Faria'
+    ],
+    username: [
+      'AfonsoMartins26',
+      'GresosJ',
+      'JulioJPinto',
+      'joaodiaslobo',
+      'MarioRodrigues10',
+      'faria-s'
+    ],
+    type: EPinType.Sticker,
+    city: 'Aveiro',
+    country: 'Portugal',
+    coordinates: [16.606273, 10.924821],
+    date: '2024-08-16',
+    photo:
+      '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
+  }
 ];

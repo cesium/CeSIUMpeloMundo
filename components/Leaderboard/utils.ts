@@ -1,7 +1,7 @@
 import { sortByOldest, getDistance } from '~/lib/utils';
-import { IPin} from '~/lib/types';
+import { IPin } from '~/lib/types';
 import styles from './style.module.css';
-import { User , Player } from './types';
+import { User, Player } from './types';
 
 function getSet(arr: User[]): User[] {
   return arr.filter(
@@ -10,14 +10,21 @@ function getSet(arr: User[]): User[] {
   );
 }
 
-function distance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+function distance(
+  lat1: number,
+  lon1: number,
+  lat2: number,
+  lon2: number
+): number {
   const R = 6371; // Radius of the earth in km
   const dLat = deg2rad(lat2 - lat1);
   const dLon = deg2rad(lon2 - lon1);
   const a =
     Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
-    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    Math.cos(deg2rad(lat1)) *
+      Math.cos(deg2rad(lat2)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   return R * c; // Distance in km
 }
@@ -32,10 +39,17 @@ function groupPins(pins: IPin[], maxDistance: number): IPin[][] {
   for (const pin of pins) {
     let added = false;
     for (const group of groups) {
-      if (group.some(p => distance(
-        p.coordinates[0], p.coordinates[1],
-        pin.coordinates[0], pin.coordinates[1]
-      ) <= maxDistance)) {
+      if (
+        group.some(
+          (p) =>
+            distance(
+              p.coordinates[0],
+              p.coordinates[1],
+              pin.coordinates[0],
+              pin.coordinates[1]
+            ) <= maxDistance
+        )
+      ) {
         group.push(pin);
         added = true;
         break;
@@ -64,7 +78,10 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
           coordinates: place.coordinates
         });
       }
-    } else if (typeof place.username === 'string' && typeof place.author === 'string') {
+    } else if (
+      typeof place.username === 'string' &&
+      typeof place.author === 'string'
+    ) {
       users.push({
         author: place.author,
         username: place.username,
@@ -80,8 +97,10 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
   for (const user of userSet) {
     let acc = 0;
 
-    const userPins = sortedPlaces.filter(place => 
-      (Array.isArray(place.username) ? place.username[0] : place.username) === user.username
+    const userPins = sortedPlaces.filter(
+      (place) =>
+        (Array.isArray(place.username) ? place.username[0] : place.username) ===
+        user.username
     );
 
     switch (type) {
@@ -92,13 +111,16 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
       case 'Distance': {
         // Group pins that are close together (within 10 km)
         const groups = groupPins(userPins, 130);
-        
+
         // Calculate total distance considering all pins
         acc = groups.reduce((totalDistance, group) => {
           if (group.length > 1) {
             // For groups with multiple pins, calculate average distance
-            const groupDistance = group.reduce((sum, pin) => sum + getDistance(pin.coordinates), 0);
-            return totalDistance + (groupDistance / group.length);
+            const groupDistance = group.reduce(
+              (sum, pin) => sum + getDistance(pin.coordinates),
+              0
+            );
+            return totalDistance + groupDistance / group.length;
           } else {
             // For isolated pins, just add their distance
             return totalDistance + getDistance(group[0].coordinates);
