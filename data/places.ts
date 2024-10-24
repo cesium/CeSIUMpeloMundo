@@ -768,5 +768,16 @@ export const PLACES: IPin[] = [
     date: '2023-09-30',
     photo:
       '/photos/Afonso-santos,GresosJ,MarioRodrigues10,MartimMelo,matildeopbravo,VitorLelis/aveiro.jpeg'
+  },
+  {
+    author: 'CeSIUM',
+    username: 'cesium',
+    type: EPinType.Sticker,
+    city: 'Campo do Gerês',
+    country: 'Portugal',
+    coordinates: [41.751656376668926, -8.199108019172911],
+    date: '2024-10-20',
+    photo:
+      '/photos/cesium/geres.jpg'
   }
 ];
