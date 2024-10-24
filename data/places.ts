@@ -772,7 +772,7 @@ export const PLACES: IPin[] = [
   {
     author: 'CeSIUM',
     username: 'cesium',
-    type: EPinType.Sticker,
+    type: EPinType.Special,
     city: 'Campo do Gerês',
     country: 'Portugal',
     coordinates: [41.751656376668926, -8.199108019172911],
