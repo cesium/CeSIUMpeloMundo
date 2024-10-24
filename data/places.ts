@@ -777,7 +777,6 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.751656376668926, -8.199108019172911],
     date: '2024-10-20',
-    photo:
-      '/photos/cesium/geres.jpg'
+    photo: '/photos/cesium/geres.jpg'
   }
 ];
