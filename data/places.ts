@@ -779,5 +779,15 @@ export const PLACES: IPin[] = [
     date: '2024-10-20',
     photo: '/photos/cesium/geres.jpg',
     orientation: 'horizontal'
+  },
+  {
+    author: 'Luis Araújo',
+    username: 'laraujo7',
+    type: EPinType.Sticker,
+    city: 'Prague',
+    country: 'Czech Republic',
+    coordinates: [50.08494, 14.42207],
+    date: '2024-09-22',
+    photo: '/photos/laraujo7/prague.jpg'
   }
 ];
