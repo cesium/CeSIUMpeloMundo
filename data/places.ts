@@ -32,14 +32,14 @@ export const PLACES: IPin[] = [
     photo: '/photos/nelsonmestevao/helsinki.jpg'
   },
   {
-    author: 'Nelson Estevão',
-    username: 'nelsonmestevao',
+    author: 'CeSIUM',
+    username: 'cesium',
     type: EPinType.Special,
     city: 'Gualtar',
     country: 'Portugal',
     coordinates: [41.56157392223945, -8.397397824887639],
     date: '1995-03-29',
-    photo: '/photos/nelsonmestevao/gualtar.jpg'
+    photo: '/photos/cesium/gualtar.jpg'
   },
   {
     author: 'Nelson Estevão',
@@ -789,5 +789,15 @@ export const PLACES: IPin[] = [
     coordinates: [50.08494, 14.42207],
     date: '2024-09-22',
     photo: '/photos/laraujo7/prague.jpg'
+  },
+  {
+    author: 'Júlio Pinto',
+    username: 'JulioJPinto',
+    type: EPinType.Picture,
+    city: 'Braga',
+    country: 'Portugal',
+    coordinates: [41.56394997739743, -8.401159808297859],
+    date: '2024-11-08',
+    photo: '/photos/JulioJPinto/med.jpg'
   }
 ];
