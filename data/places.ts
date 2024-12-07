@@ -797,7 +797,7 @@ export const PLACES: IPin[] = [
     city: 'Lisboa',
     country: 'Portugal',
     coordinates: [38.736822, -9.138451],
-    date: '2023-12-01',
+    date: '2024-12-01',
     photo: '/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg',
     orientation: 'horizontal'
   }
