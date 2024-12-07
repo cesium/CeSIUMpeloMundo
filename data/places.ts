@@ -789,5 +789,25 @@ export const PLACES: IPin[] = [
     coordinates: [50.08494, 14.42207],
     date: '2024-09-22',
     photo: '/photos/laraujo7/prague.jpg'
-  }
+  },
+  {
+    author: [
+      'Luís Pereira',
+      'Rui Oliveira',
+      'Tiago Pereira'
+    ],
+    username: [
+      'lumafepe',
+      'ruioliveira02',
+      'tiago-bacelar'
+    ],
+    type: EPinType.Sticker,
+    city: 'Lisboa',
+    country: 'Portugal',
+    coordinates: [38.736822,-9.138451],
+    date: '2023-12-01',
+    photo:
+      '/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg',
+    orientation: 'horizontal'
+  },
 ];
