@@ -791,23 +791,14 @@ export const PLACES: IPin[] = [
     photo: '/photos/laraujo7/prague.jpg'
   },
   {
-    author: [
-      'Luís Pereira',
-      'Rui Oliveira',
-      'Tiago Pereira'
-    ],
-    username: [
-      'lumafepe',
-      'ruioliveira02',
-      'tiago-bacelar'
-    ],
+    author: ['Luís Pereira', 'Rui Oliveira', 'Tiago Pereira'],
+    username: ['lumafepe', 'ruioliveira02', 'tiago-bacelar'],
     type: EPinType.Sticker,
     city: 'Lisboa',
     country: 'Portugal',
-    coordinates: [38.736822,-9.138451],
+    coordinates: [38.736822, -9.138451],
     date: '2023-12-01',
-    photo:
-      '/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg',
+    photo: '/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg',
     orientation: 'horizontal'
-  },
+  }
 ];
