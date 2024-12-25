@@ -789,5 +789,15 @@ export const PLACES: IPin[] = [
     coordinates: [50.08494, 14.42207],
     date: '2024-09-22',
     photo: '/photos/laraujo7/prague.jpg'
+  },
+  {
+    author: 'ANEI',
+    username: '',
+    type: EPinType.Sticker,
+    city: 'Coimbra',
+    country: 'Portugal',
+    coordinates: [40.209205, -8.427679],
+    date: '2024-12-22',
+    photo: '/photos/ANEI/coimbra.jpg'
   }
 ];
