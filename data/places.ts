@@ -800,5 +800,22 @@ export const PLACES: IPin[] = [
     date: '2024-12-01',
     photo: '/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg',
     orientation: 'horizontal'
+  },
+  {
+    author: 'ANEI',
+    username: [
+      'AETTUA',
+      'cesium',
+      'neiaac',
+      'neiaauav',
+      'neectaauav',
+      'NIAEFEUP'
+    ],
+    type: EPinType.Sticker,
+    city: 'Coimbra',
+    country: 'Portugal',
+    coordinates: [40.209205, -8.427679],
+    date: '2024-12-22',
+    photo: '/photos/ANEI/coimbra.jpg'
   }
 ];
