@@ -803,7 +803,14 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'ANEI',
-    username: ['AETTUA','cesium', 'neiaac', 'neiaauav', 'neectaauav','NIAEFEUP'],
+    username: [
+      'AETTUA',
+      'cesium',
+      'neiaac',
+      'neiaauav',
+      'neectaauav',
+      'NIAEFEUP'
+    ],
     type: EPinType.Sticker,
     city: 'Coimbra',
     country: 'Portugal',
