@@ -24,12 +24,16 @@ export default function Leaderboard() {
     [leaderKey]
   );
 
+  /* Get icon */
+
   const getIcon = () => {
     if (leaderKey === ELeaderKeys.Pins) {
       return <i className="bi bi-pin-fill"></i>;
     }
     return <i className="bi bi-signpost-fill"></i>;
   };
+
+  /* Get player distance */
 
   const getValue = (player: Player) => {
     if (leaderKey === ELeaderKeys.Distance) {

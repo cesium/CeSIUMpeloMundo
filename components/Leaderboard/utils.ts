@@ -6,12 +6,11 @@ import { User, Player } from './types';
 function getSet(arr: User[]): User[] {
   return arr.filter(
     (v, i, a) =>
-      a.findIndex((v2) => ['username'].every((k) => v2[k] === v[k])) === i
-  );
+      a.findIndex((v2) => v2.username === v.username) === i);
 }
 
 function distance(
-  lat1: number,
+  lat1: number, 
   lon1: number,
   lat2: number,
   lon2: number
@@ -34,10 +33,13 @@ function deg2rad(deg: number): number {
 }
 
 function groupPins(pins: IPin[], maxDistance: number): IPin[][] {
-  const groups: IPin[][] = [];
+  const groups: IPin[][] = []; // Array to store groups of pins
 
+  // Determine group for each pin
   for (const pin of pins) {
-    let added = false;
+    let added = false; // Checks if the pin was added to another group
+
+    // Check if the pin belongs to a group
     for (const group of groups) {
       if (
         group.some(
@@ -50,11 +52,12 @@ function groupPins(pins: IPin[], maxDistance: number): IPin[][] {
             ) <= maxDistance
         )
       ) {
-        group.push(pin);
+        group.push(pin); // Add pin to the group
         added = true;
         break;
       }
     }
+    // If the pin isn't part of any group, create a new one
     if (!added) {
       groups.push([pin]);
     }
@@ -70,6 +73,7 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
 
   // Populate users array
   for (const place of sortedPlaces) {
+    // More than one person
     if (Array.isArray(place.username) && Array.isArray(place.author)) {
       for (let j = 0; j < place.username.length; j++) {
         users.push({
@@ -78,6 +82,7 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
           coordinates: place.coordinates
         });
       }
+      // If there is just one person and its username is a string
     } else if (
       typeof place.username === 'string' &&
       typeof place.author === 'string'
@@ -87,40 +92,43 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
         username: place.username,
         coordinates: place.coordinates
       });
+      // Invalid username
     } else {
       console.error('Unexpected type for username or author:', place);
     }
   }
 
+  // Guarantee that users don't appear more than once in leaderboard
   const userSet = getSet(users);
 
+  // Gives each user the respective pins and total distance
   for (const user of userSet) {
     let acc = 0;
 
-    const userPins = sortedPlaces.filter(
-      (place) =>
-        (Array.isArray(place.username) ? place.username[0] : place.username) ===
-        user.username
-    );
-
+    // Logic to get the pins
+    const userPins = sortedPlaces.filter((place) => {
+      const usernames = Array.isArray(place.username) ? place.username.map(u => u.trim().toLowerCase()  ) : [place.username.trim().toLowerCase()];
+      return usernames.includes(user.username.trim().toLowerCase());
+    });
+    
     switch (type) {
       case 'Pins': {
         acc = userPins.length;
         break;
       }
       case 'Distance': {
-        // Group pins that are close together (within 10 km)
-        const groups = groupPins(userPins, 130);
+        // Group pins that are close together
+        const groups = groupPins(userPins, 10000);
 
-        // Calculate total distance considering all pins
+        // Calculates max distance within group
         acc = groups.reduce((totalDistance, group) => {
           if (group.length > 1) {
-            // For groups with multiple pins, calculate average distance
-            const groupDistance = group.reduce(
-              (sum, pin) => sum + getDistance(pin.coordinates),
+            // For groups with multiple pins, calculate max distance  
+            const groupMaxDistance = group.reduce(
+              (maxDistance, pin) => Math.max(maxDistance, getDistance(pin.coordinates)),
               0
             );
-            return totalDistance + groupDistance / group.length;
+            return totalDistance + groupMaxDistance;
           } else {
             // For isolated pins, just add their distance
             return totalDistance + getDistance(group[0].coordinates);
