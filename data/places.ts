@@ -770,53 +770,52 @@ export const PLACES: IPin[] = [
       '/photos/Afonso-santos,GresosJ,MarioRodrigues10,MartimMelo,matildeopbravo,VitorLelis/aveiro.jpeg'
   },
   {
-    author: [
-      'Afonso Martins',
-      'Gerson Júnior',
-      'Júlio Pinto',
-      'João Lobo',
-      'Mário Rodrigues',
-      'Salomé Faria'
-    ],
-    username: [
-      'AfonsoMartins26',
-      'GresosJ',
-      'JulioJPinto',
-      'joaodiaslobo',
-      'MarioRodrigues10',
-      'faria-s'
-    ],
-    type: EPinType.Sticker,
-    city: 'Aveiro',
+    author: 'CeSIUM',
+    username: 'cesium',
+    type: EPinType.Special,
+    city: 'Campo do Gerês',
     country: 'Portugal',
-    coordinates: [16.606273, 9.924821],
-    date: '2024-08-16',
-    photo:
-      '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
+    coordinates: [41.751656376668926, -8.199108019172911],
+    date: '2024-10-20',
+    photo: '/photos/cesium/geres.jpg',
+    orientation: 'horizontal'
   },
   {
-    author: [
-      'Afonso Martins',
-      'Gerson Júnior',
-      'Júlio Pinto',
-      'João Lobo',
-      'Mário Rodrigues',
-      'Salomé Faria'
-    ],
+    author: 'Luis Araújo',
+    username: 'laraujo7',
+    type: EPinType.Sticker,
+    city: 'Prague',
+    country: 'Czech Republic',
+    coordinates: [50.08494, 14.42207],
+    date: '2024-09-22',
+    photo: '/photos/laraujo7/prague.jpg'
+  },
+  {
+    author: ['Luís Pereira', 'Rui Oliveira', 'Tiago Pereira'],
+    username: ['lumafepe', 'ruioliveira02', 'tiago-bacelar'],
+    type: EPinType.Sticker,
+    city: 'Lisboa',
+    country: 'Portugal',
+    coordinates: [38.736822, -9.138451],
+    date: '2024-12-01',
+    photo: '/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg',
+    orientation: 'horizontal'
+  },
+  {
+    author: 'ANEI',
     username: [
-      'AfonsoMartins26',
-      'GresosJ',
-      'JulioJPinto',
-      'joaodiaslobo',
-      'MarioRodrigues10',
-      'faria-s'
+      'AETTUA',
+      'cesium',
+      'neiaac',
+      'neiaauav',
+      'neectaauav',
+      'NIAEFEUP'
     ],
     type: EPinType.Sticker,
-    city: 'Aveiro',
+    city: 'Coimbra',
     country: 'Portugal',
-    coordinates: [16.606273, 10.924821],
-    date: '2024-08-16',
-    photo:
-      '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
-  },
+    coordinates: [40.209205, -8.427679],
+    date: '2024-12-22',
+    photo: '/photos/ANEI/coimbra.jpg'
+  }
 ];
