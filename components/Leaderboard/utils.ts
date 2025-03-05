@@ -5,12 +5,12 @@ import { User, Player } from './types';
 
 function getSet(arr: User[]): User[] {
   return arr.filter(
-    (v, i, a) =>
-      a.findIndex((v2) => v2.username === v.username) === i);
+    (v, i, a) => a.findIndex((v2) => v2.username === v.username) === i
+  );
 }
 
 function distance(
-  lat1: number, 
+  lat1: number,
   lon1: number,
   lat2: number,
   lon2: number
@@ -107,10 +107,12 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
 
     // Logic to get the pins
     const userPins = sortedPlaces.filter((place) => {
-      const usernames = Array.isArray(place.username) ? place.username.map(u => u.trim().toLowerCase()  ) : [place.username.trim().toLowerCase()];
+      const usernames = Array.isArray(place.username)
+        ? place.username.map((u) => u.trim().toLowerCase())
+        : [place.username.trim().toLowerCase()];
       return usernames.includes(user.username.trim().toLowerCase());
     });
-    
+
     switch (type) {
       case 'Pins': {
         acc = userPins.length;
@@ -123,9 +125,10 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
         // Calculates max distance within group
         acc = groups.reduce((totalDistance, group) => {
           if (group.length > 1) {
-            // For groups with multiple pins, calculate max distance  
+            // For groups with multiple pins, calculate max distance
             const groupMaxDistance = group.reduce(
-              (maxDistance, pin) => Math.max(maxDistance, getDistance(pin.coordinates)),
+              (maxDistance, pin) =>
+                Math.max(maxDistance, getDistance(pin.coordinates)),
               0
             );
             return totalDistance + groupMaxDistance;

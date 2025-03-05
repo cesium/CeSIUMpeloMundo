@@ -462,25 +462,6 @@ export const PLACES: IPin[] = [
     photo: '/photos/JulioJPinto/ericeira.jpg'
   },
   {
-    author: ['Jonas', 'Jéssica Fernandes'],
-    username: ['Jonas', 'MFJess'],
-    type: EPinType.Sticker,
-    city: 'Ericeira',
-    country: 'Portugal',
-    coordinates: [38.96114, -9.41000],
-    date: '2022-08-20',
-    photo: '/photos/JulioJPinto/ericeira.jpg'
-  },  {
-    author: ['Jonas', 'Jéssica Fernandes'],
-    username: ['Jonas', 'MFJess'],
-    type: EPinType.Sticker,
-    city: 'Ericeira',
-    country: 'Portugal',
-    coordinates: [38.96114, -9.41200],
-    date: '2022-08-20',
-    photo: '/photos/JulioJPinto/ericeira.jpg'
-  },
-  {
     author: ['Filipe Felício', 'Daniel Pereira'],
     username: ['feliciofilipe', 'danielsp45'],
     type: EPinType.Sticker,
@@ -837,15 +818,5 @@ export const PLACES: IPin[] = [
     date: '2024-08-16',
     photo:
       '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
-  },
-  {
-    author: 'Jonas',
-    username: 'jonas1',
-    type: EPinType.Sticker,
-    city: 'Jonas do Mar',
-    country: 'Portugal',
-    coordinates: [37.525364, -30.786004],
-    date: '2022-08-06',
-    photo: '/photos/sassypocoyo/zambujeira1.jpg'
   },
 ];
