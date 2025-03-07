@@ -120,7 +120,7 @@ export function makeLeaderboard(places: IPin[], type: string): Player[] {
       }
       case 'Distance': {
         // Group pins that are close together
-        const groups = groupPins(userPins, 10000);
+        const groups = groupPins(userPins, 130);
 
         // Calculates max distance within group
         acc = groups.reduce((totalDistance, group) => {
