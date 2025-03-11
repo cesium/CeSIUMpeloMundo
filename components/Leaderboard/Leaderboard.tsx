@@ -58,7 +58,7 @@ export default function Leaderboard() {
           </select>
           <div
             className={styles.leading_info}
-            title="Distance values are calculated by summing the distance to the CeSIUM headquarters of all the pins from each author"
+            title="Distance values are calculated by summing the distance to the CeSIUM headquarters of all the pins from each author. Pins that are close together will be grouped and counted as one."
           >
             <i className="bi bi-info-circle-fill"></i>
           </div>
