@@ -9,7 +9,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [40.4213, -3.7011],
     date: '2021-07-06',
-    photo: '/photos/laraujo7/madrid.jpg'
+    photos: ['/photos/laraujo7/madrid.jpg']
   },
   {
     author: 'Luis Araújo',
@@ -19,7 +19,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [41.5888, 1.8422],
     date: '2021-07-11',
-    photo: '/photos/laraujo7/barcelona.jpg'
+    photos: ['/photos/laraujo7/barcelona.jpg']
   },
   {
     author: 'Nelson Estevão',
@@ -29,7 +29,7 @@ export const PLACES: IPin[] = [
     country: 'Finland',
     coordinates: [60.1673826, 24.9551949],
     date: '2019-01-17',
-    photo: '/photos/nelsonmestevao/helsinki.jpg'
+    photos: ['/photos/nelsonmestevao/helsinki.jpg']
   },
   {
     author: 'Nelson Estevão',
@@ -39,7 +39,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.56157392223945, -8.397397824887639],
     date: '1995-03-29',
-    photo: '/photos/nelsonmestevao/gualtar.jpg'
+    photos: ['/photos/nelsonmestevao/gualtar.jpg']
   },
   {
     author: 'Nelson Estevão',
@@ -51,7 +51,7 @@ export const PLACES: IPin[] = [
     date: '2022-06-11',
     streetview:
       'https://www.google.com/maps/@51.5052606,-0.1126733,3a,60y,348.18h,84.44t/data=!3m6!1e1!3m4!1sG6kgwad45Rn0mxC1nzHK9g!2e0!7i16384!8i8192',
-    photo: '/photos/nelsonmestevao/london.jpg'
+    photos: ['/photos/nelsonmestevao/london.jpg']
   },
   {
     author: 'Nelson Estevão',
@@ -61,7 +61,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.143507, -8.610342],
     date: '2022-08-04',
-    photo: '/photos/nelsonmestevao/porto.jpg'
+    photos: ['/photos/nelsonmestevao/porto.jpg']
   },
   {
     author: 'Francisco Lira',
@@ -71,7 +71,7 @@ export const PLACES: IPin[] = [
     country: 'Switzerland',
     coordinates: [46.933938, 7.445919],
     date: '2019-08-12',
-    photo: '/photos/FranciscoLira/bern.jpg'
+    photos: ['/photos/FranciscoLira/bern.jpg']
   },
   {
     author: 'Francisco Lira',
@@ -81,7 +81,7 @@ export const PLACES: IPin[] = [
     country: 'Switzerland',
     coordinates: [46.919683, 7.436997],
     date: '2019-08-01',
-    photo: '/photos/FranciscoLira/koniz.jpg'
+    photos: ['/photos/FranciscoLira/koniz.jpg']
   },
   {
     author: 'Filipe Felício',
@@ -91,7 +91,7 @@ export const PLACES: IPin[] = [
     country: 'Netherlands',
     coordinates: [52.37548607644857, 4.896832185020905],
     date: '2022-02-23',
-    photo: '/photos/feliciofilipe/amesterdam.jpg'
+    photos: ['/photos/feliciofilipe/amesterdam.jpg']
   },
   {
     author: 'Filipe Felício',
@@ -101,7 +101,7 @@ export const PLACES: IPin[] = [
     country: 'United Kingdom',
     coordinates: [51.5019163, -0.1596214],
     date: '2022-06-10',
-    photo: '/photos/feliciofilipe/london.jpg'
+    photos: ['/photos/feliciofilipe/london.jpg']
   },
   {
     author: ['Filipe Felício', 'Nelson Estevão', 'José Valim'],
@@ -111,7 +111,7 @@ export const PLACES: IPin[] = [
     country: 'United Kingdom',
     coordinates: [51.486082974689104, -0.19962908422844805],
     date: '2022-06-09',
-    photo: '/photos/feliciofilipe,nelsonmestevao/london.jpg'
+    photos: ['/photos/feliciofilipe,nelsonmestevao/london.jpg']
   },
   {
     author: [
@@ -128,8 +128,9 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [38.72089957160629, -9.150110630930728],
     date: '2023-04-22',
-    photo:
+    photos: [
       '/photos/feliciofilipe,nelsonmestevao,laraujo7,FranciscoLira/lisboa.jpg'
+    ]
   },
   {
     author: 'João Correia',
@@ -139,7 +140,7 @@ export const PLACES: IPin[] = [
     country: 'Switzerland',
     coordinates: [46.519164417441345, 6.563699123819026],
     date: '2022-06-06',
-    photo: '/photos/jpcorreia99/lausanne.jpg'
+    photos: ['/photos/jpcorreia99/lausanne.jpg']
   },
   {
     author: 'João Correia',
@@ -149,7 +150,7 @@ export const PLACES: IPin[] = [
     country: 'Switzerland',
     coordinates: [46.97946423603654, 8.25622198625752],
     date: '2022-06-12',
-    photo: '/photos/jpcorreia99/lucerne.jpg'
+    photos: ['/photos/jpcorreia99/lucerne.jpg']
   },
   {
     author: 'João Correia',
@@ -159,7 +160,7 @@ export const PLACES: IPin[] = [
     country: 'Ireland',
     coordinates: [53.345589992774805, -6.27459360543026],
     date: '2022-07-17',
-    photo: '/photos/jpcorreia99/dublin.jpg'
+    photos: ['/photos/jpcorreia99/dublin.jpg']
   },
   {
     author: 'Daniel Pereira',
@@ -169,7 +170,7 @@ export const PLACES: IPin[] = [
     country: 'United States of America',
     coordinates: [36.955797, -121.972159],
     date: '2022-07-04',
-    photo: '/photos/danielsp45/california.jpeg'
+    photos: ['/photos/danielsp45/california.jpeg']
   },
   {
     author: 'Gerson Júnior',
@@ -179,7 +180,7 @@ export const PLACES: IPin[] = [
     country: 'Italy',
     coordinates: [41.889048, 12.492502],
     date: '2022-07-11',
-    photo: '/photos/GresosJ/Coliseu.jpg'
+    photos: ['/photos/GresosJ/Coliseu.jpg']
   },
   {
     author: 'Gerson Júnior',
@@ -189,7 +190,7 @@ export const PLACES: IPin[] = [
     country: 'Italy',
     coordinates: [40.840007, 14.251875],
     date: '2022-07-08',
-    photo: '/photos/GresosJ/Napoles.jpg'
+    photos: ['/photos/GresosJ/Napoles.jpg']
   },
   {
     author: 'Gerson Júnior',
@@ -199,7 +200,7 @@ export const PLACES: IPin[] = [
     country: 'Italy',
     coordinates: [39.58367, 16.45292],
     date: '2022-07-04',
-    photo: '/photos/GresosJ/SanGiorgio.jpg'
+    photos: ['/photos/GresosJ/SanGiorgio.jpg']
   },
   {
     author: 'Filipe Felício',
@@ -209,7 +210,7 @@ export const PLACES: IPin[] = [
     country: 'Croatia',
     coordinates: [45.33902, 14.416862],
     date: '2022-07-07',
-    photo: '/photos/feliciofilipe/rijeka.jpg'
+    photos: ['/photos/feliciofilipe/rijeka.jpg']
   },
   {
     author: 'Filipe Felício',
@@ -219,7 +220,7 @@ export const PLACES: IPin[] = [
     country: 'Croatia',
     coordinates: [45.813258549667765, 15.977218879620182],
     date: '2022-07-03',
-    photo: '/photos/feliciofilipe/zagreb.jpg'
+    photos: ['/photos/feliciofilipe/zagreb.jpg']
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
@@ -229,7 +230,7 @@ export const PLACES: IPin[] = [
     country: 'Croatia',
     coordinates: [45.81383, 15.97732],
     date: '2022-07-03',
-    photo: '/photos/feliciofilipe,matildeopbravo/zagreb2.jpg'
+    photos: ['/photos/feliciofilipe,matildeopbravo/zagreb2.jpg']
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
@@ -239,7 +240,7 @@ export const PLACES: IPin[] = [
     country: 'Croatia',
     coordinates: [45.8149711819682, 15.97573733926956],
     date: '2022-07-02',
-    photo: '/photos/feliciofilipe,matildeopbravo/zagreb1.jpg'
+    photos: ['/photos/feliciofilipe,matildeopbravo/zagreb1.jpg']
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo', 'Mariana Rodrigues'],
@@ -249,7 +250,7 @@ export const PLACES: IPin[] = [
     country: 'Croatia',
     coordinates: [45.33264760505596, 14.455986441966521],
     date: '2022-07-04',
-    photo: '/photos/feliciofilipe,matildeopbravo/rijeka.jpg'
+    photos: ['/photos/feliciofilipe,matildeopbravo/rijeka.jpg']
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
@@ -259,7 +260,7 @@ export const PLACES: IPin[] = [
     country: 'Italy',
     coordinates: [45.65240883374153, 13.77165131984631],
     date: '2022-07-09',
-    photo: '/photos/feliciofilipe,matildeopbravo/trieste.jpg'
+    photos: ['/photos/feliciofilipe,matildeopbravo/trieste.jpg']
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo'],
@@ -269,7 +270,7 @@ export const PLACES: IPin[] = [
     country: 'Croatia',
     coordinates: [44.867328742659424, 13.850810010552738],
     date: '2022-07-08',
-    photo: '/photos/feliciofilipe,matildeopbravo/pula.jpg'
+    photos: ['/photos/feliciofilipe,matildeopbravo/pula.jpg']
   },
   {
     author: ['Filipe Felício', 'Matilde Bravo', 'José Macedo'],
@@ -279,7 +280,7 @@ export const PLACES: IPin[] = [
     country: 'Slovenia',
     coordinates: [46.05218163654292, 14.511751028966621],
     date: '2022-07-10',
-    photo: '/photos/feliciofilipe,matildeopbravo/liubliana.jpg'
+    photos: ['/photos/feliciofilipe,matildeopbravo/liubliana.jpg']
   },
   {
     author: 'Diogo Matos',
@@ -289,7 +290,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [37.525364, -8.786004],
     date: '2022-08-06',
-    photo: '/photos/sassypocoyo/zambujeira1.jpg'
+    photos: ['/photos/sassypocoyo/zambujeira1.jpg']
   },
   {
     author: 'Filipe Felício',
@@ -299,7 +300,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [41.39437640777792, 2.1750122226070197],
     date: '2022-03-21',
-    photo: '/photos/feliciofilipe/barcelona.jpg'
+    photos: ['/photos/feliciofilipe/barcelona.jpg']
   },
   {
     author: 'Mário Rodrigues',
@@ -309,7 +310,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [40.9588846, -5.6693875],
     date: '2022-08-16',
-    photo: '/photos/mariorodrigues10/salamanca.jpg'
+    photos: ['/photos/mariorodrigues10/salamanca.jpg']
   },
   {
     author: 'Vitor Lelis',
@@ -319,7 +320,7 @@ export const PLACES: IPin[] = [
     country: 'Brazil',
     coordinates: [-21.75831, -41.337461],
     date: '2022-09-12',
-    photo: '/photos/VitorLelis/campos-rio.jpg'
+    photos: ['/photos/VitorLelis/campos-rio.jpg']
   },
   {
     author: 'Matilde Bravo',
@@ -329,7 +330,7 @@ export const PLACES: IPin[] = [
     country: 'Netherlands',
     coordinates: [52.377798043025265, 4.897756773311312],
     date: '2022-07-12',
-    photo: '/photos/matildeopbravo/amsterdam.jpg'
+    photos: ['/photos/matildeopbravo/amsterdam.jpg']
   },
   {
     author: 'Matilde Bravo',
@@ -339,7 +340,7 @@ export const PLACES: IPin[] = [
     country: 'France',
     coordinates: [48.85946363288889, 2.287131396878628],
     date: '2022-07-17',
-    photo: '/photos/matildeopbravo/paris_camoes.jpg'
+    photos: ['/photos/matildeopbravo/paris_camoes.jpg']
   },
   {
     author: 'Matilde Bravo',
@@ -349,7 +350,7 @@ export const PLACES: IPin[] = [
     country: 'Croatia',
     coordinates: [43.5159178, 16.2518851],
     date: '2022-08-20',
-    photo: '/photos/matildeopbravo/trogir.jpg'
+    photos: ['/photos/matildeopbravo/trogir.jpg']
   },
   {
     author: 'Matilde Bravo',
@@ -359,7 +360,7 @@ export const PLACES: IPin[] = [
     country: 'Sweden',
     coordinates: [55.7074486, 13.1876206],
     date: '2023-01-27',
-    photo: '/photos/matildeopbravo/lund.jpeg'
+    photos: ['/photos/matildeopbravo/lund.jpeg']
   },
   {
     author: 'João Correia',
@@ -369,7 +370,7 @@ export const PLACES: IPin[] = [
     country: 'Ireland',
     coordinates: [53.33132494708253, -6.246354987702219],
     date: '2023-01-27',
-    photo: '/photos/jpcorreia99/aws_dublin.jpg'
+    photos: ['/photos/jpcorreia99/aws_dublin.jpg']
   },
   {
     author: 'João Correia',
@@ -379,7 +380,7 @@ export const PLACES: IPin[] = [
     country: 'South Korea',
     coordinates: [37.58482, 126.97762],
     date: '2023-02-07',
-    photo: '/photos/jpcorreia99/changgyeonggung_seoul.jpg'
+    photos: ['/photos/jpcorreia99/changgyeonggung_seoul.jpg']
   },
   {
     author: 'João Correia',
@@ -389,7 +390,7 @@ export const PLACES: IPin[] = [
     country: 'South Korea',
     coordinates: [37.55103, 126.99098],
     date: '2023-02-07',
-    photo: '/photos/jpcorreia99/namsam_seoul.jpg'
+    photos: ['/photos/jpcorreia99/namsam_seoul.jpg']
   },
   {
     author: 'João Correia',
@@ -399,7 +400,7 @@ export const PLACES: IPin[] = [
     country: 'Japan',
     coordinates: [35.66269, 139.69526],
     date: '2023-02-18',
-    photo: '/photos/jpcorreia99/shibuya_tokyo.jpg'
+    photos: ['/photos/jpcorreia99/shibuya_tokyo.jpg']
   },
   {
     author: 'João Correia',
@@ -409,7 +410,7 @@ export const PLACES: IPin[] = [
     country: 'Japan',
     coordinates: [35.67334, 139.70186],
     date: '2023-02-14',
-    photo: '/photos/jpcorreia99/meiji_jingu_tokyo.jpg'
+    photos: ['/photos/jpcorreia99/meiji_jingu_tokyo.jpg']
   },
   {
     author: 'João Correia',
@@ -419,7 +420,7 @@ export const PLACES: IPin[] = [
     country: 'Japan',
     coordinates: [34.65373, 135.51643],
     date: '2023-02-16',
-    photo: '/photos/jpcorreia99/shitennoji_osaka.jpg'
+    photos: ['/photos/jpcorreia99/shitennoji_osaka.jpg']
   },
   {
     author: 'João Correia',
@@ -429,7 +430,7 @@ export const PLACES: IPin[] = [
     country: 'Japan',
     coordinates: [34.96672, 135.77494],
     date: '2023-02-17',
-    photo: '/photos/jpcorreia99/fushimi_inari_kyoto.jpg'
+    photos: ['/photos/jpcorreia99/fushimi_inari_kyoto.jpg']
   },
   {
     author: 'Gerson Júnior',
@@ -439,7 +440,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.716682, -6.857647],
     date: '2022-08-13',
-    photo: '/photos/GresosJ/Bragança.jpg'
+    photos: ['/photos/GresosJ/Bragança.jpg']
   },
   {
     author: 'Daniel Pereira',
@@ -449,7 +450,7 @@ export const PLACES: IPin[] = [
     country: 'Germany',
     coordinates: [52.503042, 13.445205],
     date: '2023-04-07',
-    photo: '/photos/danielsp45/berlin_wall.jpg'
+    photos: ['/photos/danielsp45/berlin_wall.jpg']
   },
   {
     author: ['Júlio Pinto', 'Jéssica Fernandes'],
@@ -459,7 +460,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [38.96014, -9.41691],
     date: '2022-08-20',
-    photo: '/photos/JulioJPinto/ericeira.jpg'
+    photos: ['/photos/JulioJPinto/ericeira.jpg']
   },
   {
     author: ['Filipe Felício', 'Daniel Pereira'],
@@ -469,7 +470,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.73677900798794, -7.464917455479609],
     date: '2023-07-06',
-    photo: '/photos/feliciofilipe,danielsp45/chaves.jpg'
+    photos: ['/photos/feliciofilipe,danielsp45/chaves.jpg']
   },
   {
     author: [
@@ -497,8 +498,9 @@ export const PLACES: IPin[] = [
     country: 'Nederlands',
     coordinates: [52.36119, 4.888508],
     date: '2023-03-12',
-    photo:
+    photos: [
       '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/amsterdam.jpg'
+    ]
   },
   {
     author: [
@@ -526,8 +528,9 @@ export const PLACES: IPin[] = [
     country: 'Nederlands',
     coordinates: [52.477, 4.81467],
     date: '2023-03-13',
-    photo:
+    photos: [
       '/photos/laraujo7,FranciscoLira,Barbara29,machadovilaca,miguelbrandao,jessicalemos,teixeiramarcia,catarinamachado/zaandam.jpg'
+    ]
   },
   {
     author: ['Filipe Felício', 'Luis Araújo'],
@@ -537,7 +540,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [43.462868, -3.801838],
     date: '2023-07-27',
-    photo: '/photos/feliciofilipe,laraujo7/santander.jpg'
+    photos: ['/photos/feliciofilipe,laraujo7/santander.jpg']
   },
   {
     author: ['Filipe Felício', 'Luis Araújo'],
@@ -547,7 +550,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [43.472395, -3.917568],
     date: '2023-07-28',
-    photo: '/photos/feliciofilipe,laraujo7/playa_de_arnia.jpg'
+    photos: ['/photos/feliciofilipe,laraujo7/playa_de_arnia.jpg']
   },
   {
     author: 'Rui Lopes',
@@ -557,7 +560,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [37.001527, -8.947717],
     date: '2023-08-01',
-    photo: '/photos/ruilopesm/sagres.jpg'
+    photos: ['/photos/ruilopesm/sagres.jpg']
   },
   {
     author: 'Rui Lopes',
@@ -567,7 +570,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [37.067041, -8.102513],
     date: '2023-08-05',
-    photo: '/photos/ruilopesm/quarteira.jpg'
+    photos: ['/photos/ruilopesm/quarteira.jpg']
   },
   {
     author: 'Filipe Felício',
@@ -577,7 +580,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [42.24133604109711, -8.72293898782188],
     date: '2023-08-06',
-    photo: '/photos/feliciofilipe/vigo.jpg'
+    photos: ['/photos/feliciofilipe/vigo.jpg']
   },
   {
     author: ['João Lobo', 'Rita Camacho'],
@@ -587,7 +590,7 @@ export const PLACES: IPin[] = [
     country: 'Netherlands',
     coordinates: [52.377524, 4.899008],
     date: '2023-06-28',
-    photo: '/photos/joaodiaslobo,ritacamacho/amsterdam.jpeg'
+    photos: ['/photos/joaodiaslobo,ritacamacho/amsterdam.jpeg']
   },
   {
     author: ['Luis Araújo', 'Filipe Felício', 'Nelson Estevão'],
@@ -597,7 +600,7 @@ export const PLACES: IPin[] = [
     country: 'Germany',
     coordinates: [52.5208, 13.41275],
     date: '2023-10-22',
-    photo: '/photos/laraujo7,feliciofilipe,nelsonmestevao/berlin.jpg'
+    photos: ['/photos/laraujo7,feliciofilipe,nelsonmestevao/berlin.jpg']
   },
   {
     author: 'Gerson Júnior',
@@ -607,7 +610,7 @@ export const PLACES: IPin[] = [
     country: 'Netherlands',
     coordinates: [51.4400423, 5.4774228],
     date: '2023-12-26',
-    photo: '/photos/GresosJ/Eindhoven.jpg'
+    photos: ['/photos/GresosJ/Eindhoven.jpg']
   },
   {
     author: ['João Lobo', 'Rita Camacho'],
@@ -617,7 +620,7 @@ export const PLACES: IPin[] = [
     country: 'Czech Republic',
     coordinates: [50.09190612588056, 14.406278379658675],
     date: '2024-01-07',
-    photo: '/photos/joaodiaslobo,ritacamacho/prague.png'
+    photos: ['/photos/joaodiaslobo,ritacamacho/prague.png']
   },
   {
     author: 'Guilherme Costa',
@@ -627,7 +630,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [38.580415, -28.7069807],
     date: '2024-01-28',
-    photo: '/photos/xrosta/caldeira.jpg'
+    photos: ['/photos/xrosta/caldeira.jpg']
   },
   {
     author: 'NIAEFEUP',
@@ -637,7 +640,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.177745794059135, -8.595977428835305],
     date: '2024-03-09',
-    photo: '/photos/NIAEFEUP/porto.jpeg'
+    photos: ['/photos/NIAEFEUP/porto.jpeg']
   },
   {
     author: 'Dário Guimarães',
@@ -647,7 +650,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [38.707222222222, -9.1366666666667],
     date: '2024-03-15',
-    photo: '/photos/darguima/lisboa_terreiro_paco.jpg'
+    photos: ['/photos/darguima/lisboa_terreiro_paco.jpg']
   },
   {
     author: 'Dário Guimarães',
@@ -657,7 +660,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [40.206944, -8.424215],
     date: '2024-06-04',
-    photo: '/photos/darguima/coimbra_universidade.jpg'
+    photos: ['/photos/darguima/coimbra_universidade.jpg']
   },
   {
     author: 'Humberto Gomes',
@@ -667,7 +670,7 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [43.26925725801514, -2.93479144050948],
     date: '2024-08-04',
-    photo: '/photos/voidbert/bilbao.jpg'
+    photos: ['/photos/voidbert/bilbao.jpg']
   },
   {
     author: 'João Lobo',
@@ -677,7 +680,7 @@ export const PLACES: IPin[] = [
     country: 'Italy',
     coordinates: [45.465573884554935, 9.196202807173558],
     date: '2024-08-23',
-    photo: '/photos/joaodiaslobo/milan.jpeg'
+    photos: ['/photos/joaodiaslobo/milan.jpeg']
   },
   {
     author: 'João Lobo',
@@ -687,7 +690,7 @@ export const PLACES: IPin[] = [
     country: 'Italy',
     coordinates: [43.772933334813324, 11.254459280022479],
     date: '2024-08-27',
-    photo: '/photos/joaodiaslobo/florence.jpeg'
+    photos: ['/photos/joaodiaslobo/florence.jpeg']
   },
   {
     author: 'João Lobo',
@@ -697,7 +700,7 @@ export const PLACES: IPin[] = [
     country: 'Italy',
     coordinates: [43.722511398105596, 10.395425388135308],
     date: '2024-08-27',
-    photo: '/photos/joaodiaslobo/pisa.jpeg'
+    photos: ['/photos/joaodiaslobo/pisa.jpeg']
   },
   {
     author: ['Afonso Dionísio', 'Gerson Júnior', 'Júlio Pinto'],
@@ -707,7 +710,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.2706315, -7.8500863],
     date: '2024-09-08',
-    photo: '/photos/JulioJPinto,GresosJ,Afonso-santos/vilareal.jpg'
+    photos: ['/photos/JulioJPinto,GresosJ,Afonso-santos/vilareal.jpg']
   },
   {
     author: [
@@ -731,8 +734,9 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [40.64233213659726, -8.655239407017632],
     date: '2024-08-16',
-    photo:
+    photos: [
       '/photos/AfonsoMartins26,GresosJ,JulioJPinto,joaodiaslobo,MarioRodrigues10,faria-s/aveiro.jpg'
+    ]
   },
   {
     author: ['AETTUA'],
@@ -742,7 +746,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [40.6331741, -8.660137],
     date: '2023-10-01',
-    photo: '/photos/AETTUA/aettua.jpeg'
+    photos: ['/photos/AETTUA/aettua.jpeg']
   },
   {
     author: [
@@ -766,8 +770,9 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [40.626917, -8.657037],
     date: '2023-09-30',
-    photo:
+    photos: [
       '/photos/Afonso-santos,GresosJ,MarioRodrigues10,MartimMelo,matildeopbravo,VitorLelis/aveiro.jpeg'
+    ]
   },
   {
     author: 'CeSIUM',
@@ -777,8 +782,14 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [41.751656376668926, -8.199108019172911],
     date: '2024-10-20',
-    photo: '/photos/cesium/geres.jpg',
-    orientation: 'horizontal'
+    photos: ['/photos/cesium/geres.jpg'],
+    visits: [
+      {
+        photo: '/photos/JulioJPinto,GresosJ,Afonso-santos/vilareal.jpg',
+        date: '2025-03-29',
+        visitors: ['Júlio Pinto', 'Salomé Faria', 'Gustavo Pereira']
+      }
+    ]
   },
   {
     author: 'Luis Araújo',
@@ -788,7 +799,7 @@ export const PLACES: IPin[] = [
     country: 'Czech Republic',
     coordinates: [50.08494, 14.42207],
     date: '2024-09-22',
-    photo: '/photos/laraujo7/prague.jpg'
+    photos: ['/photos/laraujo7/prague.jpg']
   },
   {
     author: ['Luís Pereira', 'Rui Oliveira', 'Tiago Pereira'],
@@ -798,7 +809,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [38.736822, -9.138451],
     date: '2024-12-01',
-    photo: '/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg',
+    photos: ['/photos/lumafepe,ruioliveira02,tiago-bacelar/lisboa.jpg'],
     orientation: 'horizontal'
   },
   {
@@ -816,6 +827,6 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [40.209205, -8.427679],
     date: '2024-12-22',
-    photo: '/photos/ANEI/coimbra.jpg'
+    photos: ['/photos/ANEI/coimbra.jpg']
   }
 ];
