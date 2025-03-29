@@ -785,7 +785,7 @@ export const PLACES: IPin[] = [
     photos: ['/photos/cesium/geres.jpg'],
     visits: [
       {
-        photo: '/photos/JulioJPinto,GresosJ,Afonso-santos/vilareal.jpg',
+        photo: '/photos/JulioPinto,SalomeFaria,GustavoPereira/geres-1.jpg',
         date: '2025-03-29',
         visitors: ['Júlio Pinto', 'Salomé Faria', 'Gustavo Pereira']
       }
