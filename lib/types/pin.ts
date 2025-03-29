@@ -14,8 +14,13 @@ export interface IPin {
   country: string;
   coordinates: [number, number];
   date: string;
-  photo: string;
+  photos: string[];
   type?: EPinType;
   streetview?: string;
   orientation?: string;
+  visits?: {
+    photo: string;
+    date: string;
+    visitors: string | string[];
+  }[];
 }
