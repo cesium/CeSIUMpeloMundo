@@ -27,6 +27,12 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
+.swiper-pagination {
+  --swiper-theme-color: #ed7950;
+  --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.9);
+  --swiper-pagination-bottom: 4px;
+}
+
 .leaflet-popup-content {
   width: auto !important;
   max-width: none !important;
