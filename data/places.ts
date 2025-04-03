@@ -32,14 +32,14 @@ export const PLACES: IPin[] = [
     photos: ['/photos/nelsonmestevao/helsinki.jpg']
   },
   {
-    author: 'Nelson Estevão',
-    username: 'nelsonmestevao',
+    author: 'CeSIUM',
+    username: 'cesium',
     type: EPinType.Special,
     city: 'Gualtar',
     country: 'Portugal',
     coordinates: [41.56157392223945, -8.397397824887639],
     date: '1995-03-29',
-    photos: ['/photos/nelsonmestevao/gualtar.jpg']
+    photos: ['/photos/cesium/gualtar.jpg']
   },
   {
     author: 'Nelson Estevão',
