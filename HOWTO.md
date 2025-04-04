@@ -60,7 +60,7 @@ Where `<branch>` is the name of your branch.
 - `city` & `country` - city and country where the image was taken
 - `coordinates` - you can use [**this website**](https://www.gps-coordinates.net/my-location)
 - `date` - date of when the image was taken (year-month-day format)
-- `photo` - path to your image file
+- `photos` - array containing the paths to your image files
 
 **Understanding Pin Types:**
 
@@ -80,7 +80,7 @@ Where `<branch>` is the name of your branch.
   country: 'Spain',
   coordinates: [41.39437640777792, 2.1750122226070197],
   date: '2022-03-21',
-  photo: '/photos/feliciofilipe/barcelona.jpg'
+  photos: ['/photos/feliciofilipe/barcelona.jpg']
 }
 ```
 
@@ -95,12 +95,54 @@ Where `<branch>` is the name of your branch.
   country: 'Croatia',
   coordinates: [45.33264760505596, 14.455986441966521],
   date: '2022-07-04',
-  photo: '/photos/feliciofilipe,matildeopbravo/rijeka.jpg'
+  photo: ['/photos/feliciofilipe,matildeopbravo/rijeka.jpg']
 }
 ```
 
 > **Warning**  
 > When placing a **sticker**, we appeal to everyone's common sense and civility. Don't vandalize.
+
+> **Note**  
+> You can get a local preview of your changes by running the project on your machine, follow the [Contributing Guide](CONTRIBUTING.md) to know more.
+
+## 🚘 Registering a visit to an existing pin
+
+**1.** Move to the `data` directory and open the `places.ts` file on your favorite editor
+
+**2.** Look for the entry corresponding to the pin you visited
+
+**3.** Check for a `visits` parameter on the entry for that pin, if it doesn't exist, create one. This parameter will be an array of objects.
+
+**3.** Add a new object to the `visits` array, containing:
+
+- `photo` - path to your image file
+- `date` - date of your visit (year-month-day format)
+- `visitors` - your first and last name(s)
+
+> **Important**  
+> `visitors` should be a string for a single visitor and an array for multiple.
+
+**Check out this example:**
+
+```ts
+{
+  author: 'CeSIUM',
+  username: 'cesium',
+  type: EPinType.Special,
+  city: 'Campo do Gerês',
+  country: 'Portugal',
+  coordinates: [41.751656376668926, -8.199108019172911],
+  date: '2024-10-20',
+  photos: ['/photos/cesium/geres.jpg'],
+  visits: [
+    {
+      photo: '/photos/JulioPinto,SalomeFaria,GustavoPereira/geres-1.jpg',
+      date: '2025-03-29',
+      visitors: ['Júlio Pinto', 'Salomé Faria', 'Gustavo Pereira']
+    }
+  ]
+},
+```
 
 > **Note**  
 > You can get a local preview of your changes by running the project on your machine, follow the [Contributing Guide](CONTRIBUTING.md) to know more.
