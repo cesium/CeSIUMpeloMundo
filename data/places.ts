@@ -828,5 +828,29 @@ export const PLACES: IPin[] = [
     coordinates: [40.209205, -8.427679],
     date: '2024-12-22',
     photos: ['/photos/ANEI/coimbra.jpg']
+  },
+  {
+    author: ['João Lobo', 'Rita Camacho'],
+    username: ['joaodiaslobo', 'ritacamacho'],
+    type: EPinType.Sticker,
+    city: 'Edinburgh',
+    country: 'Scotland',
+    coordinates: [55.95060427174534, -3.1897784623459944],
+    date: '2025-03-31',
+    photos: [
+      '/photos/joaodiaslobo,ritacamacho/edinburgh-cockburn.jpeg',
+      '/photos/joaodiaslobo,ritacamacho/edinburgh-cockburn-rita.jpeg',
+      '/photos/joaodiaslobo,ritacamacho/edinburgh-cockburn-joao.jpeg'
+    ]
+  },
+  {
+    author: ['João Lobo', 'Rita Camacho'],
+    username: ['joaodiaslobo', 'ritacamacho'],
+    type: EPinType.Sticker,
+    city: 'Edinburgh',
+    country: 'Scotland',
+    coordinates: [55.949495502098394, -3.1929614558023127],
+    date: '2025-03-31',
+    photos: ['/photos/joaodiaslobo,ritacamacho/edinburgh-lawnmarket.jpeg']
   }
 ];
