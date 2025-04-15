@@ -854,13 +854,34 @@ export const PLACES: IPin[] = [
     photos: ['/photos/joaodiaslobo,ritacamacho/edinburgh-lawnmarket.jpeg']
   },
   {
-    author:   ['Afonso Dionísio', 'Gustavo Pereira', 'João Lobo', 'Lara Pereira', 'Mario Rodrigues', 'Martim Ferreira', 'Rafael Seara', 'Rita Camacho'],
-    username: ['Afonso-santos', 'cgustavop', 'joaodiaslobo', 'larareginaa', 'MarioRodrigues10', 'MartimMelo', 'rafaellseara', 'ritacamacho'],
+    author: [
+      'Afonso Dionísio',
+      'Gustavo Pereira',
+      'João Lobo',
+      'Lara Pereira',
+      'Mario Rodrigues',
+      'Martim Ferreira',
+      'Rafael Seara',
+      'Rita Camacho'
+    ],
+    username: [
+      'Afonso-santos',
+      'cgustavop',
+      'joaodiaslobo',
+      'larareginaa',
+      'MarioRodrigues10',
+      'MartimMelo',
+      'rafaellseara',
+      'ritacamacho'
+    ],
     type: EPinType.Sticker,
     city: 'Porto',
     country: 'Portugal',
     coordinates: [41.145871536223844, -8.612942075473269],
     date: '2025-04-12',
-    photos: ['/photos/Afonso-santos,cgustavop,joaodiaslobo,larareginaa,MarioRodrigues10,MartimMelo,rafaellseara,ritacamacho/porto.jpeg', '/photos/Afonso-santos,cgustavop,joaodiaslobo,larareginaa,MarioRodrigues10,MartimMelo,rafaellseara,ritacamacho/porto-sticker.jpeg'],
+    photos: [
+      '/photos/Afonso-santos,cgustavop,joaodiaslobo,larareginaa,MarioRodrigues10,MartimMelo,rafaellseara,ritacamacho/porto.jpeg',
+      '/photos/Afonso-santos,cgustavop,joaodiaslobo,larareginaa,MarioRodrigues10,MartimMelo,rafaellseara,ritacamacho/porto-sticker.jpeg'
+    ]
   }
 ];
