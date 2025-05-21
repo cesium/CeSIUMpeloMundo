@@ -304,13 +304,13 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Mário Rodrigues',
-    username: 'mariorodrigues10',
+    username: 'MarioRodrigues10',
     type: EPinType.Sticker,
     city: 'Salamanca',
     country: 'Spain',
     coordinates: [40.9588846, -5.6693875],
     date: '2022-08-16',
-    photos: ['/photos/mariorodrigues10/salamanca.jpg']
+    photos: ['/photos/MarioRodrigues10/salamanca.jpg']
   },
   {
     author: 'Vitor Lelis',
@@ -883,5 +883,15 @@ export const PLACES: IPin[] = [
       '/photos/Afonso-santos,cgustavop,joaodiaslobo,larareginaa,MarioRodrigues10,MartimMelo,rafaellseara,ritacamacho/porto.jpeg',
       '/photos/Afonso-santos,cgustavop,joaodiaslobo,larareginaa,MarioRodrigues10,MartimMelo,rafaellseara,ritacamacho/porto-sticker.jpeg'
     ]
+  },
+  {
+    author: ['Mário Rodrigues'],
+    username: ['MarioRodrigues10'],
+    type: EPinType.Sticker,
+    city: 'Brussels',
+    country: 'Belgium',
+    coordinates: [50.8378331, 4.351394],
+    date: '2025-05-18',
+    photos: ['/photos/MarioRodrigues10/brussels.jpg']
   }
 ];
