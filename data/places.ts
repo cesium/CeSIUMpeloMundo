@@ -893,5 +893,18 @@ export const PLACES: IPin[] = [
     coordinates: [50.8378331, 4.351394],
     date: '2025-05-18',
     photos: ['/photos/MarioRodrigues10/brussels.jpg']
+  },
+  {
+    author: ['Diogo Matos', 'Inês Ferreira', 'Joana Branco'],
+    username: ['diogogmatos', 'inesxferreira', 'joanabranco'],
+    type: EPinType.Sticker,
+    city: 'Freiburg',
+    country: 'Germany',
+    coordinates: [47.9933, 7.85548],
+    date: '2025-06-21',
+    photos: [
+      '/photos/diogogmatos,inesxferreira,joanabranco/freiburg1.jpg',
+      '/photos/diogogmatos,inesxferreira,joanabranco/freiburg2.jpg',
+    ]
   }
 ];
