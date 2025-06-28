@@ -904,7 +904,7 @@ export const PLACES: IPin[] = [
     date: '2025-06-21',
     photos: [
       '/photos/diogogmatos,inesxferreira,joanabranco/freiburg1.jpg',
-      '/photos/diogogmatos,inesxferreira,joanabranco/freiburg2.jpg',
+      '/photos/diogogmatos,inesxferreira,joanabranco/freiburg2.jpg'
     ]
   }
 ];
