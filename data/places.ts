@@ -290,7 +290,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [37.525364, -8.786004],
     date: '2022-08-06',
-    photos: ['/photos/sassypocoyo/zambujeira1.jpg']
+    photos: ['/photos/diogogmatos/zambujeira1.jpg']
   },
   {
     author: 'Filipe Felício',
@@ -893,5 +893,31 @@ export const PLACES: IPin[] = [
     coordinates: [50.8378331, 4.351394],
     date: '2025-05-18',
     photos: ['/photos/MarioRodrigues10/brussels.jpg']
+  },
+  {
+    author: ['Diogo Matos', 'Inês Ferreira', 'Joana Branco'],
+    username: ['diogogmatos', 'inesxferreira', 'joanabranco'],
+    type: EPinType.Sticker,
+    city: 'Freiburg',
+    country: 'Germany',
+    coordinates: [47.9933, 7.85548],
+    date: '2025-06-21',
+    photos: [
+      '/photos/diogogmatos,inesxferreira,joanabranco/freiburg1.jpg',
+      '/photos/diogogmatos,inesxferreira,joanabranco/freiburg2.jpg'
+    ]
+  },
+  {
+    author: ['Diogo Matos'],
+    username: ['diogogmatos'],
+    type: EPinType.Sticker,
+    city: 'Triberg',
+    country: 'Germany',
+    coordinates: [48.1266, 8.22844],
+    date: '2025-06-19',
+    photos: [
+      '/photos/diogogmatos/triberg1.jpg',
+      '/photos/diogogmatos/triberg2.jpg'
+    ]
   }
 ];
