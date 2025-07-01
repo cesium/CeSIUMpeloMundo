@@ -290,7 +290,7 @@ export const PLACES: IPin[] = [
     country: 'Portugal',
     coordinates: [37.525364, -8.786004],
     date: '2022-08-06',
-    photos: ['/photos/sassypocoyo/zambujeira1.jpg']
+    photos: ['/photos/diogogmatos/zambujeira1.jpg']
   },
   {
     author: 'Filipe Felício',
