@@ -906,5 +906,18 @@ export const PLACES: IPin[] = [
       '/photos/diogogmatos,inesxferreira,joanabranco/freiburg1.jpg',
       '/photos/diogogmatos,inesxferreira,joanabranco/freiburg2.jpg'
     ]
+  },
+  {
+    author: ['Diogo Matos'],
+    username: ['diogogmatos'],
+    type: EPinType.Sticker,
+    city: 'Triberg',
+    country: 'Germany',
+    coordinates: [48.1266, 8.22844],
+    date: '2025-06-19',
+    photos: [
+      '/photos/diogogmatos/triberg1.jpg',
+      '/photos/diogogmatos/triberg2.jpg'
+    ]
   }
 ];
