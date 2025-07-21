@@ -919,5 +919,15 @@ export const PLACES: IPin[] = [
       '/photos/diogogmatos/triberg1.jpg',
       '/photos/diogogmatos/triberg2.jpg'
     ]
+  },
+  {
+    author: ['Gonçalo Fernandes'],
+    username: ['gxnca'],
+    type: EPinType.Sticker,
+    city: 'London',
+    country: 'United Kingdom',
+    coordinates: [51.549064992058376, -0.14082210238394366],
+    date: '2025-07-11',
+    photos: ['/photos/goncalofernandes/london.jpg']
   }
 ];
