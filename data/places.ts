@@ -929,5 +929,28 @@ export const PLACES: IPin[] = [
     coordinates: [51.549064992058376, -0.14082210238394366],
     date: '2025-07-11',
     photos: ['/photos/goncalofernandes/london.jpg']
+  },
+  {
+    author: 'Rita Camacho',
+    username: 'ritacamacho',
+    type: EPinType.Sticker,
+    city: 'Marsaxlokk',
+    country: 'Malta',
+    coordinates: [35.832915, 14.561784],
+    date: '2025-04-17',
+    photos: ['/photos/ritacamacho/malta-st-peters-pool.jpg']
+  },
+  {
+    author: 'Rita Camacho',
+    username: 'ritacamacho',
+    type: EPinType.Sticker,
+    city: 'Mellieħa',
+    country: 'Malta',
+    coordinates: [35.960484, 14.342081],
+    date: '2025-04-15',
+    photos: [
+      '/photos/ritacamacho/malta-popeye-village.jpg',
+      '/photos/ritacamacho/malta-popeye-village-rita.jpg'
+    ]
   }
 ];
