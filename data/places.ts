@@ -323,6 +323,16 @@ export const PLACES: IPin[] = [
     photos: ['/photos/VitorLelis/campos-rio.jpg']
   },
   {
+    author: ['Vitor Lelis', 'Mariana Brandão'],
+    username: ['VitorLelis', 'MarianaBna'],
+    type: EPinType.Sticker,
+    city: 'Belo Horizonte',
+    country: 'Brazil',
+    coordinates: [-19.938606, -43.935652],
+    date: '2025-08-14',
+    photos: ['/photos/VitorLelis,MarianaBna/belo-horizonte.jpeg']
+  },
+  {
     author: 'Matilde Bravo',
     username: 'matildeopbravo',
     type: EPinType.Sticker,
