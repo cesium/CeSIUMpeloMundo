@@ -961,8 +961,6 @@ export const PLACES: IPin[] = [
     country: 'Spain',
     coordinates: [38.531749, -0.095888],
     date: '2025-08-17',
-    photos: [
-      '/photos/azevedodiogo/benidorm.jpeg'
-    ]
+    photos: ['/photos/azevedodiogo/benidorm.jpeg']
   }
 ];
