@@ -952,5 +952,15 @@ export const PLACES: IPin[] = [
       '/photos/ritacamacho/malta-popeye-village.jpg',
       '/photos/ritacamacho/malta-popeye-village-rita.jpg'
     ]
+  },
+  {
+    author: 'Diogo Azevedo',
+    username: 'azevedodiogo',
+    type: EPinType.Sticker,
+    city: 'Benidorm',
+    country: 'Spain',
+    coordinates: [38.531749, -0.095888],
+    date: '2025-08-17',
+    photos: ['/photos/azevedodiogo/benidorm.jpeg']
   }
 ];
