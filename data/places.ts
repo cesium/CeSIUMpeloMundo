@@ -972,5 +972,35 @@ export const PLACES: IPin[] = [
     coordinates: [38.531749, -0.095888],
     date: '2025-08-17',
     photos: ['/photos/azevedodiogo/benidorm.jpeg']
+  },
+  {
+    author: 'João Coelho',
+    username: 'JoaoCoelho2003',
+    type: EPinType.Sticker,
+    city: 'Athens',
+    country: 'Greece',
+    coordinates: [37.974897, 23.7220933],
+    date: '2025-04-15',
+    photos: ['/photos/JoaoCoelho2003/athens.jpg']
+  },
+  {
+    author: 'João Coelho',
+    username: 'JoaoCoelho2003',
+    type: EPinType.Sticker,
+    city: 'Istanbul',
+    country: 'Turkey',
+    coordinates: [41.0258278, 28.9745611],
+    date: '2025-07-26',
+    photos: ['/photos/JoaoCoelho2003/istanbul.jpg']
+  },
+  {
+    author: 'João Coelho',
+    username: 'JoaoCoelho2003',
+    type: EPinType.Sticker,
+    city: 'Pamukkale',
+    country: 'Turkey',
+    coordinates: [37.9179445, 29.1218917],
+    date: '2025-08-03',
+    photos: ['/photos/JoaoCoelho2003/pamukkale.jpg']
   }
 ];
