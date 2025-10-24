@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Marker as MarkerContainer, Popup } from 'react-leaflet';
 import { IPin } from '~/lib/types';
 import { getRelativeTimeString, getNameString, getDistance } from '~/lib/utils';
-import { getIcon, getFullDateString } from './utils';
+import { getIcon } from './utils';
 import AuthorIcon from '../AuthorIcon';
 import localStyles from './style.module.css';
 import 'styles/globals.css';
@@ -31,18 +31,20 @@ const Marker = ({
   const [imageOrientation, setImageOrientation] = useState(
     orientation || 'vertical'
   );
+  const [_, setIsPopupOpen] = useState(false);
+  const [shouldLoadImages, setShouldLoadImages] = useState(false);
 
   const handleImageLoad = (img: HTMLImageElement): void => {
     setImageOrientation(img.width > img.height ? 'horizontal' : 'vertical');
   };
 
   useEffect(() => {
-    if (orientation || !photos) return;
+    if (orientation || !photos || !shouldLoadImages) return;
     const img = new window.Image();
     if (visits) img.src = photos[slide] ?? visits[slide - photos.length].photo;
     else img.src = photos[slide];
     img.onload = () => handleImageLoad(img);
-  }, [photos, orientation, slide, visits]);
+  }, [photos, orientation, slide, visits, shouldLoadImages]);
 
   useEffect(() => {
     let sizes = '';
@@ -63,81 +65,94 @@ const Marker = ({
       icon={icon}
       position={coordinates}
       title={`${name} at ${city}`}
+      eventHandlers={{
+        popupopen: () => {
+          setIsPopupOpen(true);
+          setShouldLoadImages(true);
+        },
+        popupclose: () => {
+          setIsPopupOpen(false);
+        }
+      }}
     >
       <Popup className={localStyles.popup}>
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={15}
-          pagination={{ clickable: true, type: 'bullets' }}
-          modules={[Autoplay, Pagination]}
-          centeredSlides
-          style={{ width, height }}
-          onSlideChange={(swiper) => setSlide(swiper.realIndex)}
-        >
-          {photos.map((photo, idx) => (
-            <SwiperSlide key={idx}>
-              <div className={localStyles.imageContainer}>
-                <Image
-                  alt={`${name} at ${city}`}
-                  src={photo}
-                  width={width}
-                  height={height}
-                  className={localStyles.roundedImage}
-                />
-                {idx === 0 && (
-                  <div className={localStyles.textOverlay}>
-                    <h1 className={localStyles.title}>
-                      {city}, {country}
-                    </h1>
-                    <span className={localStyles.light}>
-                      <i className="bi bi-calendar-fill"></i>{' '}
-                      {getRelativeTimeString(date)} •{' '}
-                      {date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$3/$2/$1')}
-                    </span>
-                    <br />
-                    <span className={localStyles.light}>
-                      <i className="bi bi-signpost-fill"></i>{' '}
-                      {Math.round(getDistance(coordinates))} km away
-                    </span>
-                    <br />
-                    <span>
-                      <AuthorIcon author={author} /> {name}
-                    </span>
-                  </div>
-                )}
-              </div>
-            </SwiperSlide>
-          ))}
-          {visits &&
-            visits.map((visit, idx) => (
+        {shouldLoadImages && (
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={15}
+            pagination={{ clickable: true, type: 'bullets' }}
+            modules={[Autoplay, Pagination]}
+            centeredSlides
+            style={{ width, height }}
+            onSlideChange={(swiper) => setSlide(swiper.realIndex)}
+          >
+            {photos.map((photo, idx) => (
               <SwiperSlide key={idx}>
                 <div className={localStyles.imageContainer}>
                   <Image
-                    alt={`${visit.visitors} at ${city}`}
-                    src={visit.photo}
+                    alt={`${name} at ${city}`}
+                    src={photo}
                     width={width}
                     height={height}
                     className={localStyles.roundedImage}
+                    loading="lazy"
                   />
-                  <div className={localStyles.textOverlay}>
-                    <span className={localStyles.light}>
-                      <i className="bi bi-car-front-fill"></i> Visited{' '}
-                      {getRelativeTimeString(visit.date)} •{' '}
-                      {visit.date.replace(
-                        /^(\d{4})-(\d{2})-(\d{2})$/,
-                        '$3/$2/$1'
-                      )}
-                    </span>
-                    <br />
-                    <span>
-                      <AuthorIcon author={visit.visitors} />{' '}
-                      {getNameString(visit.visitors)}
-                    </span>
-                  </div>
+                  {idx === 0 && (
+                    <div className={localStyles.textOverlay}>
+                      <h1 className={localStyles.title}>
+                        {city}, {country}
+                      </h1>
+                      <span className={localStyles.light}>
+                        <i className="bi bi-calendar-fill"></i>{' '}
+                        {getRelativeTimeString(date)} •{' '}
+                        {date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$3/$2/$1')}
+                      </span>
+                      <br />
+                      <span className={localStyles.light}>
+                        <i className="bi bi-signpost-fill"></i>{' '}
+                        {Math.round(getDistance(coordinates))} km away
+                      </span>
+                      <br />
+                      <span>
+                        <AuthorIcon author={author} /> {name}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </SwiperSlide>
             ))}
-        </Swiper>
+            {visits &&
+              visits.map((visit, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className={localStyles.imageContainer}>
+                    <Image
+                      alt={`${visit.visitors} at ${city}`}
+                      src={visit.photo}
+                      width={width}
+                      height={height}
+                      className={localStyles.roundedImage}
+                      loading="lazy"
+                    />
+                    <div className={localStyles.textOverlay}>
+                      <span className={localStyles.light}>
+                        <i className="bi bi-car-front-fill"></i> Visited{' '}
+                        {getRelativeTimeString(visit.date)} •{' '}
+                        {visit.date.replace(
+                          /^(\d{4})-(\d{2})-(\d{2})$/,
+                          '$3/$2/$1'
+                        )}
+                      </span>
+                      <br />
+                      <span>
+                        <AuthorIcon author={visit.visitors} />{' '}
+                        {getNameString(visit.visitors)}
+                      </span>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        )}
       </Popup>
     </MarkerContainer>
   );
