@@ -1048,5 +1048,36 @@ export const PLACES: IPin[] = [
       '/photos/joaodiaslobo,ritacamacho/strasbourg-joao.jpeg',
       '/photos/joaodiaslobo,ritacamacho/strasbourg-rita.jpeg'
     ]
+  },
+  {
+    author: [
+      'Afonso Martins',
+      'João Lobo',
+      'Júlio Pinto',
+      'Mário Rodrigues',
+      'Nuno Fernandes',
+      'Rafael Seara',
+      'Rita Camacho',
+      'Salomé Faria'
+    ],
+    username: [
+      'AfonsoMartins26',
+      'joaodiaslobo',
+      'JulioJPinto',
+      'MarioRodrigues10',
+      'nunom27',
+      'rafaellseara',
+      'ritacamacho',
+      'faria-s'
+    ],
+    type: EPinType.Sticker,
+    city: 'Vila Nova de Cerveira',
+    country: 'Portugal',
+    coordinates: [41.94730029149744, -8.727952974351538],
+    date: '2026-03-29',
+    photos: [
+      '/photos/AfonsoMartins26,joaodiaslobo,JulioJPinto,MarioRodrigues10,nunom27,rafaellseara,ritacamacho,faria-s/dia-do-cervo.jpeg',
+      '/photos/AfonsoMartins26,joaodiaslobo,JulioJPinto,MarioRodrigues10,nunom27,rafaellseara,ritacamacho,faria-s/cervo.jpeg'
+    ]
   }
 ];
