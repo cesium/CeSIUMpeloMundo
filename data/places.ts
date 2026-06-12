@@ -994,6 +994,18 @@ export const PLACES: IPin[] = [
     photos: ['/photos/joaodiaslobo/vienna-wall.jpeg']
   },
   {
+    author: ['João Lobo', 'Mário Rodrigues', 'Nuno Fernandes', 'Salomé Faria'],
+    username: ['joaodiaslobo', 'MarioRodrigues10', 'nunom27', 'faria-s'],
+    type: EPinType.Sticker,
+    city: 'Santuário do Sameiro, Braga',
+    country: 'Portugal',
+    coordinates: [41.543407931285216, -8.370205701002659],
+    date: '2025-04-26',
+    photos: [
+      '/photos/joaodiaslobo,MarioRodrigues10,nunom27,faria-s/sameiro.jpeg'
+    ]
+  },
+  {
     author: 'João Lobo',
     username: 'joaodiaslobo',
     type: EPinType.Sticker,
