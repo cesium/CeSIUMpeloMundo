@@ -984,6 +984,26 @@ export const PLACES: IPin[] = [
     photos: ['/photos/JoaoCoelho2003/athens.jpg']
   },
   {
+    author: 'João Lobo',
+    username: 'joaodiaslobo',
+    type: EPinType.Sticker,
+    city: 'Vienna',
+    country: 'Austria',
+    coordinates: [48.21000805222474, 16.373896173841885],
+    date: '2025-04-18',
+    photos: ['/photos/joaodiaslobo/vienna-wall.jpeg']
+  },
+  {
+    author: 'João Lobo',
+    username: 'joaodiaslobo',
+    type: EPinType.Sticker,
+    city: 'Vienna',
+    country: 'Austria',
+    coordinates: [48.20762284641701, 16.393703040706985],
+    date: '2025-04-18',
+    photos: ['/photos/joaodiaslobo/vienna-telephone.jpeg']
+  },
+  {
     author: 'João Coelho',
     username: 'JoaoCoelho2003',
     type: EPinType.Sticker,
