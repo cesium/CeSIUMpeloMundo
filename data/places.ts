@@ -1079,5 +1079,15 @@ export const PLACES: IPin[] = [
       '/photos/AfonsoMartins26,joaodiaslobo,JulioJPinto,MarioRodrigues10,nunom27,rafaellseara,ritacamacho,faria-s/dia-do-cervo.jpeg',
       '/photos/AfonsoMartins26,joaodiaslobo,JulioJPinto,MarioRodrigues10,nunom27,rafaellseara,ritacamacho,faria-s/cervo.jpeg'
     ]
+  },
+  {
+    author: ['João Lobo', 'Rita Camacho'],
+    username: ['joaodiaslobo', 'ritacamacho'],
+    type: EPinType.Sticker,
+    city: 'Favignana',
+    country: 'Italy',
+    coordinates: [37.92131249452855, 12.359611542033909],
+    date: '2026-04-17',
+    photos: ['/photos/joaodiaslobo,ritacamacho/favignana.jpeg']
   }
 ];
