@@ -1034,5 +1034,19 @@ export const PLACES: IPin[] = [
     coordinates: [37.9179445, 29.1218917],
     date: '2025-08-03',
     photos: ['/photos/JoaoCoelho2003/pamukkale.jpg']
+  },
+  {
+    author: ['João Lobo', 'Rita Camacho'],
+    username: ['joaodiaslobo', 'ritacamacho'],
+    type: EPinType.Sticker,
+    city: 'Strasbourg',
+    country: 'France',
+    coordinates: [48.580548437353606, 7.742761210892393],
+    date: '2025-11-22',
+    photos: [
+      '/photos/joaodiaslobo,ritacamacho/strasbourg.jpeg',
+      '/photos/joaodiaslobo,ritacamacho/strasbourg-joao.jpeg',
+      '/photos/joaodiaslobo,ritacamacho/strasbourg-rita.jpeg'
+    ]
   }
 ];
