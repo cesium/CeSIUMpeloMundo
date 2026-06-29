@@ -1100,7 +1100,7 @@ export const PLACES: IPin[] = [
     date: '2026-06-26',
     photos: [
       '/photos/azevedodiogo/disneylandparis.jpeg',
-      '/photos/azevedodiogo/disneylandparis-diogo.jpeg',
+      '/photos/azevedodiogo/disneylandparis-diogo.jpeg'
     ]
   },
   {
@@ -1113,7 +1113,7 @@ export const PLACES: IPin[] = [
     date: '2026-06-28',
     photos: [
       '/photos/azevedodiogo/notredame.jpeg',
-      '/photos/azevedodiogo/notredame-diogo.jpeg',
+      '/photos/azevedodiogo/notredame-diogo.jpeg'
     ]
   },
   {
@@ -1126,7 +1126,7 @@ export const PLACES: IPin[] = [
     date: '2026-06-28',
     photos: [
       '/photos/azevedodiogo/torreeiffel.jpeg',
-      '/photos/azevedodiogo/torreeiffel-diogo.jpeg',
+      '/photos/azevedodiogo/torreeiffel-diogo.jpeg'
     ]
   }
 ];
