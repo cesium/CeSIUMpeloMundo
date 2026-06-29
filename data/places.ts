@@ -1089,5 +1089,44 @@ export const PLACES: IPin[] = [
     coordinates: [37.92131249452855, 12.359611542033909],
     date: '2026-04-17',
     photos: ['/photos/joaodiaslobo,ritacamacho/favignana.jpeg']
+  },
+  {
+    author: ['Diogo Azevedo'],
+    username: ['azevedodiogo'],
+    type: EPinType.Sticker,
+    city: 'Disneyland Paris, Chessy',
+    country: 'France',
+    coordinates: [48.86799666666667, 2.782661666666667],
+    date: '2026-06-26',
+    photos: [
+      '/photos/azevedodiogo/disneylandparis.jpeg',
+      '/photos/azevedodiogo/disneylandparis-diogo.jpeg',
+    ]
+  },
+  {
+    author: ['Diogo Azevedo'],
+    username: ['azevedodiogo'],
+    type: EPinType.Sticker,
+    city: 'Paris',
+    country: 'France',
+    coordinates: [48.85316166666667, 2.34785],
+    date: '2026-06-28',
+    photos: [
+      '/photos/azevedodiogo/notredame.jpeg',
+      '/photos/azevedodiogo/notredame-diogo.jpeg',
+    ]
+  },
+  {
+    author: ['Diogo Azevedo'],
+    username: ['azevedodiogo'],
+    type: EPinType.Sticker,
+    city: 'Paris',
+    country: 'France',
+    coordinates: [48.85761333333333, 2.2949216666666666],
+    date: '2026-06-28',
+    photos: [
+      '/photos/azevedodiogo/torreeiffel.jpeg',
+      '/photos/azevedodiogo/torreeiffel-diogo.jpeg',
+    ]
   }
 ];
