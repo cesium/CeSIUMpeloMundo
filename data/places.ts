@@ -1128,5 +1128,15 @@ export const PLACES: IPin[] = [
       '/photos/azevedodiogo/torreeiffel.jpeg',
       '/photos/azevedodiogo/torreeiffel-diogo.jpeg'
     ]
+  },
+  {
+    author: ['Humberto Gomes', 'José Lopes'],
+    username: ['voidbert', 'JosLopes'],
+    type: EPinType.Merch,
+    city: 'Esch-sur-Alzette',
+    country: 'Luxembourg',
+    coordinates: [49.500127, 5.93796],
+    date: '2026-07-06',
+    photos: ['/photos/voidbert,JosLopes/luxembourg.jpg']
   }
 ];
